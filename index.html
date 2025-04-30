@@ -31,12 +31,18 @@
         border: 1px solid #ddd;
         padding: 0.5rem;
         text-align: center;
+        cursor: pointer;
+      }
+      .icon.selected {
+        border-color: #007acc;
+        background: #e6f3ff;
       }
       .icon object {
         width: 64px;
         height: 64px;
         display: block;
         margin: 0 auto;
+        pointer-events: none;
       }
       .icon small {
         display: block;
@@ -44,17 +50,43 @@
         font-size: 0.75rem;
         color: #666;
       }
+      #details {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: white;
+        border: 1px solid #ddd;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #details h2 {
+        margin-top: 0;
+      }
     </style>
   </head>
   <body>
     <h1>Open Icon Forge Library</h1>
     <input type="text" id="search" placeholder="Search by tag or name..." />
     <div class="grid" id="iconGrid"></div>
+    <div id="details" style="display: none">
+      <h2 id="detailName"></h2>
+      <p><strong>Theme:</strong> <span id="detailTheme"></span></p>
+      <p><strong>Tags:</strong> <span id="detailTags"></span></p>
+      <p><strong>Date:</strong> <span id="detailDate"></span></p>
+      <p><strong>File Path:</strong> <span id="detailPath"></span></p>
+    </div>
 
     <script>
       const grid = document.getElementById("iconGrid");
       const searchInput = document.getElementById("search");
+      const details = document.getElementById("details");
+      const detailName = document.getElementById("detailName");
+      const detailTags = document.getElementById("detailTags");
+      const detailTheme = document.getElementById("detailTheme");
+      const detailDate = document.getElementById("detailDate");
+      const detailPath = document.getElementById("detailPath");
       let iconData = [];
+      let selectedDiv = null;
 
       async function loadIcons() {
         try {
@@ -79,16 +111,39 @@
           .forEach((icon) => {
             const div = document.createElement("div");
             div.className = "icon";
-            div.innerHTML = `
-          <object type="image/svg+xml" data="${icon.file}"></object>
-          <small>${icon.name}</small>
-        `;
+
+            const object = document.createElement("object");
+            object.type = "image/svg+xml";
+            object.data = icon.file;
+
+            const label = document.createElement("small");
+            label.textContent = icon.name;
+
+            div.appendChild(object);
+            div.appendChild(label);
+
+            div.addEventListener("click", () => selectIcon(div, icon));
+
             grid.appendChild(div);
           });
       }
 
+      function selectIcon(div, icon) {
+        if (selectedDiv) selectedDiv.classList.remove("selected");
+        selectedDiv = div;
+        div.classList.add("selected");
+        detailName.textContent = icon.name;
+        detailTags.textContent = icon.tags.join(", ");
+        detailTheme.textContent = icon.theme;
+        detailDate.textContent = icon.date;
+        detailPath.textContent = icon.file;
+        details.style.display = "block";
+      }
+
       searchInput.addEventListener("input", (e) => {
         renderIcons(e.target.value);
+        details.style.display = "none";
+        selectedDiv = null;
       });
 
       loadIcons();
