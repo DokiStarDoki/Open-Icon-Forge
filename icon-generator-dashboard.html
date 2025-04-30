@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Generator Dashboard</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 1rem;
+        background: #f5f7fa;
+      }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+      .panel {
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      .panel h2 {
+        margin-top: 0;
+        font-size: 1.1rem;
+        color: #34495e;
+      }
+      #startStopBtn,
+      #selectThemeBtn {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.75rem 1.5rem;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      li {
+        padding: 0.25rem 0;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Icon Generator Dashboard</h1>
+    <button id="startStopBtn">Start Generation</button>
+    <button id="selectThemeBtn">Select Top Theme from Backlog</button>
+
+    <div class="container">
+      <div class="panel">
+        <h2>1️⃣ Theme Backlog</h2>
+        <ul id="themeBacklog"></ul>
+      </div>
+      <div class="panel">
+        <h2>2️⃣ Active Theme</h2>
+        <p id="activeTheme">NO ACTIVE THEME</p>
+      </div>
+      <div class="panel">
+        <h2>3️⃣ Completed Themes</h2>
+        <ul id="completedThemes"></ul>
+      </div>
+      <div class="panel">
+        <h2>4️⃣ Active Theme Icon Backlog</h2>
+        <ul id="activeThemeIconBacklog"></ul>
+      </div>
+      <div class="panel">
+        <h2>5️⃣ Active Icon (Pending Audit)</h2>
+        <p id="activeIcon">(None)</p>
+      </div>
+      <div class="panel">
+        <h2>6️⃣ Active Theme Completed Icons</h2>
+        <ul id="activeThemeCompletedIcons"></ul>
+      </div>
+      <div class="panel">
+        <h2>7️⃣ Completed Icons (All)</h2>
+        <ul id="completedIcons"></ul>
+      </div>
+    </div>
+
+    <script>
+      const startStopBtn = document.getElementById("startStopBtn");
+      const selectThemeBtn = document.getElementById("selectThemeBtn");
+      let running = false;
+      let jsonData = [];
+
+      startStopBtn.addEventListener("click", () => {
+        running = !running;
+        startStopBtn.textContent = running
+          ? "Stop Generation"
+          : "Start Generation";
+      });
+
+      selectThemeBtn.addEventListener("click", () => {
+        const backlogEntry = jsonData.find((entry) => entry["theme-backlog"]);
+        const completedEntry = jsonData.find(
+          (entry) => entry["completed-themes"]
+        );
+        if (backlogEntry && backlogEntry["theme-backlog"].length > 0) {
+          const topTheme = backlogEntry["theme-backlog"].shift();
+          if (completedEntry) {
+            completedEntry["completed-themes"].push(topTheme);
+          } else {
+            jsonData.push({ "completed-themes": [topTheme] });
+          }
+          renderDashboard(jsonData);
+          saveMetadata(jsonData);
+        }
+      });
+
+      function saveMetadata(data) {
+        fetch("save_metadata.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => {
+            if (!res.ok) throw new Error("Failed to save metadata");
+            console.log("Metadata saved");
+          })
+          .catch(console.error);
+      }
+
+      function renderDashboard(data) {
+        const themeBacklog = document.getElementById("themeBacklog");
+        const completedThemes = document.getElementById("completedThemes");
+        const activeTheme = document.getElementById("activeTheme");
+        const activeThemeIconBacklog = document.getElementById(
+          "activeThemeIconBacklog"
+        );
+        const activeIcon = document.getElementById("activeIcon");
+        const activeThemeCompletedIcons = document.getElementById(
+          "activeThemeCompletedIcons"
+        );
+        const completedIcons = document.getElementById("completedIcons");
+
+        const icons = data.filter((entry) => entry.file);
+        const themeBacklogData =
+          data.find((entry) => entry["theme-backlog"])?.["theme-backlog"] || [];
+        const completedThemesData =
+          data.find((entry) => entry["completed-themes"])?.[
+            "completed-themes"
+          ] || [];
+
+        const activeThemeValue = completedThemesData.at(-1) || null;
+        activeTheme.textContent = activeThemeValue || "NO ACTIVE THEME";
+
+        themeBacklog.innerHTML = themeBacklogData
+          .map((t) => `<li>${t}</li>`)
+          .join("");
+        completedThemes.innerHTML = completedThemesData
+          .filter((t) => t !== activeThemeValue)
+          .map((t) => `<li>${t}</li>`)
+          .join("");
+
+        const activeThemeIcons = icons.filter(
+          (i) => i.theme === activeThemeValue
+        );
+        activeThemeCompletedIcons.innerHTML = activeThemeIcons
+          .map((i) => `<li>${i.name}</li>`)
+          .join("");
+
+        const lastIcon = icons.at(-1);
+        activeIcon.textContent = lastIcon?.name || "(None)";
+
+        completedIcons.innerHTML = icons
+          .map((i) => `<li>${i.name}</li>`)
+          .join("");
+
+        const activeThemeIconBacklogData = [
+          "Icon Idea 1",
+          "Icon Idea 2",
+          "Icon Idea 3",
+          "Icon Idea 4",
+          "Icon Idea 5",
+        ];
+        activeThemeIconBacklog.innerHTML = activeThemeIconBacklogData
+          .map((i) => `<li>${i}</li>`)
+          .join("");
+      }
+
+      fetch("metadata.json")
+        .then((res) => res.json())
+        .then((data) => {
+          jsonData = data;
+          renderDashboard(jsonData);
+        })
+        .catch((err) => console.error("Error loading metadata.json:", err));
+    </script>
+  </body>
+</html>
