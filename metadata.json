@@ -1,0 +1,28 @@
+[
+  {
+    "file": "icons/space/space-station.svg",
+    "name": "Space Station",
+    "short_description": "A simple satellite-style space station icon",
+    "tags": [
+      "space",
+      "station",
+      "satellite",
+      "orbit"
+    ],
+    "theme": "Space",
+    "date_created": "2025-04-28"
+  },
+  {
+    "file": "icons/underwater/seashell.svg",
+    "name": "Seashell",
+    "short_description": "A stylized seashell icon",
+    "tags": [
+      "sea",
+      "shell",
+      "ocean",
+      "beach"
+    ],
+    "theme": "Underwater",
+    "date_created": "2025-04-28"
+  }
+]
