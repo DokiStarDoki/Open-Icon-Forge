@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Icon Forge Library</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1rem;
+        background: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+      }
+      #search {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        width: 80%;
+        max-width: 400px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .icon {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        text-align: center;
+      }
+      .icon object {
+        width: 64px;
+        height: 64px;
+        display: block;
+        margin: 0 auto;
+      }
+      .icon small {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open Icon Forge Library</h1>
+    <input type="text" id="search" placeholder="Search by tag or name..." />
+    <div class="grid" id="iconGrid"></div>
+
+    <script>
+      const grid = document.getElementById("iconGrid");
+      const searchInput = document.getElementById("search");
+      let iconData = [];
+
+      async function loadIcons() {
+        try {
+          const response = await fetch("metadata.json");
+          iconData = await response.json();
+          renderIcons();
+        } catch (err) {
+          grid.innerHTML = "<p>Error loading metadata.json</p>";
+          console.error("Failed to load metadata.json:", err);
+        }
+      }
+
+      function renderIcons(filter = "") {
+        const lowerFilter = filter.toLowerCase();
+        grid.innerHTML = "";
+        iconData
+          .filter(
+            (icon) =>
+              icon.name.toLowerCase().includes(lowerFilter) ||
+              icon.tags.some((tag) => tag.toLowerCase().includes(lowerFilter))
+          )
+          .forEach((icon) => {
+            const div = document.createElement("div");
+            div.className = "icon";
+            div.innerHTML = `
+          <object type="image/svg+xml" data="${icon.file}"></object>
+          <small>${icon.name}</small>
+        `;
+            grid.appendChild(div);
+          });
+      }
+
+      searchInput.addEventListener("input", (e) => {
+        renderIcons(e.target.value);
+      });
+
+      loadIcons();
+    </script>
+  </body>
+</html>
