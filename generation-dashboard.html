@@ -95,6 +95,28 @@
         });
       }
 
+      async function generateTheme() {
+        const response = await fetch("generate_theme.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            theme_backlog: dashboard.theme_backlog,
+            themes_used: dashboard.completed_themes,
+          }),
+        });
+
+        const data = await response.json();
+        dashboard.generated_theme = {
+          name: data.theme,
+          is_new: data.is_new,
+        };
+
+        console.log("[Replicate Response]", data); // 👈 Add this line
+
+        renderDashboard();
+        saveDashboard();
+      }
+
       function addThemeToBacklog() {
         if (
           dashboard.generated_theme?.name &&
@@ -146,9 +168,7 @@
 
     <div class="section">
       <h2>Action 1: Generate Theme</h2>
-      <button onclick="/* generateTheme logic here */">
-        [GENERATE NEW THEME]
-      </button>
+      <button onclick="generateTheme()">[GENERATE NEW THEME]</button>
       <button onclick="addThemeToBacklog()">[ADD THEME TO BACKLOG]</button>
       <div class="output" id="theme-output">DISPLAY THEME GENERATED HERE</div>
       <div class="output" id="theme-new-flag">IS NEW: [TRUE/FALSE]</div>
