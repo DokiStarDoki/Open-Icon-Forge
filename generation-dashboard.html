@@ -144,7 +144,7 @@
           .filter((i) => i.theme === dashboard.selected_theme)
           .map((i) => i.idea);
 
-        const response = await fetch("generate_icon_idea.php", {
+        const response = await fetch("php/generate_icon_idea.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -159,7 +159,6 @@
           is_new: data.is_new,
         };
 
-        console.log("[Replicate Icon Idea Response]", data);
         renderDashboard();
         saveDashboard();
       }

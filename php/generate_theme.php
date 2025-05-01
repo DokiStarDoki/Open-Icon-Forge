@@ -1,11 +1,12 @@
 <?php
+header('Content-Type: application/json');
 // Show all errors (for debugging)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Load environment variables from .env
-$env = parse_ini_file(".env");
+$env = parse_ini_file("../.env");
 $replicate_token = $env["REPLICATE_API_TOKEN"] ?? '';
 
 if (!$replicate_token) {

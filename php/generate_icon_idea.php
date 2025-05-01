@@ -1,11 +1,12 @@
 <?php
-// Show errors
+header('Content-Type: application/json');
+// Show all errors (for debugging)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Load .env
-$env = parse_ini_file(".env");
+// Load environment variables from .env
+$env = parse_ini_file("../.env");
 $replicate_token = $env["REPLICATE_API_TOKEN"] ?? '';
 
 if (!$replicate_token) {
@@ -14,19 +15,19 @@ if (!$replicate_token) {
   exit;
 }
 
-// Read POST input
+// Read incoming POST data
 $data = json_decode(file_get_contents("php://input"), true);
 $selected_theme = $data["selected_theme"] ?? '';
 $existing_ideas = $data["existing_ideas"] ?? [];
 
 $joined = implode(", ", array_map(fn($idea) => "\"$idea\"", $existing_ideas));
 
-// Prompt to LLM
+// Build Claude-friendly prompt
 $prompt = "Generate a new simple icon idea for the theme \"$selected_theme\".
 Avoid using any of the following ideas: [$joined]
 Return ONLY the icon idea as a short phrase. No formatting or explanation.";
 
-// Send to Replicate (Claude 3.5 Haiku)
+// Prepare cURL to Replicate Claude 3.5 Haiku (no polling, Prefer: wait)
 $ch = curl_init("https://api.replicate.com/v1/models/anthropic/claude-3.5-haiku/predictions");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
@@ -35,29 +36,42 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
   "Content-Type: application/json",
   "Prefer: wait"
 ]);
+
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
-  "input" => [
+"input" => [
     "prompt" => $prompt,
-    "max_tokens" => 100,
+    "max_tokens" => 500,
     "system_prompt" => ""
-  ]
+]
 ]));
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-$raw = curl_exec($ch);
-$error = curl_error($ch);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 🔥 disables SSL validation
+
+// Run the request
+$init_response = curl_exec($ch);
+$curl_error = curl_error($ch);
 curl_close($ch);
-file_put_contents("../json/replicate-icon-debug.json", $raw ?: $error);
 
-// Error handling
-if (!$raw) {
-  http_response_code(500);
-  echo json_encode(["error" => "cURL failed", "details" => $error]);
-  exit;
+// Save raw response for debugging
+file_put_contents("../json/replicate-debug.json", $init_response ?: $curl_error);
+
+// Handle request failure
+if (!$init_response) {
+    http_response_code(500);
+    echo json_encode(["error" => "cURL failed", "details" => $curl_error]);
+    exit;
 }
 
-$response = json_decode($raw, true);
-$output = $response["output"] ?? null;
+// Parse API output
+$response_data = json_decode($init_response, true);
+$output = $response_data["output"] ?? null;
+
+if (!$output) {
+    http_response_code(500);
+    echo json_encode(["error" => "No output from Replicate", "response" => $response_data]);
+    exit;
+}
+
 $idea = is_array($output) ? trim(implode("", $output)) : trim($output);
 $is_new = $idea && !in_array($idea, $existing_ideas);
 
