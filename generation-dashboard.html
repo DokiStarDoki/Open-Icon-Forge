@@ -186,6 +186,27 @@
         }
       }
 
+      async function generateIcon() {
+        console.log("test bug");
+        const { theme, idea } = dashboard.selected_icon;
+        const response = await fetch("php/generate_icon.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ theme, idea }),
+        });
+
+        const data = await response.json();
+        dashboard.generated_icon = {
+          png_path: data.png_path,
+          quality_check_passed: false,
+        };
+
+        console.log("📦 RESPONSE FROM PHP:", data);
+
+        renderDashboard();
+        saveDashboard();
+      }
+
       window.onload = loadDashboard;
     </script>
   </head>
@@ -219,7 +240,7 @@
     <div class="section">
       <h2>Action 3: Generate Icon</h2>
       <button onclick="grabTopIcon()">[GRAB TOP BACKLOG ICON]</button>
-      <button onclick="/* generateIcon logic here */">[GENERATE ICON]</button>
+      <button onclick="generateIcon()">[GENERATE ICON]</button>
       <div class="output" id="grabbed-icon">
         Selected Icon: [Grabbed icon name]
       </div>
