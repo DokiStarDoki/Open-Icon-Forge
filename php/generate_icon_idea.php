@@ -23,9 +23,17 @@ $existing_ideas = $data["existing_ideas"] ?? [];
 $joined = implode(", ", array_map(fn($idea) => "\"$idea\"", $existing_ideas));
 
 // Build Claude-friendly prompt
-$prompt = "Generate a new simple icon idea for the theme \"$selected_theme\".
+$prompt = "Generate a fresh, distinctive icon concept for the theme \"$selected_theme\".
 Avoid using any of the following ideas: [$joined]
-Return ONLY the icon idea as a short phrase. No formatting or explanation.";
+Respond with ONLY the icon idea as a brief, descriptive phrase (3-7 words). No additional text.
+
+Your icon concept should:
+- Be simple enough to work at small sizes
+- Have a recognizable silhouette
+- Use minimal detail while remaining identifiable
+- Be visually distinct from the excluded concepts
+
+Format as: [Icon Name] – [Brief visual description]";
 
 // Prepare cURL to Replicate Claude 3.5 Haiku (no polling, Prefer: wait)
 $ch = curl_init("https://api.replicate.com/v1/models/anthropic/claude-3.5-haiku/predictions");
