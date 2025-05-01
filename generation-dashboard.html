@@ -39,7 +39,7 @@
       let dashboard = {};
 
       async function loadDashboard() {
-        const response = await fetch("load_dashboard.php");
+        const response = await fetch("php/load_dashboard.php");
         dashboard = await response.json();
         renderDashboard();
       }
@@ -88,7 +88,7 @@
       }
 
       async function saveDashboard() {
-        await fetch("save_dashboard.php", {
+        await fetch("php/save_dashboard.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(dashboard),
@@ -96,7 +96,7 @@
       }
 
       async function generateTheme() {
-        const response = await fetch("generate_theme.php", {
+        const response = await fetch("php/generate_theme.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -135,6 +135,33 @@
           renderDashboard();
           saveDashboard();
         }
+      }
+
+      async function generateIconIdea() {
+        if (!dashboard.selected_theme) return;
+
+        const existingIdeas = dashboard.icon_idea_backlog
+          .filter((i) => i.theme === dashboard.selected_theme)
+          .map((i) => i.idea);
+
+        const response = await fetch("generate_icon_idea.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            selected_theme: dashboard.selected_theme,
+            existing_ideas: existingIdeas,
+          }),
+        });
+
+        const data = await response.json();
+        dashboard.generated_icon_idea = {
+          idea: data.idea,
+          is_new: data.is_new,
+        };
+
+        console.log("[Replicate Icon Idea Response]", data);
+        renderDashboard();
+        saveDashboard();
       }
 
       function addIconIdea() {
@@ -180,9 +207,7 @@
     <div class="section">
       <h2>Action 2: Generate Icon Idea</h2>
       <button onclick="grabTopBacklogTheme()">[GRAB TOP BACKLOG THEME]</button>
-      <button onclick="/* generateIconIdea logic here */">
-        [GENERATE ICON IDEAS]
-      </button>
+      <button onclick="generateIconIdea()">[GENERATE ICON IDEA]</button>
       <button onclick="addIconIdea()">[ADD ICON IDEA TO ICON BACKLOG]</button>
       <div class="output" id="selected-theme">DISPLAY SELECTED THEME HERE</div>
       <div class="output" id="icon-idea">DISPLAY GENERATED ICON IDEA HERE</div>

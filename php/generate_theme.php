@@ -59,7 +59,7 @@ $curl_error = curl_error($ch);
 curl_close($ch);
 
 // Save raw response for debugging
-file_put_contents("replicate-debug.json", $init_response ?: $curl_error);
+file_put_contents("../json/replicate-debug.json", $init_response ?: $curl_error);
 
 // Handle request failure
 if (!$init_response) {
