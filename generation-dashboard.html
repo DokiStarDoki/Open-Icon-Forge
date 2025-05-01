@@ -35,14 +35,120 @@
         border-radius: 6px;
       }
     </style>
+    <script>
+      let dashboard = {};
+
+      async function loadDashboard() {
+        const response = await fetch("load_dashboard.php");
+        dashboard = await response.json();
+        renderDashboard();
+      }
+
+      function renderDashboard() {
+        document.getElementById("theme-output").innerText =
+          dashboard.generated_theme?.name || "DISPLAY THEME GENERATED HERE";
+        document.getElementById("theme-new-flag").innerText =
+          "IS NEW: " + (dashboard.generated_theme?.is_new ?? "[TRUE/FALSE]");
+        document.getElementById("theme-backlog").innerText =
+          "Theme Backlog: " + dashboard.theme_backlog.join(", ");
+
+        document.getElementById("selected-theme").innerText =
+          dashboard.selected_theme || "DISPLAY SELECTED THEME HERE";
+        document.getElementById("icon-idea").innerText =
+          dashboard.generated_icon_idea?.idea ||
+          "DISPLAY GENERATED ICON IDEA HERE";
+        document.getElementById("icon-new-flag").innerText =
+          "IS NEW: " +
+          (dashboard.generated_icon_idea?.is_new ?? "[TRUE/FALSE]");
+        document.getElementById("icon-backlog").innerText =
+          "Icon Backlog: " +
+          dashboard.icon_idea_backlog.map((i) => i.idea).join(", ");
+
+        document.getElementById("grabbed-icon").innerText =
+          "Selected Icon: " +
+          (dashboard.selected_icon?.idea ?? "[Grabbed icon name]");
+        document.getElementById("icon-preview").innerText =
+          "DISPLAY GENERATED ICON HERE";
+        document.getElementById("png-quality").innerText =
+          "IS QUALITY (PNG): " +
+          (dashboard.generated_icon?.quality_check_passed ?? "[TRUE/FALSE]");
+
+        document.getElementById("vector-preview").innerText =
+          "DISPLAY VECTOR ICON HERE";
+        document.getElementById("svg-quality").innerText =
+          "IS QUALITY (SVG): " +
+          (dashboard.vectorized_icon?.quality_check_passed ?? "[TRUE/FALSE]");
+
+        const md = dashboard.metadata;
+        document.getElementById("metadata-view").innerText = md
+          ? `Name: ${md.name}\nDesc: ${
+              md.short_description
+            }\nTags: ${md.tags.join(", ")}`
+          : "DISPLAY AND EDIT METADATA HERE";
+      }
+
+      async function saveDashboard() {
+        await fetch("save_dashboard.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dashboard),
+        });
+      }
+
+      function addThemeToBacklog() {
+        if (
+          dashboard.generated_theme?.name &&
+          dashboard.generated_theme.is_new
+        ) {
+          dashboard.theme_backlog.push(dashboard.generated_theme.name);
+          dashboard.generated_theme.is_new = false;
+          renderDashboard();
+          saveDashboard();
+        }
+      }
+
+      function grabTopBacklogTheme() {
+        if (dashboard.theme_backlog.length > 0) {
+          dashboard.selected_theme = dashboard.theme_backlog.shift();
+          renderDashboard();
+          saveDashboard();
+        }
+      }
+
+      function addIconIdea() {
+        if (
+          dashboard.generated_icon_idea?.idea &&
+          dashboard.generated_icon_idea.is_new
+        ) {
+          dashboard.icon_idea_backlog.push({
+            theme: dashboard.selected_theme,
+            idea: dashboard.generated_icon_idea.idea,
+          });
+          dashboard.generated_icon_idea.is_new = false;
+          renderDashboard();
+          saveDashboard();
+        }
+      }
+
+      function grabTopIcon() {
+        if (dashboard.icon_idea_backlog.length > 0) {
+          dashboard.selected_icon = dashboard.icon_idea_backlog.shift();
+          renderDashboard();
+          saveDashboard();
+        }
+      }
+
+      window.onload = loadDashboard;
+    </script>
   </head>
   <body>
     <h1>Icon Forge Dashboard</h1>
 
-    <!-- Action 1 -->
     <div class="section">
       <h2>Action 1: Generate Theme</h2>
-      <button onclick="generateTheme()">[GENERATE NEW THEME]</button>
+      <button onclick="/* generateTheme logic here */">
+        [GENERATE NEW THEME]
+      </button>
       <button onclick="addThemeToBacklog()">[ADD THEME TO BACKLOG]</button>
       <div class="output" id="theme-output">DISPLAY THEME GENERATED HERE</div>
       <div class="output" id="theme-new-flag">IS NEW: [TRUE/FALSE]</div>
@@ -51,11 +157,12 @@
       </div>
     </div>
 
-    <!-- Action 2 -->
     <div class="section">
       <h2>Action 2: Generate Icon Idea</h2>
       <button onclick="grabTopBacklogTheme()">[GRAB TOP BACKLOG THEME]</button>
-      <button onclick="generateIconIdea()">[GENERATE ICON IDEAS]</button>
+      <button onclick="/* generateIconIdea logic here */">
+        [GENERATE ICON IDEAS]
+      </button>
       <button onclick="addIconIdea()">[ADD ICON IDEA TO ICON BACKLOG]</button>
       <div class="output" id="selected-theme">DISPLAY SELECTED THEME HERE</div>
       <div class="output" id="icon-idea">DISPLAY GENERATED ICON IDEA HERE</div>
@@ -65,11 +172,10 @@
       </div>
     </div>
 
-    <!-- Action 3 -->
     <div class="section">
       <h2>Action 3: Generate Icon</h2>
       <button onclick="grabTopIcon()">[GRAB TOP BACKLOG ICON]</button>
-      <button onclick="generateIcon()">[GENERATE ICON]</button>
+      <button onclick="/* generateIcon logic here */">[GENERATE ICON]</button>
       <div class="output" id="grabbed-icon">
         Selected Icon: [Grabbed icon name]
       </div>
@@ -77,20 +183,20 @@
       <div class="output" id="png-quality">IS QUALITY (PNG): [TRUE/FALSE]</div>
     </div>
 
-    <!-- Action 4 -->
     <div class="section">
       <h2>Action 4: Vectorize Icon</h2>
-      <button onclick="vectorizeIcon()">[VECTORIZE ICON]</button>
-      <button onclick="saveVector()">[SAVE VECTOR]</button>
+      <button onclick="/* vectorizeIcon logic here */">[VECTORIZE ICON]</button>
+      <button onclick="/* saveVector logic here */">[SAVE VECTOR]</button>
       <div class="output" id="vector-preview">DISPLAY VECTOR ICON HERE</div>
       <div class="output" id="svg-quality">IS QUALITY (SVG): [TRUE/FALSE]</div>
     </div>
 
-    <!-- Action 5 -->
     <div class="section">
       <h2>Action 5: Finalize Metadata</h2>
-      <button onclick="generateMetadata()">[GENERATE METADATA]</button>
-      <button onclick="saveMetadata()">[SAVE METADATA]</button>
+      <button onclick="/* generateMetadata logic here */">
+        [GENERATE METADATA]
+      </button>
+      <button onclick="/* saveMetadata logic here */">[SAVE METADATA]</button>
       <div class="output" id="metadata-view">
         DISPLAY AND EDIT METADATA HERE
       </div>
