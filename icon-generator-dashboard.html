@@ -2,205 +2,131 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Icon Generator Dashboard</title>
     <style>
       body {
         font-family: sans-serif;
         margin: 0;
-        padding: 1rem;
-        background: #f5f7fa;
-      }
-      h1 {
-        text-align: center;
-        color: #2c3e50;
-      }
-      .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
-      }
-      .panel {
-        background: white;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      }
-      .panel h2 {
-        margin-top: 0;
-        font-size: 1.1rem;
-        color: #34495e;
-      }
-      #startStopBtn,
-      #selectThemeBtn {
-        display: block;
-        margin: 1rem auto;
-        padding: 0.75rem 1.5rem;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 1rem;
-        cursor: pointer;
-      }
-      ul {
-        list-style: none;
         padding: 0;
-        margin: 0;
-        max-height: 200px;
+        display: flex;
+      }
+      .main {
+        flex: 1;
+        padding: 1rem;
         overflow-y: auto;
       }
-      li {
-        padding: 0.25rem 0;
-        border-bottom: 1px solid #eee;
+      .card {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      .card h4 {
+        margin-top: 0;
+      }
+      .output {
+        background: #fafafa;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        white-space: pre-wrap;
+      }
+      img.preview {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0.5rem;
+      }
+      .preview-box {
+        display: flex;
+        gap: 1rem;
+      }
+      textarea {
+        width: 100%;
+        height: 120px;
       }
     </style>
   </head>
   <body>
-    <h1>Icon Generator Dashboard</h1>
-    <button id="startStopBtn">Start Generation</button>
-    <button id="selectThemeBtn">Select Top Theme from Backlog</button>
+    <div class="main">
+      <section id="dashboard">
+        <h2>🧪 Icon Generator Dashboard</h2>
 
-    <div class="container">
-      <div class="panel">
-        <h2>1️⃣ Theme Backlog</h2>
-        <ul id="themeBacklog"></ul>
-      </div>
-      <div class="panel">
-        <h2>2️⃣ Active Theme</h2>
-        <p id="activeTheme">NO ACTIVE THEME</p>
-      </div>
-      <div class="panel">
-        <h2>3️⃣ Completed Themes</h2>
-        <ul id="completedThemes"></ul>
-      </div>
-      <div class="panel">
-        <h2>4️⃣ Active Theme Icon Backlog</h2>
-        <ul id="activeThemeIconBacklog"></ul>
-      </div>
-      <div class="panel">
-        <h2>5️⃣ Active Icon (Pending Audit)</h2>
-        <p id="activeIcon">(None)</p>
-      </div>
-      <div class="panel">
-        <h2>6️⃣ Active Theme Completed Icons</h2>
-        <ul id="activeThemeCompletedIcons"></ul>
-      </div>
-      <div class="panel">
-        <h2>7️⃣ Completed Icons (All)</h2>
-        <ul id="completedIcons"></ul>
-      </div>
+        <div class="card">
+          <h4>ACTION 1: Generate 1 New Theme</h4>
+          <button onclick="generateTheme()">Generate New Theme</button>
+          <div class="output" id="theme-output">[Theme will appear here]</div>
+          <button onclick="saveTheme()">Save Theme to Backlog</button>
+          <div class="output" id="theme-list">
+            [Theme backlog will appear here]
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>ACTION 2: Generate Icon Idea</h4>
+          <button onclick="generateIconIdea()">Generate Icon Idea</button>
+          <div class="output" id="icon-idea-output">
+            [Icon idea will appear here]
+          </div>
+          <button onclick="saveIconIdea()">Save Icon Idea to Backlog</button>
+          <div class="output" id="icon-idea-list">
+            [Icon idea backlog will appear here]
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>ACTION 3: Generate PNG for Idea</h4>
+          <button onclick="generatePNG()">Generate PNG</button>
+          <div class="preview-box">
+            <img id="png-preview" class="preview" src="" alt="PNG preview" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>ACTION 4: Vectorize PNG to SVG</h4>
+          <button onclick="vectorizeImage()">Vectorize</button>
+          <div class="preview-box">
+            <img id="svg-preview" class="preview" src="" alt="SVG preview" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>ACTION 5: Generate Metadata</h4>
+          <button onclick="generateMetadata()">Generate Metadata</button>
+          <textarea id="metadata-editor">
+{
+  "name": "",
+  "short_description": "",
+  "tags": [],
+  "theme": "",
+  "date_created": ""
+}</textarea
+          >
+        </div>
+
+        <div class="card">
+          <h4>ACTION 6: Approve & Finalize Icon</h4>
+          <button onclick="approveIcon()">Approve Icon</button>
+          <div class="output" id="final-output">
+            [Finalization details here]
+          </div>
+        </div>
+      </section>
+
+      <section id="tools">
+        <h2>🛠 Debug Output</h2>
+        <div class="output" id="log-output">
+          [Logs or debug output shown here]
+        </div>
+      </section>
     </div>
 
     <script>
-      const startStopBtn = document.getElementById("startStopBtn");
-      const selectThemeBtn = document.getElementById("selectThemeBtn");
-      let running = false;
-      let jsonData = [];
-
-      startStopBtn.addEventListener("click", () => {
-        running = !running;
-        startStopBtn.textContent = running
-          ? "Stop Generation"
-          : "Start Generation";
-      });
-
-      selectThemeBtn.addEventListener("click", () => {
-        const backlogEntry = jsonData.find((entry) => entry["theme-backlog"]);
-        const completedEntry = jsonData.find(
-          (entry) => entry["completed-themes"]
-        );
-        if (backlogEntry && backlogEntry["theme-backlog"].length > 0) {
-          const topTheme = backlogEntry["theme-backlog"].shift();
-          if (completedEntry) {
-            completedEntry["completed-themes"].push(topTheme);
-          } else {
-            jsonData.push({ "completed-themes": [topTheme] });
-          }
-          renderDashboard(jsonData);
-          saveMetadata(jsonData);
-        }
-      });
-
-      function saveMetadata(data) {
-        fetch("save_metadata.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        })
-          .then((res) => {
-            if (!res.ok) throw new Error("Failed to save metadata");
-            console.log("Metadata saved");
-          })
-          .catch(console.error);
-      }
-
-      function renderDashboard(data) {
-        const themeBacklog = document.getElementById("themeBacklog");
-        const completedThemes = document.getElementById("completedThemes");
-        const activeTheme = document.getElementById("activeTheme");
-        const activeThemeIconBacklog = document.getElementById(
-          "activeThemeIconBacklog"
-        );
-        const activeIcon = document.getElementById("activeIcon");
-        const activeThemeCompletedIcons = document.getElementById(
-          "activeThemeCompletedIcons"
-        );
-        const completedIcons = document.getElementById("completedIcons");
-
-        const icons = data.filter((entry) => entry.file);
-        const themeBacklogData =
-          data.find((entry) => entry["theme-backlog"])?.["theme-backlog"] || [];
-        const completedThemesData =
-          data.find((entry) => entry["completed-themes"])?.[
-            "completed-themes"
-          ] || [];
-
-        const activeThemeValue = completedThemesData.at(-1) || null;
-        activeTheme.textContent = activeThemeValue || "NO ACTIVE THEME";
-
-        themeBacklog.innerHTML = themeBacklogData
-          .map((t) => `<li>${t}</li>`)
-          .join("");
-        completedThemes.innerHTML = completedThemesData
-          .filter((t) => t !== activeThemeValue)
-          .map((t) => `<li>${t}</li>`)
-          .join("");
-
-        const activeThemeIcons = icons.filter(
-          (i) => i.theme === activeThemeValue
-        );
-        activeThemeCompletedIcons.innerHTML = activeThemeIcons
-          .map((i) => `<li>${i.name}</li>`)
-          .join("");
-
-        const lastIcon = icons.at(-1);
-        activeIcon.textContent = lastIcon?.name || "(None)";
-
-        completedIcons.innerHTML = icons
-          .map((i) => `<li>${i.name}</li>`)
-          .join("");
-
-        const activeThemeIconBacklogData = [
-          "Icon Idea 1",
-          "Icon Idea 2",
-          "Icon Idea 3",
-          "Icon Idea 4",
-          "Icon Idea 5",
-        ];
-        activeThemeIconBacklog.innerHTML = activeThemeIconBacklogData
-          .map((i) => `<li>${i}</li>`)
-          .join("");
-      }
-
-      fetch("metadata.json")
-        .then((res) => res.json())
-        .then((data) => {
-          jsonData = data;
-          renderDashboard(jsonData);
-        })
-        .catch((err) => console.error("Error loading metadata.json:", err));
+      function generateTheme() {}
+      function saveTheme() {}
+      function generateIconIdea() {}
+      function saveIconIdea() {}
+      function generatePNG() {}
+      function vectorizeImage() {}
+      function generateMetadata() {}
+      function approveIcon() {}
     </script>
   </body>
 </html>
