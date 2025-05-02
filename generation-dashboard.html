@@ -69,17 +69,61 @@
         loadGeneratedImages();
       }
 
-      async function testConvertToBMP() {
-        const imagePath = "icons/generated/airforce-badge.png"; // change as needed
+      async function convertToSvgFromPngOrWebp(imagePath) {
+        try {
+          // STEP 1: Convert image (png/webp) to BMP
+          const bmpResponse = await fetch("php/icon_to_bmp.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ image_path: imagePath }),
+          });
 
-        const response = await fetch("php/icon_to_bmp.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ image_path: imagePath }),
-        });
+          const bmpData = await bmpResponse.json();
 
-        const data = await response.json();
-        console.log(data);
+          if (!bmpData.success) {
+            console.error("BMP conversion failed:", bmpData.error);
+            alert("Failed to create BMP.");
+            return;
+          }
+
+          const bmpPath = bmpData.bmp_path;
+          console.log("BMP created:", bmpPath);
+
+          // STEP 2: Run Potrace to convert BMP to SVG
+          const svgResponse = await fetch("php/bmp_to_svg.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ bmp_path: bmpPath }),
+          });
+
+          const svgData = await svgResponse.json();
+
+          if (!svgData.success) {
+            console.error("Potrace failed:", svgData.error);
+            alert("Failed to vectorize BMP.");
+            return;
+          }
+
+          // Optional: update dashboard or preview
+          console.log("SVG created:", svgData.svg_path);
+          dashboard.vectorized_icon = {
+            svg_path: svgData.svg_path,
+            quality_check_passed: false,
+          };
+          renderDashboard();
+          saveDashboard();
+        } catch (err) {
+          console.error("Error in vectorization pipeline:", err);
+        }
+      }
+
+      function vectorizeIcon() {
+        const path = dashboard.generated_icon?.png_path;
+        if (!path) {
+          alert("No icon selected for vectorization.");
+          return;
+        }
+        convertToSvgFromPngOrWebp(path);
       }
 
       function renderDashboard() {
@@ -182,28 +226,6 @@
 
         // Clear out old vector if switching to a new image
         dashboard.vectorized_icon = null;
-
-        renderDashboard();
-        saveDashboard();
-      }
-
-      async function vectorizeIcon() {
-        if (!dashboard.generated_icon?.png_path) return;
-        console.log("Sending image_path:", dashboard.generated_icon?.png_path);
-
-        const response = await fetch("php/vectorize_icon.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            image_path: dashboard.generated_icon.png_path,
-          }),
-        });
-
-        const data = await response.json();
-        dashboard.vectorized_icon = {
-          svg_path: data.svg_path,
-          quality_check_passed: false,
-        };
 
         renderDashboard();
         saveDashboard();
@@ -394,7 +416,7 @@
 
     <div class="section">
       <h2>Action 4: Vectorize Icon</h2>
-      <button onclick="testConvertToBMP()">[VECTORIZE ICON]</button>
+      <button onclick="vectorizeIcon()">[VECTORIZE ICON]</button>
       <div class="output" id="vector-preview">DISPLAY VECTOR ICON HERE</div>
       <div class="output" id="svg-quality">IS QUALITY (SVG): [TRUE/FALSE]</div>
     </div>
