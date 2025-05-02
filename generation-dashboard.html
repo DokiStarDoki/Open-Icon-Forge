@@ -39,6 +39,7 @@
         margin-right: 10px;
         border-radius: 4px;
         border: 1px solid #ccc;
+        cursor: pointer;
       }
     </style>
     <script>
@@ -118,12 +119,41 @@
       }
 
       function vectorizeIcon() {
-        const path = dashboard.generated_icon?.png_path;
-        if (!path) {
-          alert("No icon selected for vectorization.");
+        const idea = dashboard.selected_icon?.idea;
+        if (!idea) {
+          alert("No icon selected.");
           return;
         }
-        convertToSvgFromPngOrWebp(path);
+
+        const imagePath = `icons/generated/${dashboard.selected_icon.filename}`;
+        convertToSvgFromPngOrWebp(imagePath); // existing chain
+      }
+
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, "")
+          .trim()
+          .replace(/\s+/g, "-") // replace whitespace
+          .replace(/^-+|-+$/g, ""); // remove leading/trailing dashes
+      }
+
+      function getCurrentIconBaseSlug() {
+        return slugify(dashboard.selected_icon?.idea || "");
+      }
+
+      function getIconPaths() {
+        const filename = dashboard.selected_icon?.filename || "";
+        const base = filename.replace(/\.(webp|png)$/i, "");
+
+        return {
+          base,
+          png: `icons/generated/${base}.png`,
+          webp: `icons/generated/${base}.webp`,
+          bmp: `icons/temp/${base}.bmp`,
+          svg: `icons/vectorized/${base}.svg`,
+          preferred: null, // we’ll determine this dynamically
+        };
       }
 
       function renderDashboard() {
@@ -153,42 +183,42 @@
 
         document.getElementById("grabbed-icon").innerText =
           "Selected Icon: " +
-          (dashboard.generated_icon?.png_path || "None selected");
-
-        document.getElementById("png-quality").innerText =
-          "IS QUALITY (PNG): " +
-          (dashboard.generated_icon?.quality_check_passed ?? "[TRUE/FALSE]");
+          (dashboard.selected_icon?.idea || "None selected");
 
         const svgPreview = document.getElementById("vector-preview");
-
         let previewHTML = "";
 
-        // Show selected PNG/WebP preview
-        if (dashboard.generated_icon?.png_path) {
+        const filename = dashboard.selected_icon?.filename;
+        const base = filename?.replace(/\.(webp|png)$/i, "");
+
+        if (filename) {
           previewHTML += `
-            <div>
-              <strong>Original:</strong><br>
-              <img src="${dashboard.generated_icon.png_path}" style="max-height:100px;">
-            </div>`;
+    <div>
+      <strong>Original:</strong><br>
+      <img src="icons/generated/${encodeURIComponent(
+        filename
+      )}" style="max-height:100px;">
+    </div>`;
         }
 
-        // Only show SVG if the path is in vectorized folder and PNG path matches
-        if (
-          dashboard.vectorized_icon?.svg_path &&
-          dashboard.vectorized_icon.svg_path.startsWith("icons/vectorized/")
-        ) {
+        if (base) {
           previewHTML += `
-            <div style="margin-top:10px;">
-              <strong>Vector:</strong><br>
-              <img src="${dashboard.vectorized_icon.svg_path}" style="max-height:100px;">
-            </div>`;
+    <div style="margin-top:10px;">
+      <strong>Vector:</strong><br>
+      <img src="icons/vectorized/${encodeURIComponent(
+        base
+      )}.svg" style="max-height:100px;">
+    </div>`;
         }
 
         svgPreview.innerHTML = previewHTML || "DISPLAY VECTOR ICON HERE";
 
+        // Static placeholder for quality flags
+        document.getElementById("png-quality").innerText =
+          "IS QUALITY (PNG): [TRUE/FALSE]";
+
         document.getElementById("svg-quality").innerText =
-          "IS QUALITY (SVG): " +
-          (dashboard.vectorized_icon?.quality_check_passed ?? "[TRUE/FALSE]");
+          "IS QUALITY (SVG): [TRUE/FALSE]";
 
         const md = dashboard.metadata;
         document.getElementById("metadata-view").innerText = md
@@ -219,13 +249,15 @@
       }
 
       function selectForVector(path) {
-        dashboard.generated_icon = {
-          png_path: path,
-          quality_check_passed: false,
-        };
+        const filename = path.split("/").pop(); // e.g. "Bubbling Icon.webp"
+        const base = filename.replace(/\.(webp|png)$/i, ""); // remove extension
+        const theme = dashboard.selected_theme || "Uncategorized";
 
-        // Clear out old vector if switching to a new image
-        dashboard.vectorized_icon = null;
+        dashboard.selected_icon = {
+          theme,
+          idea: base, // idea shown to user = base name
+          filename: filename, // actual saved file
+        };
 
         renderDashboard();
         saveDashboard();
@@ -239,8 +271,6 @@
             body: JSON.stringify({
               selected_theme: dashboard.selected_theme,
               selected_icon: dashboard.selected_icon,
-              generated_icon: dashboard.generated_icon,
-              vectorized_icon: dashboard.vectorized_icon,
               metadata: dashboard.metadata,
               generated_theme: dashboard.generated_theme,
               generated_icon_idea: dashboard.generated_icon_idea,
@@ -350,6 +380,7 @@
 
       async function generateIcon() {
         const { theme, idea } = dashboard.selected_icon;
+        console.log(idea);
         const response = await fetch("php/generate_icon.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },

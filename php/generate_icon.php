@@ -53,8 +53,9 @@ if (!$theme || !$idea) {
 
 // Generate prompt and file slug
 $prompt = "black and white icon, line art only, white background, no color. simple. concept: $idea. Theme: $theme";
-$slug = strtolower(preg_replace("/[^a-z0-9]+/", "-", $idea));
-$output_path = "../icons/generated/$slug.webp";
+
+$filename = trim(preg_replace('/[\\\\\/:*?"<>|]+/', '', $idea)); // strip illegal FS chars
+$output_path = "../icons/generated/$filename.webp";
 
 // Prepare payload for Replicate API
 $payload = json_encode([
@@ -138,7 +139,8 @@ file_put_contents($output_path, $image_data);
 // ✅ All good — clean buffer and return JSON
 ob_end_clean();
 echo json_encode([
-  "png_path" => "../icons/generated/$slug.webp",
+  "filename" => "$filename.webp",
   "quality_check_passed" => false
 ]);
+
 ?>
