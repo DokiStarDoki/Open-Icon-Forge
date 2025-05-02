@@ -1,24 +1,22 @@
 <?php
-// Enable errors for debugging
 ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 header("Content-Type: application/json");
 
-// Get image_path from POST
 $body = json_decode(file_get_contents("php://input"), true);
-if (!isset($body['image_path'])) {
+$relPath = $body['image_path'] ?? null;
+
+if (!$relPath) {
   http_response_code(400);
   echo json_encode(["error" => "Missing image_path"]);
   exit;
 }
 
-// Convert relative web path to filesystem path
-$webRoot = realpath(__DIR__ . '/../'); // e.g. project root
-$inputPath = realpath($webRoot . '/' . $body['image_path']);
+$webRoot = realpath(__DIR__ . '/../');
+$inputPath = realpath($webRoot . '/' . $relPath);
 if (!$inputPath || !file_exists($inputPath)) {
   http_response_code(404);
-  echo json_encode(["error" => "Image file not found at path: $inputPath"]);
+  echo json_encode(["error" => "Image not found"]);
   exit;
 }
 
@@ -27,49 +25,62 @@ $filename = pathinfo($inputPath, PATHINFO_FILENAME);
 $bmpDir = $webRoot . '/icons/temp/';
 $bmpPath = $bmpDir . $filename . '.bmp';
 
-// Ensure temp directory exists
 if (!is_dir($bmpDir) && !mkdir($bmpDir, 0755, true)) {
   http_response_code(500);
-  echo json_encode(["error" => "Failed to create temp folder: $bmpDir"]);
+  echo json_encode(["error" => "Could not create temp folder"]);
   exit;
 }
 
-// Load image using GD
+// Load image
 switch ($ext) {
   case 'webp':
-    $image = imagecreatefromwebp($inputPath);
+    $src = imagecreatefromwebp($inputPath);
     break;
   case 'png':
-    $image = imagecreatefrompng($inputPath);
+    $src = imagecreatefrompng($inputPath);
     break;
   default:
     http_response_code(415);
-    echo json_encode(["error" => "Unsupported file type: $ext"]);
+    echo json_encode(["error" => "Unsupported file type"]);
     exit;
 }
 
-if (!$image) {
+if (!$src) {
   http_response_code(500);
-  echo json_encode(["error" => "Failed to load image: $inputPath"]);
+  echo json_encode(["error" => "Failed to load image"]);
   exit;
 }
 
-// Save BMP
-if (!function_exists('imagebmp')) {
-  http_response_code(500);
-  echo json_encode(["error" => "imagebmp() not available in this PHP build."]);
-  exit;
+$width = imagesx($src);
+$height = imagesy($src);
+$bw = imagecreatetruecolor($width, $height);
+
+// Convert to black and white
+$black = imagecolorallocate($bw, 0, 0, 0);
+$white = imagecolorallocate($bw, 255, 255, 255);
+$threshold = 127;
+
+for ($y = 0; $y < $height; $y++) {
+  for ($x = 0; $x < $width; $x++) {
+    $rgb = imagecolorat($src, $x, $y);
+    $r = ($rgb >> 16) & 0xFF;
+    $g = ($rgb >> 8) & 0xFF;
+    $b = $rgb & 0xFF;
+    $brightness = 0.299 * $r + 0.587 * $g + 0.114 * $b;
+    imagesetpixel($bw, $x, $y, $brightness < $threshold ? $black : $white);
+  }
 }
 
-if (!imagebmp($image, $bmpPath)) {
+imagedestroy($src);
+
+// Save to BMP
+if (!imagebmp($bw, $bmpPath)) {
   http_response_code(500);
-  echo json_encode(["error" => "Failed to save BMP to $bmpPath"]);
+  echo json_encode(["error" => "Failed to write BMP"]);
   exit;
 }
+imagedestroy($bw);
 
-imagedestroy($image);
-
-// Respond with the .bmp path
 echo json_encode([
   "success" => true,
   "bmp_path" => 'icons/temp/' . basename($bmpPath),
