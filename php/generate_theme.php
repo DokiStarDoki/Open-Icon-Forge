@@ -88,4 +88,3 @@ echo json_encode([
   "theme" => $theme,
   "is_new" => $is_new
 ]);
-?>
