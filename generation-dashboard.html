@@ -78,14 +78,36 @@
 
         document.getElementById("grabbed-icon").innerText =
           "Selected Icon: " +
-          (dashboard.selected_icon?.idea ?? "[Grabbed icon name]");
+          (dashboard.generated_icon?.png_path || "None selected");
 
         document.getElementById("png-quality").innerText =
           "IS QUALITY (PNG): " +
           (dashboard.generated_icon?.quality_check_passed ?? "[TRUE/FALSE]");
 
-        document.getElementById("vector-preview").innerText =
-          "DISPLAY VECTOR ICON HERE";
+        const svgPreview = document.getElementById("vector-preview");
+
+        let previewHTML = "";
+
+        // Show PNG or WebP preview (selected image)
+        if (dashboard.generated_icon?.png_path) {
+          previewHTML += `
+    <div>
+      <strong>Original:</strong><br>
+      <img src="${dashboard.generated_icon.png_path}" style="max-height:100px;">
+    </div>`;
+        }
+
+        // Show SVG vectorized preview if available
+        if (dashboard.vectorized_icon?.svg_path) {
+          previewHTML += `
+    <div style="margin-top:10px;">
+      <strong>Vector:</strong><br>
+      <img src="${dashboard.vectorized_icon.svg_path}" style="max-height:100px;">
+    </div>`;
+        }
+
+        // Fallback if neither are set
+        svgPreview.innerHTML = previewHTML || "DISPLAY VECTOR ICON HERE";
 
         document.getElementById("svg-quality").innerText =
           "IS QUALITY (SVG): " +
@@ -112,9 +134,41 @@
         container.innerHTML = images
           .map(
             (path) =>
-              `<img src="${path}" alt="icon" title="${path.split("/").pop()}">`
+              `<img src="${path}" onclick="selectForVector('${path}')" alt="icon" title="${path
+                .split("/")
+                .pop()}">`
           )
           .join("");
+      }
+
+      function selectForVector(path) {
+        dashboard.generated_icon = {
+          png_path: path,
+          quality_check_passed: false,
+        };
+        renderDashboard();
+        saveDashboard();
+      }
+
+      async function vectorizeIcon() {
+        if (!dashboard.generated_icon?.png_path) return;
+
+        const response = await fetch("php/vectorize_icon.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            image_path: dashboard.generated_icon.png_path,
+          }),
+        });
+
+        const data = await response.json();
+        dashboard.vectorized_icon = {
+          svg_path: data.svg_path,
+          quality_check_passed: false,
+        };
+
+        renderDashboard();
+        saveDashboard();
       }
 
       async function saveDashboard() {
@@ -282,8 +336,7 @@
 
     <div class="section">
       <h2>Action 4: Vectorize Icon</h2>
-      <button onclick="/* vectorizeIcon logic */">[VECTORIZE ICON]</button>
-      <button onclick="/* saveVector logic */">[SAVE VECTOR]</button>
+      <button onclick="vectorizeIcon()">[VECTORIZE ICON]</button>
       <div class="output" id="vector-preview">DISPLAY VECTOR ICON HERE</div>
       <div class="output" id="svg-quality">IS QUALITY (SVG): [TRUE/FALSE]</div>
     </div>
