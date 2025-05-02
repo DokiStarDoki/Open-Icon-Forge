@@ -34,6 +34,12 @@
         padding: 10px;
         border-radius: 6px;
       }
+      #generated-images img {
+        max-height: 100px;
+        margin-right: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
     </style>
     <script>
       let dashboard = {};
@@ -42,24 +48,30 @@
         const response = await fetch("php/load_dashboard.php");
         dashboard = await response.json();
         renderDashboard();
+        loadGeneratedImages();
       }
 
       function renderDashboard() {
         document.getElementById("theme-output").innerText =
           dashboard.generated_theme?.name || "DISPLAY THEME GENERATED HERE";
+
         document.getElementById("theme-new-flag").innerText =
           "IS NEW: " + (dashboard.generated_theme?.is_new ?? "[TRUE/FALSE]");
+
         document.getElementById("theme-backlog").innerText =
           "Theme Backlog: " + dashboard.theme_backlog.join(", ");
 
         document.getElementById("selected-theme").innerText =
           dashboard.selected_theme || "DISPLAY SELECTED THEME HERE";
+
         document.getElementById("icon-idea").innerText =
           dashboard.generated_icon_idea?.idea ||
           "DISPLAY GENERATED ICON IDEA HERE";
+
         document.getElementById("icon-new-flag").innerText =
           "IS NEW: " +
           (dashboard.generated_icon_idea?.is_new ?? "[TRUE/FALSE]");
+
         document.getElementById("icon-backlog").innerText =
           "Icon Backlog: " +
           dashboard.icon_idea_backlog.map((i) => i.idea).join(", ");
@@ -67,14 +79,14 @@
         document.getElementById("grabbed-icon").innerText =
           "Selected Icon: " +
           (dashboard.selected_icon?.idea ?? "[Grabbed icon name]");
-        document.getElementById("icon-preview").innerText =
-          "DISPLAY GENERATED ICON HERE";
+
         document.getElementById("png-quality").innerText =
           "IS QUALITY (PNG): " +
           (dashboard.generated_icon?.quality_check_passed ?? "[TRUE/FALSE]");
 
         document.getElementById("vector-preview").innerText =
           "DISPLAY VECTOR ICON HERE";
+
         document.getElementById("svg-quality").innerText =
           "IS QUALITY (SVG): " +
           (dashboard.vectorized_icon?.quality_check_passed ?? "[TRUE/FALSE]");
@@ -85,6 +97,24 @@
               md.short_description
             }\nTags: ${md.tags.join(", ")}`
           : "DISPLAY AND EDIT METADATA HERE";
+      }
+
+      async function loadGeneratedImages() {
+        const response = await fetch("php/list_generated.php");
+        const images = await response.json();
+        const container = document.getElementById("generated-images");
+
+        if (!Array.isArray(images)) {
+          container.innerText = "Failed to load generated images.";
+          return;
+        }
+
+        container.innerHTML = images
+          .map(
+            (path) =>
+              `<img src="${path}" alt="icon" title="${path.split("/").pop()}">`
+          )
+          .join("");
       }
 
       async function saveDashboard() {
@@ -110,8 +140,6 @@
           name: data.theme,
           is_new: data.is_new,
         };
-
-        console.log("[Replicate Response]", data); // 👈 Add this line
 
         renderDashboard();
         saveDashboard();
@@ -187,7 +215,6 @@
       }
 
       async function generateIcon() {
-        console.log("test bug");
         const { theme, idea } = dashboard.selected_icon;
         const response = await fetch("php/generate_icon.php", {
           method: "POST",
@@ -201,10 +228,9 @@
           quality_check_passed: false,
         };
 
-        console.log("📦 RESPONSE FROM PHP:", data);
-
         renderDashboard();
         saveDashboard();
+        loadGeneratedImages(); // Refresh icon list
       }
 
       window.onload = loadDashboard;
@@ -219,9 +245,7 @@
       <button onclick="addThemeToBacklog()">[ADD THEME TO BACKLOG]</button>
       <div class="output" id="theme-output">DISPLAY THEME GENERATED HERE</div>
       <div class="output" id="theme-new-flag">IS NEW: [TRUE/FALSE]</div>
-      <div class="list" id="theme-backlog">
-        Theme Backlog: [List of themes here]
-      </div>
+      <div class="list" id="theme-backlog">Theme Backlog: [List]</div>
     </div>
 
     <div class="section">
@@ -232,36 +256,44 @@
       <div class="output" id="selected-theme">DISPLAY SELECTED THEME HERE</div>
       <div class="output" id="icon-idea">DISPLAY GENERATED ICON IDEA HERE</div>
       <div class="output" id="icon-new-flag">IS NEW: [TRUE/FALSE]</div>
-      <div class="list" id="icon-backlog">
-        Icon Backlog: [List of icon ideas here]
-      </div>
+      <div class="list" id="icon-backlog">Icon Backlog: [List]</div>
     </div>
 
     <div class="section">
       <h2>Action 3: Generate Icon</h2>
       <button onclick="grabTopIcon()">[GRAB TOP BACKLOG ICON]</button>
       <button onclick="generateIcon()">[GENERATE ICON]</button>
-      <div class="output" id="grabbed-icon">
-        Selected Icon: [Grabbed icon name]
+      <div class="output" id="grabbed-icon">Selected Icon: [Grabbed icon]</div>
+      <div class="output">Generated Icons:</div>
+      <div
+        id="generated-images"
+        style="
+          display: flex;
+          overflow-x: auto;
+          padding: 10px;
+          background: #eee;
+          border-radius: 6px;
+        "
+      >
+        <!-- Auto-filled by loadGeneratedImages() -->
       </div>
-      <div class="output" id="icon-preview">DISPLAY GENERATED ICON HERE</div>
       <div class="output" id="png-quality">IS QUALITY (PNG): [TRUE/FALSE]</div>
     </div>
 
     <div class="section">
       <h2>Action 4: Vectorize Icon</h2>
-      <button onclick="/* vectorizeIcon logic here */">[VECTORIZE ICON]</button>
-      <button onclick="/* saveVector logic here */">[SAVE VECTOR]</button>
+      <button onclick="/* vectorizeIcon logic */">[VECTORIZE ICON]</button>
+      <button onclick="/* saveVector logic */">[SAVE VECTOR]</button>
       <div class="output" id="vector-preview">DISPLAY VECTOR ICON HERE</div>
       <div class="output" id="svg-quality">IS QUALITY (SVG): [TRUE/FALSE]</div>
     </div>
 
     <div class="section">
       <h2>Action 5: Finalize Metadata</h2>
-      <button onclick="/* generateMetadata logic here */">
+      <button onclick="/* generateMetadata logic */">
         [GENERATE METADATA]
       </button>
-      <button onclick="/* saveMetadata logic here */">[SAVE METADATA]</button>
+      <button onclick="/* saveMetadata logic */">[SAVE METADATA]</button>
       <div class="output" id="metadata-view">
         DISPLAY AND EDIT METADATA HERE
       </div>
