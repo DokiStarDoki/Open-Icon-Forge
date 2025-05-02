@@ -44,11 +44,42 @@
     <script>
       let dashboard = {};
 
+      window.onload = () => {
+        loadDashboard();
+      };
+
       async function loadDashboard() {
-        const response = await fetch("php/load_dashboard.php");
-        dashboard = await response.json();
+        const [dashRes, themeRes, iconRes] = await Promise.all([
+          fetch("php/load_dashboard.php"),
+          fetch("json/theme-backlog.json"),
+          fetch("json/icon-backlog.json"),
+        ]);
+
+        const dashData = await dashRes.json();
+        const themeData = await themeRes.json();
+        const iconData = await iconRes.json();
+
+        dashboard = {
+          ...dashData,
+          theme_backlog: themeData,
+          icon_idea_backlog: iconData,
+        };
+
         renderDashboard();
         loadGeneratedImages();
+      }
+
+      async function testConvertToBMP() {
+        const imagePath = "icons/generated/airforce-badge.png"; // change as needed
+
+        const response = await fetch("php/icon_to_bmp.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ image_path: imagePath }),
+        });
+
+        const data = await response.json();
+        console.log(data);
       }
 
       function renderDashboard() {
@@ -88,25 +119,27 @@
 
         let previewHTML = "";
 
-        // Show PNG or WebP preview (selected image)
+        // Show selected PNG/WebP preview
         if (dashboard.generated_icon?.png_path) {
           previewHTML += `
-    <div>
-      <strong>Original:</strong><br>
-      <img src="${dashboard.generated_icon.png_path}" style="max-height:100px;">
-    </div>`;
+            <div>
+              <strong>Original:</strong><br>
+              <img src="${dashboard.generated_icon.png_path}" style="max-height:100px;">
+            </div>`;
         }
 
-        // Show SVG vectorized preview if available
-        if (dashboard.vectorized_icon?.svg_path) {
+        // Only show SVG if the path is in vectorized folder and PNG path matches
+        if (
+          dashboard.vectorized_icon?.svg_path &&
+          dashboard.vectorized_icon.svg_path.startsWith("icons/vectorized/")
+        ) {
           previewHTML += `
-    <div style="margin-top:10px;">
-      <strong>Vector:</strong><br>
-      <img src="${dashboard.vectorized_icon.svg_path}" style="max-height:100px;">
-    </div>`;
+            <div style="margin-top:10px;">
+              <strong>Vector:</strong><br>
+              <img src="${dashboard.vectorized_icon.svg_path}" style="max-height:100px;">
+            </div>`;
         }
 
-        // Fallback if neither are set
         svgPreview.innerHTML = previewHTML || "DISPLAY VECTOR ICON HERE";
 
         document.getElementById("svg-quality").innerText =
@@ -146,12 +179,17 @@
           png_path: path,
           quality_check_passed: false,
         };
+
+        // Clear out old vector if switching to a new image
+        dashboard.vectorized_icon = null;
+
         renderDashboard();
         saveDashboard();
       }
 
       async function vectorizeIcon() {
         if (!dashboard.generated_icon?.png_path) return;
+        console.log("Sending image_path:", dashboard.generated_icon?.png_path);
 
         const response = await fetch("php/vectorize_icon.php", {
           method: "POST",
@@ -172,11 +210,31 @@
       }
 
       async function saveDashboard() {
-        await fetch("php/save_dashboard.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(dashboard),
-        });
+        await Promise.all([
+          fetch("php/save_dashboard.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              selected_theme: dashboard.selected_theme,
+              selected_icon: dashboard.selected_icon,
+              generated_icon: dashboard.generated_icon,
+              vectorized_icon: dashboard.vectorized_icon,
+              metadata: dashboard.metadata,
+              generated_theme: dashboard.generated_theme,
+              generated_icon_idea: dashboard.generated_icon_idea,
+            }),
+          }),
+          fetch("php/save_theme_backlog.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dashboard.theme_backlog),
+          }),
+          fetch("php/save_icon_backlog.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dashboard.icon_idea_backlog),
+          }),
+        ]);
       }
 
       async function generateTheme() {
@@ -336,7 +394,7 @@
 
     <div class="section">
       <h2>Action 4: Vectorize Icon</h2>
-      <button onclick="vectorizeIcon()">[VECTORIZE ICON]</button>
+      <button onclick="testConvertToBMP()">[VECTORIZE ICON]</button>
       <div class="output" id="vector-preview">DISPLAY VECTOR ICON HERE</div>
       <div class="output" id="svg-quality">IS QUALITY (SVG): [TRUE/FALSE]</div>
     </div>
