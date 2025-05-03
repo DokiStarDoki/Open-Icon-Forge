@@ -1,47 +1,24 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-header("Content-Type: application/json");
+$bmpFile = urldecode($_GET['file']);
+$outputSvg = str_replace('.bmp', '.svg', $bmpFile);
+$bmpPath = "input/$bmpFile";
+$svgPath = "input/$outputSvg";
 
-$webRoot = realpath(__DIR__ . '/../');
-$tempDir = $webRoot . '/icons/temp/';
-$inputDir = $webRoot . '/input/';
-
-$filename = $_GET['file'] ?? null;
-if (!$filename) {
-  http_response_code(400);
-  echo json_encode(["error" => "Missing ?file parameter"]);
-  exit;
+if (!file_exists($bmpPath)) {
+    echo json_encode(["error" => "BMP not found at $bmpPath"]);
+    exit;
 }
 
-$bmpPath = realpath($tempDir . $filename);
-if (!$bmpPath || !file_exists($bmpPath)) {
-  http_response_code(404);
-  echo json_encode(["error" => "BMP file not found", "path" => $bmpPath]);
-  exit;
+$command = "potrace \"$bmpPath\" -s -o \"$svgPath\"";
+exec($command, $output, $code);
+
+if ($code !== 0 || !file_exists($svgPath)) {
+    echo json_encode([
+        "error" => "Potrace failed or SVG not created.",
+        "command" => $command,
+        "code" => $code
+    ]);
+    exit;
 }
 
-$name = pathinfo($bmpPath, PATHINFO_FILENAME);
-$svgPath = $inputDir . $name . '.svg';
-
-$command = "potrace " . escapeshellarg($bmpPath) . " -s -o " . escapeshellarg($svgPath);
-exec($command . " 2>&1", $output, $exitCode);
-
-if (!file_exists($svgPath) || $exitCode !== 0) {
-  http_response_code(500);
-  echo json_encode([
-    "error" => "Potrace failed",
-    "command" => $command,
-    "output" => implode("\n", $output),
-    "code" => $exitCode
-  ]);
-  exit;
-}
-
-// Clean up
-@unlink($bmpPath);
-
-echo json_encode([
-  "success" => true,
-  "svg_path" => 'input/' . basename($svgPath)
-]);
+echo json_encode(["success" => true, "svg" => $svgPath]);
