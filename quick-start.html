@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Addition Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+      .card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 16px;
+        font-size: 1rem;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      #status {
+        margin-top: 20px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        background: #f1f1f1;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Theme Addition App</h1>
+      <p>
+        This tool ingests new themes from <code>/input/input.json</code> and
+        creates folders under <code>/icons/</code> for each new theme (excluding
+        ignored folders).
+      </p>
+      <button onclick="runThemeAddition()">Ingest New Themes</button>
+      <div id="status">Status: Idle</div>
+
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 20px;
+        "
+      >
+        <div style="flex: 1 1 45%">
+          <h2>Current Themes:</h2>
+          <ul id="theme-list"></ul>
+        </div>
+      </div>
+
+      <div style="flex: 1 1 45%">
+        <h2>New Themes in input.json:</h2>
+        <ul id="input-theme-list"></ul>
+      </div>
+    </div>
+
+    <script>
+      const IGNORED_FOLDERS = ["generated", "temp", "vectorized"];
+
+      async function runThemeAddition() {
+        document.getElementById("status").textContent =
+          "Checking for new themes...";
+
+        const response = await fetch("php/run_theme_addition.php");
+        const result = await response.json();
+
+        let statusText = "Added " + result.added.length + " new themes.";
+
+        if (result.added.length > 0) {
+          statusText +=
+            result.added.length > 0
+              ? "New Themes:" + result.added.map((t) => "- " + t).join("")
+              : "No new themes found.";
+        } else {
+          statusText += "No new themes found.";
+        }
+
+        document.getElementById("status").textContent = statusText;
+        renderThemeList(result.allThemes);
+        reloadInputThemes();
+      }
+
+      async function renderThemeList(themes) {
+        const list = document.getElementById("theme-list");
+        list.innerHTML = "";
+        themes
+          .filter((theme) => !IGNORED_FOLDERS.includes(theme))
+          .forEach((theme) => {
+            const li = document.createElement("li");
+            li.textContent = theme;
+            list.appendChild(li);
+          });
+      }
+
+      // Initial load
+      window.onload = function () {
+        fetch("php/list_themes.php")
+          .then((res) => res.json())
+          .then((data) => {
+            document.getElementById("status").textContent =
+              "Loaded current themes.";
+            renderThemeList(data);
+          })
+          .catch((err) => {
+            document.getElementById("status").textContent =
+              "Failed to load themes.";
+            console.error(err);
+          });
+
+        reloadInputThemes();
+      };
+
+      function reloadInputThemes() {
+        fetch("input/input.json")
+          .then((res) => res.json())
+          .then((data) => {
+            const inputList = document.getElementById("input-theme-list");
+            inputList.innerHTML = "";
+            (data.themes || []).forEach((theme) => {
+              const li = document.createElement("li");
+              li.textContent = theme;
+              inputList.appendChild(li);
+            });
+          })
+          .catch((err) => {
+            const inputList = document.getElementById("input-theme-list");
+            inputList.innerHTML = "<li>Failed to load input.json</li>";
+            console.error(err);
+          });
+      }
+    </script>
+  </body>
+</html>
