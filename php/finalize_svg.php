@@ -1,42 +1,63 @@
 <?php
-$file = urldecode($_GET['file']);
-$svgPath = "input/" . $file;
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+header("Content-Type: application/json");
 
-if (!file_exists($svgPath)) {
-    echo json_encode(["error" => "SVG not found at $svgPath"]);
+// Read and decode JSON input
+$body = json_decode(file_get_contents("php://input"), true);
+$svgPath = $body['svg_path'] ?? null;
+
+if (!$svgPath) {
+    http_response_code(400);
+    echo json_encode(["success" => false, "error" => "Missing svg_path"]);
     exit;
 }
 
-// Load metadata
-$meta = json_decode(file_get_contents("input/input.json"), true);
-$baseName = pathinfo($file, PATHINFO_FILENAME);
+$webRoot = realpath(__DIR__ . '/../');
+$inputPath = realpath($webRoot . '/' . $svgPath);
 
-file_put_contents("php://stderr", "Looking for metadata for $baseName\n");
-
-
-$entry = null;
-foreach ($meta as $item) {
-    if (pathinfo($item['name'], PATHINFO_FILENAME) === $baseName) {
-        $entry = $item;
-        break;
-    }
-}
-
-if (!$entry || !isset($entry['theme'])) {
-    echo json_encode(["error" => "Metadata entry not found for $baseName"]);
+if (!$inputPath || !file_exists($inputPath)) {
+    http_response_code(404);
+    echo json_encode(["success" => false, "error" => "SVG not found"]);
     exit;
 }
 
-$themeFolder = "icons/" . $entry['theme'];
-if (!is_dir($themeFolder)) {
-    mkdir($themeFolder, 0777, true);
+// Determine base name and matching JSON
+$baseName = basename($svgPath, '.svg');
+$jsonPath = $webRoot . "/input/$baseName.json";
+if (!file_exists($jsonPath)) {
+    echo json_encode(["success" => false, "error" => "Metadata JSON not found"]);
+    exit;
 }
+
+$meta = json_decode(file_get_contents($jsonPath), true);
+$theme = $meta['theme'] ?? null;
+$name = $meta['name'] ?? null;
+
+if (!$theme || !$name) {
+    echo json_encode(["success" => false, "error" => "Invalid metadata"]);
+    exit;
+}
+
+$destFolder = $webRoot . "/icons/$theme";
+if (!is_dir($destFolder)) {
+    mkdir($destFolder, 0777, true);
+}
+
+$destSvgPath = "$destFolder/$name.svg";
+$destJsonPath = "$destFolder/$name.json";
 
 // Move SVG
-$destSvg = "$themeFolder/$file";
-rename($svgPath, $destSvg);
+rename($inputPath, $destSvgPath);
 
-// Save metadata
-file_put_contents("$themeFolder/{$baseName}.json", json_encode($entry, JSON_PRETTY_PRINT));
+// Move JSON
+rename($jsonPath, $destJsonPath);
 
-echo json_encode(["success" => true, "moved_to" => $destSvg]);
+// Delete PNG and BMP
+$pngPath = $webRoot . "/input/$baseName.png";
+$bmpPath = $webRoot . "/input/$baseName.bmp";
+
+if (file_exists($pngPath)) unlink($pngPath);
+if (file_exists($bmpPath)) unlink($bmpPath);
+
+echo json_encode(["success" => true, "moved_to" => $destSvgPath]);

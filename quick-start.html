@@ -313,36 +313,45 @@
       function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
       }
-
       async function startVectorization() {
+        const statusBox = document.getElementById("vector-status");
+        statusBox.textContent = "⏳ Starting vectorization...";
+
         const res = await fetch("php/list_pngs.php");
         const files = await res.json();
-        let completed = 0;
 
         for (const file of files) {
-          const base = file.replace(/\.png$/i, "");
+          const imagePath = "input/" + file;
+          try {
+            statusBox.innerHTML += `<div>🖼️ Processing ${imagePath}...</div>`;
 
-          await fetch(`../icon_to_bmp.php?file=${encodeURIComponent(file)}`);
-          await sleep(200);
-          await fetch(
-            `../bmp_to_svg.php?file=${encodeURIComponent(base + ".bmp")}`
-          );
-          await sleep(200);
-          await fetch(
-            `php/finalize_svg.php?file=${encodeURIComponent(base + ".svg")}`
-          );
-          await sleep(200);
-          completed++;
-          document.getElementById(
-            "vector-status"
-          ).textContent = `Progress: ${completed} / ${files.length}`;
+            const bmpRes = await fetch("php/icon_to_bmp.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ image_path: imagePath }),
+            });
+            const bmpJson = await bmpRes.json();
+            if (!bmpJson.success)
+              throw new Error("BMP step failed: " + bmpJson.error);
+
+            const svgRes = await fetch("php/bmp_to_svg.php", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ bmp_path: bmpJson.bmp_path }),
+            });
+            const svgJson = await svgRes.json();
+            if (!svgJson.success)
+              throw new Error("SVG step failed: " + svgJson.error);
+
+            statusBox.innerHTML += `<div>✅ Vectorized to ${svgJson.svg_path}</div>`;
+          } catch (e) {
+            statusBox.innerHTML += `<div style="color:red">❌ Error on ${file}: ${e.message}</div>`;
+          }
         }
 
-        document.getElementById(
-          "vector-status"
-        ).textContent = `✅ All ${completed} icons processed.`;
         loadPngGrid();
         loadSvgGrid();
+        statusBox.innerHTML += "<hr>✅ Done.";
       }
     </script>
   </body>
