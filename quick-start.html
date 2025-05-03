@@ -46,7 +46,7 @@
     <div class="card">
       <h1>Theme Addition App</h1>
       <p>
-        This tool ingests new themes from <code>/input/input.json</code> and
+        This tool ingests new themes from <code>/input/theme.json</code> and
         creates folders under <code>/icons/</code> for each new theme (excluding
         ignored folders).
       </p>
@@ -69,8 +69,38 @@
       </div>
 
       <div style="flex: 1 1 45%">
-        <h2>New Themes in input.json:</h2>
+        <h2>New Themes in theme.json:</h2>
         <ul id="input-theme-list"></ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Icon Ingestion App</h1>
+      <p>
+        This tool ingests icons from <code>/input/icons.json</code> and saves
+        each as a JSON file in its appropriate theme folder under
+        <code>/icons/</code>.
+      </p>
+      <button onclick="runIconIngestion()">Ingest Icons</button>
+      <div id="icon-status">Status: Idle</div>
+
+      <div
+        style="
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 20px;
+        "
+      >
+        <div style="flex: 1 1 45%">
+          <h2>New Icon Ideas (icons.json):</h2>
+          <ul id="input-icon-list"></ul>
+        </div>
+        <div style="flex: 1 1 45%">
+          <h2>All Created Icons:</h2>
+          <ul id="all-icon-list"></ul>
+        </div>
       </div>
     </div>
 
@@ -128,10 +158,12 @@
           });
 
         reloadInputThemes();
+        reloadInputIcons();
+        loadAllIcons();
       };
 
       function reloadInputThemes() {
-        fetch("input/input.json")
+        fetch("input/theme.json")
           .then((res) => res.json())
           .then((data) => {
             const inputList = document.getElementById("input-theme-list");
@@ -144,7 +176,67 @@
           })
           .catch((err) => {
             const inputList = document.getElementById("input-theme-list");
-            inputList.innerHTML = "<li>Failed to load input.json</li>";
+            inputList.innerHTML = "<li>Failed to load theme.json</li>";
+            console.error(err);
+          });
+      }
+
+      function reloadInputIcons() {
+        fetch("input/icons.json")
+          .then((res) => res.json())
+          .then((data) => {
+            const inputList = document.getElementById("input-icon-list");
+            inputList.innerHTML = "";
+            (data || []).forEach((icon) => {
+              const li = document.createElement("li");
+              li.textContent = `${icon.name} (${icon.theme})`;
+              inputList.appendChild(li);
+            });
+          })
+          .catch((err) => {
+            const inputList = document.getElementById("input-icon-list");
+            inputList.innerHTML = "<li>Failed to load icons.json</li>";
+            console.error(err);
+          });
+      }
+
+      function loadAllIcons() {
+        fetch("php/list_generated.php")
+          .then((res) => res.json())
+          .then((icons) => {
+            const allList = document.getElementById("all-icon-list");
+            allList.innerHTML = "";
+            (icons || []).forEach((icon) => {
+              if (icon.name && icon.theme) {
+                const li = document.createElement("li");
+                li.textContent = `${icon.name} (${icon.theme})`;
+                allList.appendChild(li);
+              }
+            });
+          })
+          .catch((err) => {
+            const allList = document.getElementById("all-icon-list");
+            allList.innerHTML = "<li>Failed to load current icons</li>";
+            console.error(err);
+          });
+      }
+
+      function runIconIngestion() {
+        document.getElementById("icon-status").textContent =
+          "Processing icon ideas...";
+
+        fetch("php/icon-idea-ingest.php")
+          .then((res) => res.json())
+          .then((data) => {
+            document.getElementById(
+              "icon-status"
+            ).textContent = `Created ${data.created.length} icons.`;
+            reloadInputIcons(); // ⬅️ Refresh the display after ingestion
+            loadAllIcons(); // ⬅️ Optional: also refresh all created icons
+          })
+          .catch((err) => {
+            document.getElementById("icon-status").textContent =
+              "Failed to ingest icons.";
             console.error(err);
           });
       }

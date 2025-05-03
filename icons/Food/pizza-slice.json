@@ -1,0 +1,12 @@
+{
+    "name": "Pizza Slice",
+    "short_description": "A triangular pizza slice icon with visible toppings.",
+    "tags": [
+        "pizza",
+        "slice",
+        "cheese",
+        "food"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-03"
+}

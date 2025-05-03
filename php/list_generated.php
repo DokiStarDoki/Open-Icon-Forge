@@ -1,10 +1,32 @@
 <?php
-$dir = "../icons/generated/";
-$files = glob($dir . "*.{png,webp}", GLOB_BRACE);
+header('Content-Type: application/json');
 
-$paths = array_map(function($f) {
-  return str_replace("../", "", $f); // Return relative paths
-}, $files);
+$iconDir = '../icons/';
+$icons = [];
 
-echo json_encode($paths);
-?>
+function scanIconMetadata($dir) {
+    $results = [];
+
+    $folders = scandir($dir);
+    foreach ($folders as $folder) {
+        if ($folder === '.' || $folder === '..') continue;
+
+        $path = $dir . $folder . '/';
+        if (!is_dir($path)) continue;
+
+        foreach (glob($path . '*.json') as $file) {
+            $json = json_decode(file_get_contents($file), true);
+            if (isset($json['name']) && isset($json['theme'])) {
+                $results[] = [
+                    'name' => $json['name'],
+                    'theme' => $json['theme']
+                ];
+            }
+        }
+    }
+
+    return $results;
+}
+
+$icons = scanIconMetadata($iconDir);
+echo json_encode($icons);

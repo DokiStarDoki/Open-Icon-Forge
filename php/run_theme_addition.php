@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 $iconsDir = realpath(__DIR__ . '/../icons');
-$inputFile = realpath(__DIR__ . '/../input/input.json');
+$inputFile = realpath(__DIR__ . '/../input/theme.json');
 $ignored = ['generated', 'temp', 'vectorized'];
 
 if (!$iconsDir || !is_dir($iconsDir)) {
@@ -29,7 +29,7 @@ sort($existingThemes);
 // Load input themes
 if (!file_exists($inputFile)) {
   echo json_encode([
-    'error' => 'input.json not found',
+    'error' => 'theme.json not found',
     'added' => [],
     'allThemes' => $existingThemes
   ]);
@@ -53,7 +53,7 @@ foreach ($inputThemes as $theme) {
   // In both cases (added or already existed), do NOT include it in remaining list
 }
 
-// Rewrite input.json with remaining themes (those not added or already present)
+// Rewrite theme.json with remaining themes (those not added or already present)
 file_put_contents($inputFile, json_encode(['themes' => $remaining], JSON_PRETTY_PRINT));
 
 sort($existingThemes);

@@ -1,0 +1,12 @@
+{
+    "name": "Book Stack",
+    "short_description": "A stack of three books arranged on top of each other.",
+    "tags": [
+        "books",
+        "stack",
+        "reading",
+        "library"
+    ],
+    "theme": "Books",
+    "date_created": "2025-05-03"
+}
