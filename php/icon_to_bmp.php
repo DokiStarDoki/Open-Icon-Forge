@@ -3,30 +3,29 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 header("Content-Type: application/json");
 
-// Input
-$body = json_decode(file_get_contents("php://input"), true);
-$relPath = $body['image_path'] ?? null;
+$webRoot = realpath(__DIR__ . '/../');
+$inputDir = $webRoot . '/input/';
+$tempDir = $webRoot . '/icons/temp/';
 
-if (!$relPath) {
+$filename = $_GET['file'] ?? null;
+if (!$filename) {
   http_response_code(400);
-  echo json_encode(["error" => "Missing image_path"]);
+  echo json_encode(["error" => "Missing ?file parameter"]);
   exit;
 }
 
-$webRoot = realpath(__DIR__ . '/../');
-$inputPath = realpath($webRoot . '/' . $relPath);
+$inputPath = realpath($inputDir . $filename);
 if (!$inputPath || !file_exists($inputPath)) {
   http_response_code(404);
-  echo json_encode(["error" => "Image not found"]);
+  echo json_encode(["error" => "Image not found", "path" => $inputPath]);
   exit;
 }
 
 $ext = strtolower(pathinfo($inputPath, PATHINFO_EXTENSION));
-$filename = pathinfo($inputPath, PATHINFO_FILENAME);
-$bmpDir = $webRoot . '/icons/temp/';
-$bmpPath = $bmpDir . $filename . '.bmp';
+$name = pathinfo($inputPath, PATHINFO_FILENAME);
+$bmpPath = $tempDir . $name . '.bmp';
 
-if (!is_dir($bmpDir) && !mkdir($bmpDir, 0755, true)) {
+if (!is_dir($tempDir) && !mkdir($tempDir, 0755, true)) {
   http_response_code(500);
   echo json_encode(["error" => "Could not create temp folder"]);
   exit;
@@ -90,7 +89,6 @@ for ($y = 0; $y < $height; $y++) {
 
 imagedestroy($src);
 
-// Save BMP
 if (!imagebmp($bw, $bmpPath)) {
   http_response_code(500);
   echo json_encode(["error" => "Failed to write BMP"]);
@@ -98,7 +96,6 @@ if (!imagebmp($bw, $bmpPath)) {
 }
 imagedestroy($bw);
 
-// Return
 echo json_encode([
   "success" => true,
   "bmp_path" => 'icons/temp/' . basename($bmpPath),

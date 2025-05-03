@@ -104,6 +104,45 @@
       </div>
     </div>
 
+    <div class="card">
+      <h1>Vectorization App</h1>
+      <p>
+        This tool finds all PNGs in <code>/input/</code>, vectorizes them, and
+        moves each SVG to its correct folder using matching .json metadata.
+      </p>
+      <button onclick="startVectorization()">Vectorize Icons</button>
+      <div id="vector-status">Status: Idle</div>
+
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px">
+        <div style="flex: 1 1 45%">
+          <h2>PNGs in Input:</h2>
+          <div
+            id="png-grid"
+            style="
+              max-height: 200px;
+              overflow-y: scroll;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+            "
+          ></div>
+        </div>
+        <div style="flex: 1 1 45%">
+          <h2>Vectorized SVGs:</h2>
+          <div
+            id="svg-grid"
+            style="
+              max-height: 200px;
+              overflow-y: scroll;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const IGNORED_FOLDERS = ["generated", "temp", "vectorized"];
 
@@ -160,6 +199,8 @@
         reloadInputThemes();
         reloadInputIcons();
         loadAllIcons();
+        loadPngGrid();
+        loadSvgGrid();
       };
 
       function reloadInputThemes() {
@@ -239,6 +280,69 @@
               "Failed to ingest icons.";
             console.error(err);
           });
+      }
+
+      async function loadPngGrid() {
+        const res = await fetch("php/list_pngs.php");
+        const files = await res.json();
+        const grid = document.getElementById("png-grid");
+        grid.innerHTML = "";
+        files.forEach((f) => {
+          const img = document.createElement("img");
+          img.src = `input/${f}`;
+          img.style.width = "64px";
+          img.style.height = "64px";
+          grid.appendChild(img);
+        });
+      }
+
+      async function loadSvgGrid() {
+        const res = await fetch("php/list_svgs.php");
+        const files = await res.json();
+        const grid = document.getElementById("svg-grid");
+        grid.innerHTML = "";
+        files.forEach((f) => {
+          const img = document.createElement("img");
+          img.src = f;
+          img.style.width = "64px";
+          img.style.height = "64px";
+          grid.appendChild(img);
+        });
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function startVectorization() {
+        const res = await fetch("php/list_pngs.php");
+        const files = await res.json();
+        let completed = 0;
+
+        for (const file of files) {
+          const base = file.replace(/\.png$/i, "");
+
+          await fetch(`../icon_to_bmp.php?file=${encodeURIComponent(file)}`);
+          await sleep(200);
+          await fetch(
+            `../bmp_to_svg.php?file=${encodeURIComponent(base + ".bmp")}`
+          );
+          await sleep(200);
+          await fetch(
+            `php/finalize_svg.php?file=${encodeURIComponent(base + ".svg")}`
+          );
+          await sleep(200);
+          completed++;
+          document.getElementById(
+            "vector-status"
+          ).textContent = `Progress: ${completed} / ${files.length}`;
+        }
+
+        document.getElementById(
+          "vector-status"
+        ).textContent = `✅ All ${completed} icons processed.`;
+        loadPngGrid();
+        loadSvgGrid();
       }
     </script>
   </body>
