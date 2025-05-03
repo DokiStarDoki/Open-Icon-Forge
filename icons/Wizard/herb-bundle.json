@@ -1,0 +1,12 @@
+{
+    "name": "Herb Bundle",
+    "short_description": "A tied bunch of leaves used for magical purposes.",
+    "tags": [
+        "herbs",
+        "bundle",
+        "plants",
+        "magic"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}

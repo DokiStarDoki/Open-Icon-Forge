@@ -1,0 +1,12 @@
+{
+    "name": "Potion Bottle",
+    "short_description": "A round potion flask with a cork and swirling liquid inside.",
+    "tags": [
+        "potion",
+        "bottle",
+        "magic",
+        "alchemy"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Cauldron",
+    "short_description": "A round cauldron with steam rising from the top.",
+    "tags": [
+        "cauldron",
+        "pot",
+        "brew",
+        "alchemy"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}

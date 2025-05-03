@@ -1,0 +1,12 @@
+{
+    "name": "Magic Tome",
+    "short_description": "A closed spellbook with a clasp and arcane symbol.",
+    "tags": [
+        "book",
+        "tome",
+        "magic",
+        "spells"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}

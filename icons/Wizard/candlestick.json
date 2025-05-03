@@ -1,0 +1,12 @@
+{
+    "name": "Candlestick",
+    "short_description": "A candle in a holder with dripping wax and a flame.",
+    "tags": [
+        "candle",
+        "light",
+        "wax",
+        "fire"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}

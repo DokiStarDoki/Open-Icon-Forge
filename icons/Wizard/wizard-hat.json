@@ -1,0 +1,12 @@
+{
+    "name": "Wizard Hat",
+    "short_description": "A classic pointed wizard hat with a brim and band.",
+    "tags": [
+        "hat",
+        "wizard",
+        "magic",
+        "costume"
+    ],
+    "theme": "Wizard",
+    "date_created": "2025-05-03"
+}
