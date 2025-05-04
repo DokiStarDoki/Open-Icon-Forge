@@ -71,14 +71,44 @@
         border: 1px solid #ccc;
         border-radius: 10px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-        max-width: 600px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         transition: all 0.3s ease;
       }
+      .details-content {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+      .details-icon object {
+        width: 128px;
+        height: 128px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: #f9f9f9;
+        padding: 0.5rem;
+      }
+      .details-meta {
+        flex: 1;
+      }
       #details h2 {
         margin-top: 0;
         color: #007acc;
+      }
+      .details-icon button {
+        margin-top: 0.75rem;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #007acc;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .details-icon button:hover {
+        background-color: #005fa3;
       }
     </style>
   </head>
@@ -86,18 +116,28 @@
     <h1>Open Icon Forge Library</h1>
     <input type="text" id="search" placeholder="Search by tag or name..." />
     <div class="grid" id="iconGrid"></div>
+
     <div id="details" style="display: none">
-      <h2 id="detailName"></h2>
-      <p><strong>Theme:</strong> <span id="detailTheme"></span></p>
-      <p><strong>Tags:</strong> <span id="detailTags"></span></p>
-      <p><strong>Date:</strong> <span id="detailDate"></span></p>
-      <p><strong>File Path:</strong> <span id="detailPath"></span></p>
+      <div class="details-content">
+        <div class="details-icon">
+          <object id="detailIcon" type="image/svg+xml"></object>
+          <button id="downloadBtn">Download SVG</button>
+        </div>
+        <div class="details-meta">
+          <h2 id="detailName"></h2>
+          <p><strong>Theme:</strong> <span id="detailTheme"></span></p>
+          <p><strong>Tags:</strong> <span id="detailTags"></span></p>
+          <p><strong>Date:</strong> <span id="detailDate"></span></p>
+          <p><strong>File Path:</strong> <span id="detailPath"></span></p>
+        </div>
+      </div>
     </div>
 
     <script>
       const grid = document.getElementById("iconGrid");
       const searchInput = document.getElementById("search");
       const details = document.getElementById("details");
+      const detailIcon = document.getElementById("detailIcon");
       const detailName = document.getElementById("detailName");
       const detailTags = document.getElementById("detailTags");
       const detailTheme = document.getElementById("detailTheme");
@@ -155,12 +195,20 @@
         selectedDiv = div;
         div.classList.add("selected");
 
+        detailIcon.data = icon.file;
         detailName.textContent = icon.name;
         detailTags.textContent = icon.tags?.join(", ") || "";
         detailTheme.textContent = icon.theme || "";
         detailDate.textContent = icon.date_created || "";
         detailPath.textContent = icon.file;
         details.style.display = "block";
+
+        document.getElementById("downloadBtn").onclick = () => {
+          const link = document.createElement("a");
+          link.href = detailIcon.data;
+          link.download = icon.file.split("/").pop();
+          link.click();
+        };
       }
 
       searchInput.addEventListener("input", (e) => {
