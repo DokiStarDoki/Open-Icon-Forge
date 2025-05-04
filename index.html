@@ -12,11 +12,13 @@
         background: linear-gradient(to bottom right, #fefefe, #e0f7fa);
         color: #333;
       }
+
       h1 {
         text-align: center;
         font-size: 2rem;
         color: #007acc;
       }
+
       .controls {
         display: flex;
         justify-content: center;
@@ -24,6 +26,7 @@
         flex-wrap: wrap;
         margin-top: 1rem;
       }
+
       #search,
       #tagFilter {
         padding: 0.6rem;
@@ -31,10 +34,12 @@
         border-radius: 6px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
+
       #search {
         width: 80%;
         max-width: 400px;
       }
+
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -42,32 +47,62 @@
         margin-top: 2rem;
         padding: 0 1rem;
       }
+
       .icon {
+        position: relative;
         background: white;
         border: 1px solid #ddd;
         padding: 0.5rem;
+        padding-top: 0.25rem;
         border-radius: 10px;
         text-align: center;
         cursor: pointer;
+        width: 90%;
+        height: 120px;
+        transition: box-shadow 0.2s ease;
       }
+
       .icon object {
-        width: 64px;
-        height: 64px;
+        /* width: 64px; */
+        height: 75%;
         display: block;
         margin: 0 auto;
         pointer-events: none;
       }
+
       .icon small {
         display: block;
-        margin-top: 0.5rem;
+        margin-top: 0rem;
         font-size: 0.75rem;
         color: #444;
       }
+
       .icon.selected {
         border-color: #007acc;
         background: #e6f3ff;
         box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.3);
       }
+
+      .quick-download {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        padding: 2px 6px;
+        font-size: 0.65rem;
+        background: #007acc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 0.85;
+        width: 90%;
+      }
+
+      .quick-download:hover {
+        background: #005fa3;
+        opacity: 1;
+      }
+
       #details {
         margin-top: 2rem;
         padding: 1rem;
@@ -81,11 +116,13 @@
         display: none;
         opacity: 0;
       }
+
       .details-content {
         display: flex;
         gap: 1.5rem;
         align-items: flex-start;
       }
+
       .details-icon object {
         width: 128px;
         height: 128px;
@@ -94,6 +131,7 @@
         background: #f9f9f9;
         padding: 0.5rem;
       }
+
       .details-icon button {
         margin-top: 0.75rem;
         padding: 0.4rem 0.75rem;
@@ -104,12 +142,15 @@
         color: white;
         cursor: pointer;
       }
+
       .details-icon button:hover {
         background-color: #005fa3;
       }
+
       .details-meta {
         flex: 1;
       }
+
       #details h2 {
         margin-top: 0;
         color: #007acc;
@@ -117,7 +158,11 @@
     </style>
   </head>
   <body>
-    <h1 id="mainTitle">Open Icon Forge Library</h1>
+    <h1 id="mainTitle">
+      Open Icon Forge Library
+      <span id="iconCount" style="font-size: 1rem; color: #555">(0 icons)</span>
+    </h1>
+
     <div class="controls">
       <input type="text" id="search" placeholder="Search by tag or name..." />
       <select id="tagFilter">
@@ -176,6 +221,14 @@
             return;
           }
         }
+
+        // 👇 Set total icon count (excluding banned themes)
+        const bannedThemes = ["vectorized", "temp", "generated"];
+        const count = icons.filter(
+          (icon) => !bannedThemes.includes(icon.theme?.toLowerCase())
+        ).length;
+        document.getElementById("iconCount").textContent = `(${count} icons)`;
+
         populateTagDropdown();
         renderIcons();
       }
@@ -220,6 +273,15 @@
           });
       }
 
+      function addHoverEffects(div) {
+        div.addEventListener("mouseenter", () => {
+          gsap.to(div, { scale: 1.08, duration: 0.2, ease: "power2.out" });
+        });
+        div.addEventListener("mouseleave", () => {
+          gsap.to(div, { scale: 1, duration: 0.2, ease: "power2.out" });
+        });
+      }
+
       function renderIcons(filter = "", selectedFilter = "") {
         const lowerFilter = filter.toLowerCase();
         const bannedThemes = ["vectorized", "temp", "generated"];
@@ -255,16 +317,25 @@
             const label = document.createElement("small");
             label.textContent = icon.name;
 
+            const download = document.createElement("button");
+            download.className = "quick-download";
+            download.innerText = "↓";
+            download.title = "Download SVG";
+
+            download.addEventListener("click", (e) => {
+              e.stopPropagation();
+              const link = document.createElement("a");
+              link.href = icon.file;
+              link.download = icon.file.split("/").pop();
+              link.click();
+            });
+
             div.appendChild(object);
             div.appendChild(label);
+            div.appendChild(download);
 
-            div.addEventListener(
-              "click",
-              ((iconCopy) => {
-                return () => selectIcon(div, iconCopy);
-              })(icon)
-            );
-
+            div.addEventListener("click", () => selectIcon(div, icon));
+            addHoverEffects(div);
             grid.appendChild(div);
 
             gsap.from(div, {
@@ -289,7 +360,6 @@
         detailDate.textContent = icon.date_created || "";
         detailPath.textContent = icon.file;
 
-        // Pre-hide inner content before panel animates in
         gsap.set(".details-content > *", {
           opacity: 0,
           y: 20,
