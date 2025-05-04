@@ -1,6 +1,23 @@
 {
     "icons": [
         {
+            "name": "Mouse",
+            "theme": "Animal",
+            "tags": [
+                "animal",
+                "rodent",
+                "pet",
+                "small",
+                "mammal",
+                "wildlife",
+                "tail",
+                "mouse"
+            ],
+            "short_description": "A small rodent with a long tail and pointed snout.",
+            "file": "icons/animal/mouse.svg",
+            "json_path": "icons/animal/mouse.json"
+        },
+        {
             "name": "Canteen",
             "theme": "Army",
             "tags": [
@@ -189,6 +206,91 @@
             "json_path": "icons/artifact/treasure-map.json"
         },
         {
+            "name": "Barber Cape",
+            "theme": "Barbershop",
+            "tags": [
+                "clothing",
+                "costume",
+                "superhero",
+                "fashion",
+                "accessory",
+                "cover",
+                "garment",
+                "protection"
+            ],
+            "short_description": "A simple cape with a rounded collar.",
+            "file": "icons/barbershop/barber-cape.svg",
+            "json_path": "icons/barbershop/barber-cape.json"
+        },
+        {
+            "name": "Barber Pole",
+            "theme": "Barbershop",
+            "tags": [
+                "barbershop",
+                "salon",
+                "grooming",
+                "hairstyling",
+                "traditional",
+                "pole",
+                "sign",
+                "striped"
+            ],
+            "short_description": "A traditional barber pole with red and white stripes.",
+            "file": "icons/barbershop/barber-pole.svg",
+            "json_path": "icons/barbershop/barber-pole.json"
+        },
+        {
+            "name": "Comb",
+            "theme": "Barbershop",
+            "tags": [
+                "grooming",
+                "hair",
+                "styling",
+                "detangle",
+                "barbershop",
+                "beauty",
+                "personal care",
+                "tool"
+            ],
+            "short_description": "A basic hair comb with teeth for detangling and styling.",
+            "file": "icons/barbershop/comb.svg",
+            "json_path": "icons/barbershop/comb.json"
+        },
+        {
+            "name": "Hair Brush",
+            "theme": "Barbershop",
+            "tags": [
+                "grooming",
+                "styling",
+                "hair",
+                "brush",
+                "beauty",
+                "personal care",
+                "comb",
+                "barbershop"
+            ],
+            "short_description": "An oval hairbrush with bristles for styling hair.",
+            "file": "icons/barbershop/hair-brush.svg",
+            "json_path": "icons/barbershop/hair-brush.json"
+        },
+        {
+            "name": "Hair Clipper",
+            "theme": "Barbershop",
+            "tags": [
+                "grooming",
+                "haircut",
+                "barber",
+                "salon",
+                "trimmer",
+                "electric",
+                "styling",
+                "tool"
+            ],
+            "short_description": "An electric hair clipper with cord for cutting hair.",
+            "file": "icons/barbershop/hair-clipper.svg",
+            "json_path": "icons/barbershop/hair-clipper.json"
+        },
+        {
             "name": "Hair Dryer",
             "theme": "Barbershop",
             "tags": [
@@ -251,6 +353,40 @@
             "short_description": "A classic folding straight razor used for close shaves.",
             "file": "icons/barbershop/straight-razor.svg",
             "json_path": "icons/barbershop/straight-razor.json"
+        },
+        {
+            "name": "BBQ Grill",
+            "theme": "BBQ",
+            "tags": [
+                "cooking",
+                "barbecue",
+                "outdoor",
+                "grilling",
+                "food",
+                "summer",
+                "cookout",
+                "heat"
+            ],
+            "short_description": "A kettle-style barbecue grill with heat rising from it.",
+            "file": "icons/bbq/bbq-grill.svg",
+            "json_path": "icons/bbq/bbq-grill.json"
+        },
+        {
+            "name": "Tire",
+            "theme": "car",
+            "tags": [
+                "automotive",
+                "car",
+                "vehicle",
+                "rubber",
+                "wheel",
+                "transportation",
+                "tread",
+                "road"
+            ],
+            "short_description": "A vehicle tire with wheel, showing tread pattern and spokes.",
+            "file": "icons/car/tire.svg",
+            "json_path": "icons/car/tire.json"
         },
         {
             "name": "Dice Pair",
@@ -404,6 +540,23 @@
             "short_description": "A glass of whiskey with ice cubes and a straw.",
             "file": "icons/casino/whiskey-glass.svg",
             "json_path": "icons/casino/whiskey-glass.json"
+        },
+        {
+            "name": "Desk",
+            "theme": "furniture",
+            "tags": [
+                "furniture",
+                "office",
+                "workspace",
+                "table",
+                "drawer",
+                "storage",
+                "study",
+                "work"
+            ],
+            "short_description": "A simple desk or work table with drawer and storage compartment.",
+            "file": "icons/furniture/desk.svg",
+            "json_path": "icons/furniture/desk.json"
         },
         {
             "name": "Boot in Water",
@@ -863,6 +1016,40 @@
             "json_path": "icons/hospital/wheelchair.json"
         },
         {
+            "name": "Image Frame",
+            "theme": "living room",
+            "tags": [
+                "picture",
+                "frame",
+                "art",
+                "display",
+                "photography",
+                "decor",
+                "wall",
+                "gallery"
+            ],
+            "short_description": "A picture frame with geometric design elements showing a circle and triangle.",
+            "file": "icons/living room/image-frame.svg",
+            "json_path": "icons/living room/image-frame.json"
+        },
+        {
+            "name": "Remote Control",
+            "theme": "living room",
+            "tags": [
+                "entertainment",
+                "television",
+                "media",
+                "electronic",
+                "control",
+                "buttons",
+                "device",
+                "digital"
+            ],
+            "short_description": "A television or media remote control with numbered buttons and control pad.",
+            "file": "icons/living room/remote-control.svg",
+            "json_path": "icons/living room/remote-control.json"
+        },
+        {
             "name": "Fire Dragon",
             "theme": "Monster",
             "tags": [
@@ -1092,6 +1279,91 @@
             "json_path": "icons/office/clipboard.json"
         },
         {
+            "name": "Bicycle",
+            "theme": "outdoors",
+            "tags": [
+                "transportation",
+                "cycling",
+                "exercise",
+                "outdoors",
+                "vehicle",
+                "eco-friendly",
+                "travel",
+                "sport"
+            ],
+            "short_description": "A standard bicycle with two wheels, frame, and handlebars for personal transportation.",
+            "file": "icons/outdoors/bicycle.svg",
+            "json_path": "icons/outdoors/bicycle.json"
+        },
+        {
+            "name": "Garden Hose",
+            "theme": "Outdoors",
+            "tags": [
+                "garden",
+                "watering",
+                "outdoor",
+                "yard",
+                "hose",
+                "water",
+                "spray",
+                "tool"
+            ],
+            "short_description": "A coiled garden hose with spray nozzle attachment.",
+            "file": "icons/outdoors/garden-hose.svg",
+            "json_path": "icons/outdoors/garden-hose.json"
+        },
+        {
+            "name": "Lawn Mower",
+            "theme": "outdoors",
+            "tags": [
+                "garden",
+                "yard",
+                "maintenance",
+                "grass",
+                "outdoor",
+                "equipment",
+                "lawn",
+                "tool"
+            ],
+            "short_description": "A push lawn mower for cutting grass and lawn maintenance.",
+            "file": "icons/outdoors/lawn-mower.svg",
+            "json_path": "icons/outdoors/lawn-mower.json"
+        },
+        {
+            "name": "Paint Can",
+            "theme": "Renovation",
+            "tags": [
+                "paint",
+                "decoration",
+                "renovation",
+                "brush",
+                "DIY",
+                "home improvement",
+                "color",
+                "can"
+            ],
+            "short_description": "A can of paint with a brush leaning against it.",
+            "file": "icons/renovation/paint-can.svg",
+            "json_path": "icons/renovation/paint-can.json"
+        },
+        {
+            "name": "Power Plug",
+            "theme": "Renovation",
+            "tags": [
+                "electricity",
+                "power",
+                "outlet",
+                "cord",
+                "plug",
+                "electronic",
+                "connection",
+                "home"
+            ],
+            "short_description": "An electrical power plug with a cord.",
+            "file": "icons/renovation/power-plug.svg",
+            "json_path": "icons/renovation/power-plug.json"
+        },
+        {
             "name": "Boiling Flask",
             "theme": "Science",
             "tags": [
@@ -1119,6 +1391,74 @@
             "short_description": "A simple satellite-style space station icon",
             "file": "icons/space/space-station.svg",
             "json_path": "icons/space/space-station.json"
+        },
+        {
+            "name": "Briefcase",
+            "theme": "tools",
+            "tags": [
+                "business",
+                "work",
+                "luggage",
+                "storage",
+                "professional",
+                "office",
+                "document",
+                "carry"
+            ],
+            "short_description": "A rectangular business case with handle and lock for carrying documents and work items.",
+            "file": "icons/tools/briefcase.svg",
+            "json_path": "icons/tools/briefcase.json"
+        },
+        {
+            "name": "Power Drill",
+            "theme": "tools",
+            "tags": [
+                "construction",
+                "tool",
+                "diy",
+                "hardware",
+                "electric",
+                "cordless",
+                "drill",
+                "power"
+            ],
+            "short_description": "A cordless power drill with battery pack for construction and home repairs.",
+            "file": "icons/tools/power-drill.svg",
+            "json_path": "icons/tools/power-drill.json"
+        },
+        {
+            "name": "Screwdriver",
+            "theme": "tools",
+            "tags": [
+                "tool",
+                "hardware",
+                "repair",
+                "flathead",
+                "handheld",
+                "manual",
+                "diy",
+                "construction"
+            ],
+            "short_description": "A flathead screwdriver with handle and metal shaft for fastening screws.",
+            "file": "icons/tools/screwdriver.svg",
+            "json_path": "icons/tools/screwdriver.json"
+        },
+        {
+            "name": "Wrench",
+            "theme": "tools",
+            "tags": [
+                "tool",
+                "hardware",
+                "mechanical",
+                "repair",
+                "maintenance",
+                "metal",
+                "fastener",
+                "handheld"
+            ],
+            "short_description": "An open-end wrench or spanner for tightening nuts and bolts.",
+            "file": "icons/tools/wrench.svg",
+            "json_path": "icons/tools/wrench.json"
         },
         {
             "name": "Seashell",

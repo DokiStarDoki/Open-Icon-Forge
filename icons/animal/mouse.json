@@ -1,0 +1,17 @@
+{
+    "name": "Mouse",
+    "fname": "mouse",
+    "short_description": "A small rodent with a long tail and pointed snout.",
+    "tags": [
+        "animal",
+        "rodent",
+        "pet",
+        "small",
+        "mammal",
+        "wildlife",
+        "tail",
+        "mouse"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-04"
+}

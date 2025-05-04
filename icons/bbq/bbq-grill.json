@@ -1,0 +1,17 @@
+{
+    "name": "BBQ Grill",
+    "fname": "bbq-grill",
+    "short_description": "A kettle-style barbecue grill with heat rising from it.",
+    "tags": [
+        "cooking",
+        "barbecue",
+        "outdoor",
+        "grilling",
+        "food",
+        "summer",
+        "cookout",
+        "heat"
+    ],
+    "theme": "BBQ",
+    "date_created": "2025-05-04"
+}

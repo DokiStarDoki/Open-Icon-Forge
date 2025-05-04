@@ -1,0 +1,17 @@
+{
+    "name": "Desk",
+    "fname": "desk",
+    "short_description": "A simple desk or work table with drawer and storage compartment.",
+    "tags": [
+        "furniture",
+        "office",
+        "workspace",
+        "table",
+        "drawer",
+        "storage",
+        "study",
+        "work"
+    ],
+    "theme": "furniture",
+    "date_created": "2025-05-04"
+}

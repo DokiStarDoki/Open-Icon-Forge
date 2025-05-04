@@ -1,0 +1,17 @@
+{
+    "name": "Remote Control",
+    "fname": "remote-control",
+    "short_description": "A television or media remote control with numbered buttons and control pad.",
+    "tags": [
+        "entertainment",
+        "television",
+        "media",
+        "electronic",
+        "control",
+        "buttons",
+        "device",
+        "digital"
+    ],
+    "theme": "living room",
+    "date_created": "2025-05-04"
+}

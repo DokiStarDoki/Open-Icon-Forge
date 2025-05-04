@@ -1,0 +1,17 @@
+{
+    "name": "Briefcase",
+    "fname": "briefcase",
+    "short_description": "A rectangular business case with handle and lock for carrying documents and work items.",
+    "tags": [
+        "business",
+        "work",
+        "luggage",
+        "storage",
+        "professional",
+        "office",
+        "document",
+        "carry"
+    ],
+    "theme": "tools",
+    "date_created": "2025-05-04"
+}

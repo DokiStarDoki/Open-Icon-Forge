@@ -1,0 +1,17 @@
+{
+    "name": "Power Drill",
+    "fname": "power-drill",
+    "short_description": "A cordless power drill with battery pack for construction and home repairs.",
+    "tags": [
+        "construction",
+        "tool",
+        "diy",
+        "hardware",
+        "electric",
+        "cordless",
+        "drill",
+        "power"
+    ],
+    "theme": "tools",
+    "date_created": "2025-05-04"
+}

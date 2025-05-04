@@ -1,0 +1,17 @@
+{
+    "name": "Screwdriver",
+    "fname": "screwdriver",
+    "short_description": "A flathead screwdriver with handle and metal shaft for fastening screws.",
+    "tags": [
+        "tool",
+        "hardware",
+        "repair",
+        "flathead",
+        "handheld",
+        "manual",
+        "diy",
+        "construction"
+    ],
+    "theme": "tools",
+    "date_created": "2025-05-04"
+}
