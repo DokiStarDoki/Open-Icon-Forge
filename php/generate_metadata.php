@@ -57,7 +57,11 @@ if (!is_dir(dirname($outputFile))) {
   mkdir(dirname($outputFile), 0777, true);
 }
 
-file_put_contents($outputFile, json_encode($metadata, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+// ✅ Wrap metadata in "icons" key
+file_put_contents(
+  $outputFile,
+  json_encode(['icons' => $metadata], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+);
 
 echo json_encode([
   'success' => true,

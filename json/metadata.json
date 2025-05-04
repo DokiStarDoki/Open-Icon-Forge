@@ -1,158 +1,160 @@
-[
-    {
-        "name": "Space Station",
-        "theme": "Space",
-        "tags": [
-            "space",
-            "station",
-            "satellite",
-            "orbit"
-        ],
-        "short_description": "A simple satellite-style space station icon",
-        "file": "icons/space/space-station.svg",
-        "json_path": "icons/space/space-station.json"
-    },
-    {
-        "name": "Seashell",
-        "theme": "Underwater",
-        "tags": [
-            "sea",
-            "shell",
-            "ocean",
-            "beach"
-        ],
-        "short_description": "A stylized seashell icon",
-        "file": "icons/underwater/seashell.svg",
-        "json_path": "icons/underwater/seashell.json"
-    },
-    {
-        "name": "Candlestick",
-        "theme": "Wizard",
-        "tags": [
-            "candle",
-            "light",
-            "wax",
-            "fire"
-        ],
-        "short_description": "A candle in a holder with dripping wax and a flame.",
-        "file": "icons/wizard/candlestick.svg",
-        "json_path": "icons/wizard/candlestick.json"
-    },
-    {
-        "name": "Cauldron",
-        "theme": "Wizard",
-        "tags": [
-            "cauldron",
-            "pot",
-            "brew",
-            "alchemy"
-        ],
-        "short_description": "A round cauldron with steam rising from the top.",
-        "file": "icons/wizard/cauldron.svg",
-        "json_path": "icons/wizard/cauldron.json"
-    },
-    {
-        "name": "Crystal Ball",
-        "theme": "Wizard",
-        "tags": [
-            "crystal",
-            "ball",
-            "magic",
-            "divination"
-        ],
-        "short_description": "A mystical crystal ball resting on a three-legged stand.",
-        "file": "icons/wizard/crystal-ball.svg",
-        "json_path": "icons/wizard/crystal-ball.json"
-    },
-    {
-        "name": "Herb Bundle",
-        "theme": "Wizard",
-        "tags": [
-            "herbs",
-            "bundle",
-            "plants",
-            "magic"
-        ],
-        "short_description": "A tied bunch of leaves used for magical purposes.",
-        "file": "icons/wizard/herb-bundle.svg",
-        "json_path": "icons/wizard/herb-bundle.json"
-    },
-    {
-        "name": "Magic Tome",
-        "theme": "Wizard",
-        "tags": [
-            "book",
-            "tome",
-            "magic",
-            "spells"
-        ],
-        "short_description": "A closed spellbook with a clasp and arcane symbol.",
-        "file": "icons/wizard/magic-tome.svg",
-        "json_path": "icons/wizard/magic-tome.json"
-    },
-    {
-        "name": "Mortar and Pestle",
-        "theme": "Wizard",
-        "tags": [
-            "mortar",
-            "pestle",
-            "grind",
-            "alchemy"
-        ],
-        "short_description": "A bowl with a pestle for grinding magical ingredients.",
-        "file": "icons/wizard/mortar-and-pestle.svg",
-        "json_path": "icons/wizard/mortar-and-pestle.json"
-    },
-    {
-        "name": "Potion Bottle",
-        "theme": "Wizard",
-        "tags": [
-            "potion",
-            "bottle",
-            "magic",
-            "alchemy"
-        ],
-        "short_description": "A round potion flask with a cork and swirling liquid inside.",
-        "file": "icons/wizard/potion-bottle.svg",
-        "json_path": "icons/wizard/potion-bottle.json"
-    },
-    {
-        "name": "Scroll",
-        "theme": "Wizard",
-        "tags": [
-            "scroll",
-            "parchment",
-            "seal",
-            "spells"
-        ],
-        "short_description": "A rolled parchment with a visible seal and text lines.",
-        "file": "icons/wizard/scroll.svg",
-        "json_path": "icons/wizard/scroll.json"
-    },
-    {
-        "name": "Wand",
-        "theme": "Wizard",
-        "tags": [
-            "wand",
-            "magic",
-            "tool",
-            "casting"
-        ],
-        "short_description": "A slender wand with a gem tip and wrapped handle.",
-        "file": "icons/wizard/wand.svg",
-        "json_path": "icons/wizard/wand.json"
-    },
-    {
-        "name": "Wizard Hat",
-        "theme": "Wizard",
-        "tags": [
-            "hat",
-            "wizard",
-            "magic",
-            "costume"
-        ],
-        "short_description": "A classic pointed wizard hat with a brim and band.",
-        "file": "icons/wizard/wizard-hat.svg",
-        "json_path": "icons/wizard/wizard-hat.json"
-    }
-]
+{
+    "icons": [
+        {
+            "name": "Space Station",
+            "theme": "Space",
+            "tags": [
+                "space",
+                "station",
+                "satellite",
+                "orbit"
+            ],
+            "short_description": "A simple satellite-style space station icon",
+            "file": "icons/space/space-station.svg",
+            "json_path": "icons/space/space-station.json"
+        },
+        {
+            "name": "Seashell",
+            "theme": "Underwater",
+            "tags": [
+                "sea",
+                "shell",
+                "ocean",
+                "beach"
+            ],
+            "short_description": "A stylized seashell icon",
+            "file": "icons/underwater/seashell.svg",
+            "json_path": "icons/underwater/seashell.json"
+        },
+        {
+            "name": "Candlestick",
+            "theme": "Wizard",
+            "tags": [
+                "candle",
+                "light",
+                "wax",
+                "fire"
+            ],
+            "short_description": "A candle in a holder with dripping wax and a flame.",
+            "file": "icons/wizard/candlestick.svg",
+            "json_path": "icons/wizard/candlestick.json"
+        },
+        {
+            "name": "Cauldron",
+            "theme": "Wizard",
+            "tags": [
+                "cauldron",
+                "pot",
+                "brew",
+                "alchemy"
+            ],
+            "short_description": "A round cauldron with steam rising from the top.",
+            "file": "icons/wizard/cauldron.svg",
+            "json_path": "icons/wizard/cauldron.json"
+        },
+        {
+            "name": "Crystal Ball",
+            "theme": "Wizard",
+            "tags": [
+                "crystal",
+                "ball",
+                "magic",
+                "divination"
+            ],
+            "short_description": "A mystical crystal ball resting on a three-legged stand.",
+            "file": "icons/wizard/crystal-ball.svg",
+            "json_path": "icons/wizard/crystal-ball.json"
+        },
+        {
+            "name": "Herb Bundle",
+            "theme": "Wizard",
+            "tags": [
+                "herbs",
+                "bundle",
+                "plants",
+                "magic"
+            ],
+            "short_description": "A tied bunch of leaves used for magical purposes.",
+            "file": "icons/wizard/herb-bundle.svg",
+            "json_path": "icons/wizard/herb-bundle.json"
+        },
+        {
+            "name": "Magic Tome",
+            "theme": "Wizard",
+            "tags": [
+                "book",
+                "tome",
+                "magic",
+                "spells"
+            ],
+            "short_description": "A closed spellbook with a clasp and arcane symbol.",
+            "file": "icons/wizard/magic-tome.svg",
+            "json_path": "icons/wizard/magic-tome.json"
+        },
+        {
+            "name": "Mortar and Pestle",
+            "theme": "Wizard",
+            "tags": [
+                "mortar",
+                "pestle",
+                "grind",
+                "alchemy"
+            ],
+            "short_description": "A bowl with a pestle for grinding magical ingredients.",
+            "file": "icons/wizard/mortar-and-pestle.svg",
+            "json_path": "icons/wizard/mortar-and-pestle.json"
+        },
+        {
+            "name": "Potion Bottle",
+            "theme": "Wizard",
+            "tags": [
+                "potion",
+                "bottle",
+                "magic",
+                "alchemy"
+            ],
+            "short_description": "A round potion flask with a cork and swirling liquid inside.",
+            "file": "icons/wizard/potion-bottle.svg",
+            "json_path": "icons/wizard/potion-bottle.json"
+        },
+        {
+            "name": "Scroll",
+            "theme": "Wizard",
+            "tags": [
+                "scroll",
+                "parchment",
+                "seal",
+                "spells"
+            ],
+            "short_description": "A rolled parchment with a visible seal and text lines.",
+            "file": "icons/wizard/scroll.svg",
+            "json_path": "icons/wizard/scroll.json"
+        },
+        {
+            "name": "Wand",
+            "theme": "Wizard",
+            "tags": [
+                "wand",
+                "magic",
+                "tool",
+                "casting"
+            ],
+            "short_description": "A slender wand with a gem tip and wrapped handle.",
+            "file": "icons/wizard/wand.svg",
+            "json_path": "icons/wizard/wand.json"
+        },
+        {
+            "name": "Wizard Hat",
+            "theme": "Wizard",
+            "tags": [
+                "hat",
+                "wizard",
+                "magic",
+                "costume"
+            ],
+            "short_description": "A classic pointed wizard hat with a brim and band.",
+            "file": "icons/wizard/wizard-hat.svg",
+            "json_path": "icons/wizard/wizard-hat.json"
+        }
+    ]
+}
