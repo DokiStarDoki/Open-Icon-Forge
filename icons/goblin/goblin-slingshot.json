@@ -1,0 +1,16 @@
+{
+    "name": "Goblin Slingshot",
+    "fname": "goblin-slingshot",
+    "short_description": "A makeshift slingshot crafted from wood and twine.",
+    "tags": [
+        "slingshot",
+        "weapon",
+        "toy",
+        "goblin",
+        "wood",
+        "primitive",
+        "ranged"
+    ],
+    "theme": "Goblin",
+    "date_created": "2025-05-03"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Mystic Potion",
+    "fname": "mystic-potion",
+    "short_description": "A glass vial filled with bubbling magical liquid.",
+    "tags": [
+        "potion",
+        "magic",
+        "elixir",
+        "alchemy",
+        "artifact",
+        "bottle",
+        "liquid"
+    ],
+    "theme": "Artifact",
+    "date_created": "2025-05-03"
+}

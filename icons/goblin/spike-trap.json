@@ -1,0 +1,15 @@
+{
+    "name": "Spike Trap",
+    "fname": "spike-trap",
+    "short_description": "A crude wooden trap lined with sharp spikes.",
+    "tags": [
+        "trap",
+        "spikes",
+        "danger",
+        "weapon",
+        "goblin",
+        "defense"
+    ],
+    "theme": "Goblin",
+    "date_created": "2025-05-03"
+}

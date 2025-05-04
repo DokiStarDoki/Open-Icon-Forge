@@ -1,0 +1,16 @@
+{
+    "name": "Treasure Map",
+    "fname": "treasure-map",
+    "short_description": "An old, rolled parchment map marked with a treasure route.",
+    "tags": [
+        "map",
+        "treasure",
+        "scroll",
+        "adventure",
+        "x marks",
+        "artifact",
+        "navigation"
+    ],
+    "theme": "Artifact",
+    "date_created": "2025-05-03"
+}

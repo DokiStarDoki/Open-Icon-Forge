@@ -1,6 +1,277 @@
 {
     "icons": [
         {
+            "name": "Ancient Goblet",
+            "theme": "Artifact",
+            "tags": [
+                "goblet",
+                "cup",
+                "ritual",
+                "artifact",
+                "ancient",
+                "ceremony",
+                "drinkware"
+            ],
+            "short_description": "A decorated goblet, possibly used in old rituals.",
+            "file": "icons/artifact/ancient-goblet.svg",
+            "json_path": "icons/artifact/ancient-goblet.json"
+        },
+        {
+            "name": "Mystic Potion",
+            "theme": "Artifact",
+            "tags": [
+                "potion",
+                "magic",
+                "elixir",
+                "alchemy",
+                "artifact",
+                "bottle",
+                "liquid"
+            ],
+            "short_description": "A glass vial filled with bubbling magical liquid.",
+            "file": "icons/artifact/mystic-potion.svg",
+            "json_path": "icons/artifact/mystic-potion.json"
+        },
+        {
+            "name": "Treasure Map",
+            "theme": "Artifact",
+            "tags": [
+                "map",
+                "treasure",
+                "scroll",
+                "adventure",
+                "x marks",
+                "artifact",
+                "navigation"
+            ],
+            "short_description": "An old, rolled parchment map marked with a treasure route.",
+            "file": "icons/artifact/treasure-map.svg",
+            "json_path": "icons/artifact/treasure-map.json"
+        },
+        {
+            "name": "Bone Brush",
+            "theme": "Goblin",
+            "tags": [
+                "brush",
+                "bone",
+                "goblin",
+                "tool",
+                "primitive",
+                "bristles",
+                "cleaning"
+            ],
+            "short_description": "A rudimentary brush made from a bone handle and coarse fibers.",
+            "file": "icons/goblin/bone-brush.svg",
+            "json_path": "icons/goblin/bone-brush.json"
+        },
+        {
+            "name": "Bone Dagger",
+            "theme": "Goblin",
+            "tags": [
+                "dagger",
+                "bone",
+                "weapon",
+                "primitive",
+                "goblin",
+                "blade",
+                "sharp"
+            ],
+            "short_description": "A crude dagger crafted from bone and wrapped with sinew.",
+            "file": "icons/goblin/bone-dagger.svg",
+            "json_path": "icons/goblin/bone-dagger.json"
+        },
+        {
+            "name": "Bone Flute",
+            "theme": "Goblin",
+            "tags": [
+                "flute",
+                "bone",
+                "instrument",
+                "music",
+                "goblin",
+                "primitive",
+                "tribal"
+            ],
+            "short_description": "A musical flute carved from a hollow bone with finger holes.",
+            "file": "icons/goblin/bone-flute.svg",
+            "json_path": "icons/goblin/bone-flute.json"
+        },
+        {
+            "name": "Bone Hook",
+            "theme": "Goblin",
+            "tags": [
+                "hook",
+                "bone",
+                "tool",
+                "goblin",
+                "primitive",
+                "curved",
+                "fishing"
+            ],
+            "short_description": "A simple curved hook carved from bone.",
+            "file": "icons/goblin/bone-hook.svg",
+            "json_path": "icons/goblin/bone-hook.json"
+        },
+        {
+            "name": "Bone Maracas",
+            "theme": "Goblin",
+            "tags": [
+                "maracas",
+                "bone",
+                "music",
+                "goblin",
+                "instrument",
+                "tribal",
+                "rattle"
+            ],
+            "short_description": "A pair of maracas made from bone handles and gourd tops.",
+            "file": "icons/goblin/bone-maracas.svg",
+            "json_path": "icons/goblin/bone-maracas.json"
+        },
+        {
+            "name": "Bone Pick",
+            "theme": "Goblin",
+            "tags": [
+                "pick",
+                "bone",
+                "tool",
+                "goblin",
+                "primitive",
+                "sharp",
+                "needle"
+            ],
+            "short_description": "A sharp pick or awl made from a slender bone.",
+            "file": "icons/goblin/bone-pick.svg",
+            "json_path": "icons/goblin/bone-pick.json"
+        },
+        {
+            "name": "Bone Spoon",
+            "theme": "Goblin",
+            "tags": [
+                "spoon",
+                "bone",
+                "utensil",
+                "goblin",
+                "primitive",
+                "eating",
+                "carved"
+            ],
+            "short_description": "A simple spoon fashioned from a long bone.",
+            "file": "icons/goblin/bone-spoon.svg",
+            "json_path": "icons/goblin/bone-spoon.json"
+        },
+        {
+            "name": "Goblin Slingshot",
+            "theme": "Goblin",
+            "tags": [
+                "slingshot",
+                "weapon",
+                "toy",
+                "goblin",
+                "wood",
+                "primitive",
+                "ranged"
+            ],
+            "short_description": "A makeshift slingshot crafted from wood and twine.",
+            "file": "icons/goblin/goblin-slingshot.svg",
+            "json_path": "icons/goblin/goblin-slingshot.json"
+        },
+        {
+            "name": "Mushroom Pouch",
+            "theme": "Goblin",
+            "tags": [
+                "mushroom",
+                "pouch",
+                "bag",
+                "goblin",
+                "ingredients",
+                "forage",
+                "nature"
+            ],
+            "short_description": "A small sack filled with various wild mushrooms.",
+            "file": "icons/goblin/mushroom-pouch.svg",
+            "json_path": "icons/goblin/mushroom-pouch.json"
+        },
+        {
+            "name": "Spike Trap",
+            "theme": "Goblin",
+            "tags": [
+                "trap",
+                "spikes",
+                "danger",
+                "weapon",
+                "goblin",
+                "defense"
+            ],
+            "short_description": "A crude wooden trap lined with sharp spikes.",
+            "file": "icons/goblin/spike-trap.svg",
+            "json_path": "icons/goblin/spike-trap.json"
+        },
+        {
+            "name": "Spine Chalice",
+            "theme": "Goblin",
+            "tags": [
+                "chalice",
+                "goblet",
+                "bone",
+                "spine",
+                "goblin",
+                "ceremonial",
+                "drinkware"
+            ],
+            "short_description": "A ceremonial goblet with a stem shaped like a spinal column.",
+            "file": "icons/goblin/spine-chalice.svg",
+            "json_path": "icons/goblin/spine-chalice.json"
+        },
+        {
+            "name": "Spiral Amulet",
+            "theme": "Goblin",
+            "tags": [
+                "amulet",
+                "spiral",
+                "goblin",
+                "magic",
+                "talisman",
+                "necklace",
+                "primitive"
+            ],
+            "short_description": "A mystical spiral-shaped pendant on a cord.",
+            "file": "icons/goblin/spiral-amulet.svg",
+            "json_path": "icons/goblin/spiral-amulet.json"
+        },
+        {
+            "name": "Thorn Crown",
+            "theme": "Goblin",
+            "tags": [
+                "crown",
+                "thorns",
+                "spikes",
+                "goblin",
+                "royalty",
+                "primitive",
+                "bone"
+            ],
+            "short_description": "A jagged crown made of twisted thorns or bone-like spikes.",
+            "file": "icons/goblin/thorn-crown.svg",
+            "json_path": "icons/goblin/thorn-crown.json"
+        },
+        {
+            "name": "Tooth Necklace",
+            "theme": "Goblin",
+            "tags": [
+                "necklace",
+                "tooth",
+                "primitive",
+                "tribal",
+                "goblin",
+                "accessory",
+                "fangs"
+            ],
+            "short_description": "A primitive necklace strung with sharp animal teeth.",
+            "file": "icons/goblin/tooth-necklace.svg",
+            "json_path": "icons/goblin/tooth-necklace.json"
+        },
+        {
             "name": "Space Station",
             "theme": "Space",
             "tags": [
