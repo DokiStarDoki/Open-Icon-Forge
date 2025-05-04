@@ -1,0 +1,15 @@
+{
+    "name": "Gift Box",
+    "fname": "gift-box",
+    "short_description": "A wrapped gift box with a ribbon on top.",
+    "tags": [
+        "gift",
+        "present",
+        "party",
+        "box",
+        "surprise",
+        "celebration"
+    ],
+    "theme": "Party",
+    "date_created": "2025-05-04"
+}

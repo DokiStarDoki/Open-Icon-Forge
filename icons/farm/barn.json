@@ -1,0 +1,16 @@
+{
+    "name": "Barn",
+    "fname": "barn",
+    "short_description": "A traditional barn structure with a weather vane rooster on top.",
+    "tags": [
+        "farm",
+        "building",
+        "agriculture",
+        "rural",
+        "storage",
+        "weathervane",
+        "rooster"
+    ],
+    "theme": "farm",
+    "date_created": "2025-05-04"
+}

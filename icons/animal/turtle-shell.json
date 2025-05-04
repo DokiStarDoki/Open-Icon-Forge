@@ -1,0 +1,14 @@
+{
+    "name": "Turtle Shell",
+    "fname": "turtle-shell",
+    "short_description": "A top-down view of a turtle shell with geometric patterns.",
+    "tags": [
+        "turtle",
+        "shell",
+        "animal",
+        "pattern",
+        "reptile"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-04"
+}

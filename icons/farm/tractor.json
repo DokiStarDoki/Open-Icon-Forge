@@ -1,0 +1,16 @@
+{
+    "name": "Tractor",
+    "fname": "tractor",
+    "short_description": "A farming tractor on a plowed field.",
+    "tags": [
+        "tractor",
+        "farm",
+        "agriculture",
+        "vehicle",
+        "farming",
+        "field",
+        "machinery"
+    ],
+    "theme": "farm",
+    "date_created": "2025-05-04"
+}

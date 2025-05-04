@@ -1,0 +1,17 @@
+{
+    "name": "Power Axe",
+    "fname": "power-axe",
+    "short_description": "A powered axe with a striped handle.",
+    "tags": [
+        "tool",
+        "chopping",
+        "wood",
+        "cutting",
+        "lumber",
+        "scifi",
+        "forestry",
+        "handle"
+    ],
+    "theme": "tool",
+    "date_created": "2025-05-04"
+}

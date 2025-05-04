@@ -1,0 +1,17 @@
+{
+    "name": "Cat",
+    "fname": "fluffy-cat",
+    "short_description": "An icon of a small fluffy cat with whiskers.",
+    "tags": [
+        "pet",
+        "animal",
+        "feline",
+        "domestic",
+        "cute",
+        "whiskers",
+        "furry",
+        "companion"
+    ],
+    "theme": "animal",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Hippo",
+    "fname": "hippo",
+    "short_description": "A front-facing hippo in a simple line-art style.",
+    "tags": [
+        "hippo",
+        "animal",
+        "wildlife",
+        "zoo",
+        "line-art"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-04"
+}

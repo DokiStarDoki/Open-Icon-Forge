@@ -1,0 +1,15 @@
+{
+    "name": "Gift Box with Tag",
+    "fname": "gift-box-with-tag",
+    "short_description": "A wrapped gift box with a bow and hanging tag.",
+    "tags": [
+        "gift",
+        "present",
+        "box",
+        "celebration",
+        "tag",
+        "ribbon"
+    ],
+    "theme": "Party",
+    "date_created": "2025-05-04"
+}

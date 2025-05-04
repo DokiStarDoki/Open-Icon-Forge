@@ -1,0 +1,16 @@
+{
+    "name": "Cat Hat",
+    "fname": "cat-hat",
+    "short_description": "A beanie hat with cat ears.",
+    "tags": [
+        "hat",
+        "cat",
+        "beanie",
+        "clothing",
+        "fashion",
+        "winter",
+        "accessory"
+    ],
+    "theme": "clothing",
+    "date_created": "2025-05-04"
+}

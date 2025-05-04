@@ -1,0 +1,16 @@
+{
+    "name": "Satellite",
+    "fname": "satellite",
+    "short_description": "A space satellite orbiting around Earth.",
+    "tags": [
+        "satellite",
+        "space",
+        "orbit",
+        "technology",
+        "communication",
+        "Earth",
+        "science"
+    ],
+    "theme": "space",
+    "date_created": "2025-05-04"
+}
