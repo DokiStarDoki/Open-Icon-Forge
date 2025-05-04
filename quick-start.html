@@ -3,165 +3,209 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theme Addition Dashboard</title>
+    <title>Open Icon Forge Dashboard</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background: #f8f9fa;
+        font-family: "Segoe UI", sans-serif;
         margin: 0;
-        padding: 20px;
+        padding: 1rem;
+        background: #f1f5f9;
+        color: #1f2937;
       }
-      .card {
-        background: #ffffff;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
+
+      h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      .dashboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 1rem;
+        max-width: 1920px;
         margin: 0 auto;
       }
-      h1 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+
+      .card {
+        background: white;
+        border: 2px solid #111827;
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
+
+      .card h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem;
+      }
+
       button {
-        padding: 10px 16px;
-        font-size: 1rem;
-        margin-top: 10px;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        border: none;
+        background: #3b82f6;
+        color: white;
+        border-radius: 6px;
         cursor: pointer;
       }
-      #status {
-        margin-top: 20px;
-        font-family: monospace;
-        white-space: pre-wrap;
-        background: #f1f1f1;
-        padding: 10px;
-        border-radius: 8px;
+
+      button:hover {
+        background: #2563eb;
       }
-      ul {
-        padding-left: 20px;
+
+      .status-box {
+        font-family: monospace;
+        font-size: 0.85rem;
+        background: #f3f4f6;
+        padding: 0.5rem;
+        border-radius: 6px;
+        margin-top: 0.5rem;
+        white-space: pre-wrap;
+      }
+
+      ul,
+      .grid-box {
+        margin: 0.5rem 0;
+        padding-left: 1rem;
+        overflow-y: auto;
+        max-height: 150px;
+        background: #f9fafb;
+        border-radius: 6px;
+        border: 1px solid #e5e7eb;
+      }
+
+      ul li {
+        padding: 2px 0;
+      }
+
+      .grid-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 0.5rem;
+      }
+
+      .grid-box img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        background: white;
+      }
+
+      .split {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .split > div {
+        flex: 1 1 45%;
+      }
+
+      .card-number {
+        font-weight: bold;
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <h1>Theme Addition App</h1>
-      <p>
-        This tool ingests new themes from <code>/input/theme.json</code> and
-        creates folders under <code>/icons/</code> for each new theme (excluding
-        ignored folders).
-      </p>
-      <button onclick="runThemeAddition()">Ingest New Themes</button>
-      <div id="status">Status: Idle</div>
-
-      <div
-        style="
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin-top: 20px;
-        "
-      >
-        <div style="flex: 1 1 45%">
-          <h2>Current Themes:</h2>
-          <ul id="theme-list"></ul>
-        </div>
-      </div>
-
-      <div style="flex: 1 1 45%">
-        <h2>New Themes in theme.json:</h2>
-        <ul id="input-theme-list"></ul>
-      </div>
-    </div>
-
-    <div class="card">
-      <h1>Icon Ingestion App</h1>
-      <p>
-        This tool ingests icons from <code>/input/icons.json</code> and saves
-        each as a JSON file in its appropriate theme folder under
-        <code>/icons/</code>.
-      </p>
-      <button onclick="runIconIngestion()">Ingest Icons</button>
-      <div id="icon-status">Status: Idle</div>
-
-      <div
-        style="
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin-top: 20px;
-        "
-      >
-        <div style="flex: 1 1 45%">
-          <h2>New Icon Ideas (icons.json):</h2>
-          <ul id="input-icon-list"></ul>
-        </div>
-        <div style="flex: 1 1 45%">
-          <h2>All Created Icons:</h2>
-          <ul id="all-icon-list"></ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h1>Vectorization App</h1>
-      <p>
-        This tool finds all PNGs in <code>/input/</code>, vectorizes them, and
-        moves each SVG to its correct folder using matching .json metadata.
-      </p>
-      <button onclick="startVectorization()">Vectorize Icons</button>
-      <div id="vector-status">Status: Idle</div>
-
-      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px">
-        <div style="flex: 1 1 45%">
-          <h2>PNGs in Input:</h2>
-          <div
-            id="png-grid"
-            style="
-              max-height: 200px;
-              overflow-y: scroll;
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px;
-            "
-          ></div>
-        </div>
-        <div style="flex: 1 1 45%">
-          <h2>Vectorized SVGs:</h2>
-          <div
-            id="svg-grid"
-            style="
-              max-height: 200px;
-              overflow-y: scroll;
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px;
-            "
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h1>App 5: SVG Match</h1>
-      <button onclick="showSvgJsonMatches()">Check Matches</button>
-      <div style="display: flex; gap: 20px; margin-top: 10px">
-        <div style="flex: 1">
-          <h2>JSON Files</h2>
-          <ul id="json-match-list"></ul>
-        </div>
-        <div style="flex: 1">
-          <h2>SVGs in /input/</h2>
-          <ul id="svg-file-list"></ul>
-        </div>
-      </div>
-
+    <h1>🎛️ Open Icon Forge Dashboard</h1>
+    <div class="dashboard">
+      <!-- 1 -->
       <div class="card">
-        <h2>Finalize SVG Placement</h1>
-        
+        <div class="card-number">1️⃣</div>
+        <h2>📁 Theme Ingestion</h2>
+        <p>
+          Reads <code>/input/theme.json</code> and creates folders under
+          <code>/icons/</code>.
+        </p>
+        <button onclick="runThemeAddition()">Ingest New Themes</button>
+        <div id="status" class="status-box">Status: Idle</div>
+        <div class="split">
+          <div>
+            <h3>Existing Themes</h3>
+            <ul id="theme-list"></ul>
+          </div>
+          <div>
+            <h3>New Themes (theme.json)</h3>
+            <ul id="input-theme-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="card">
+        <div class="card-number">2️⃣</div>
+        <h2>🖼️ Icon Ingestion</h2>
+        <p>Processes <code>/input/icons.json</code> into theme folders.</p>
+        <button onclick="runIconIngestion()">Ingest Icons</button>
+        <div id="icon-status" class="status-box">Status: Idle</div>
+        <div class="split">
+          <div>
+            <h3>New Ideas</h3>
+            <ul id="input-icon-list"></ul>
+          </div>
+          <div>
+            <h3>Created Icons</h3>
+            <ul id="all-icon-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="card">
+        <div class="card-number">3️⃣</div>
+        <h2>🎨 Vectorization</h2>
+        <p>
+          Vectorizes PNGs in <code>/input/</code> and moves SVGs into folders
+          via metadata.
+        </p>
+        <button onclick="startVectorization()">Vectorize Icons</button>
+        <div id="vector-status" class="status-box">Status: Idle</div>
+        <div class="split">
+          <div>
+            <h3>Input PNGs</h3>
+            <div id="png-grid" class="grid-box"></div>
+          </div>
+          <div>
+            <h3>SVG Output</h3>
+            <div id="svg-grid" class="grid-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="card">
+        <div class="card-number">4️⃣</div>
+        <h2>🔄 Match + Finalize</h2>
+        <p>Checks matches between SVGs and JSONs, and finalizes placement.</p>
+        <button onclick="showSvgJsonMatches()">Check Matches</button>
+        <div class="split">
+          <div>
+            <h3>JSON Files</h3>
+            <ul id="json-match-list"></ul>
+          </div>
+          <div>
+            <h3>SVG Files</h3>
+            <ul id="svg-file-list"></ul>
+          </div>
+        </div>
+        <h3>Finalize Placement</h3>
         <button onclick="finalizeSvgPlacement()">Place SVGs</button>
-        <div id="finalize-status">Status: Idle</div>
+        <div id="finalize-status" class="status-box">Status: Idle</div>
       </div>
     </div>
 
@@ -483,7 +527,6 @@
           svgList.appendChild(li);
         });
       }
-
     </script>
   </body>
 </html>
