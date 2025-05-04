@@ -16,15 +16,23 @@
         font-size: 2rem;
         color: #007acc;
       }
-      #search {
-        display: block;
-        margin: 1rem auto;
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      #search,
+      #tagFilter {
         padding: 0.6rem;
         border: 1px solid #ccc;
         border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      #search {
         width: 80%;
         max-width: 400px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
       .grid {
         display: grid;
@@ -89,13 +97,6 @@
         background: #f9f9f9;
         padding: 0.5rem;
       }
-      .details-meta {
-        flex: 1;
-      }
-      #details h2 {
-        margin-top: 0;
-        color: #007acc;
-      }
       .details-icon button {
         margin-top: 0.75rem;
         padding: 0.4rem 0.75rem;
@@ -110,11 +111,24 @@
       .details-icon button:hover {
         background-color: #005fa3;
       }
+      .details-meta {
+        flex: 1;
+      }
+      #details h2 {
+        margin-top: 0;
+        color: #007acc;
+      }
     </style>
   </head>
   <body>
     <h1>Open Icon Forge Library</h1>
-    <input type="text" id="search" placeholder="Search by tag or name..." />
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search by tag or name..." />
+      <select id="tagFilter">
+        <option value="">Filter by tag</option>
+      </select>
+    </div>
+
     <div class="grid" id="iconGrid"></div>
 
     <div id="details" style="display: none">
@@ -136,6 +150,7 @@
     <script>
       const grid = document.getElementById("iconGrid");
       const searchInput = document.getElementById("search");
+      const tagFilter = document.getElementById("tagFilter");
       const details = document.getElementById("details");
       const detailIcon = document.getElementById("detailIcon");
       const detailName = document.getElementById("detailName");
@@ -143,6 +158,7 @@
       const detailTheme = document.getElementById("detailTheme");
       const detailDate = document.getElementById("detailDate");
       const detailPath = document.getElementById("detailPath");
+      const downloadBtn = document.getElementById("downloadBtn");
 
       let icons = [];
       let selectedDiv = null;
@@ -152,6 +168,7 @@
           const res = await fetch("php/list_svgs.php");
           const data = await res.json();
           icons = data.icons || [];
+          populateTagDropdown();
           renderIcons();
         } catch (err) {
           grid.innerHTML = "<p>Error loading SVG list</p>";
@@ -159,18 +176,75 @@
         }
       }
 
-      function renderIcons(filter = "") {
+      function populateTagDropdown() {
+        const tagCounts = {};
+        const themeCounts = {};
+
+        icons.forEach((icon) => {
+          const theme = icon.theme;
+          if (
+            theme &&
+            !["vectorized", "temp", "generated"].includes(theme.toLowerCase())
+          ) {
+            themeCounts[theme] = (themeCounts[theme] || 0) + 1;
+          }
+
+          (icon.tags || []).forEach((tag) => {
+            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+          });
+        });
+
+        tagFilter.innerHTML =
+          '<option value="">Filter by tag or theme</option>';
+
+        // Add themes first
+        Object.keys(themeCounts)
+          .sort()
+          .forEach((theme) => {
+            const option = document.createElement("option");
+            option.value = `theme:${theme}`;
+            option.textContent = `Theme: ${theme} (${themeCounts[theme]})`;
+            tagFilter.appendChild(option);
+          });
+
+        // Then tags
+        Object.keys(tagCounts)
+          .sort()
+          .forEach((tag) => {
+            const option = document.createElement("option");
+            option.value = `tag:${tag}`;
+            option.textContent = `Tag: ${tag} (${tagCounts[tag]})`;
+            tagFilter.appendChild(option);
+          });
+      }
+
+      function renderIcons(filter = "", selectedFilter = "") {
         const lowerFilter = filter.toLowerCase();
         const bannedThemes = ["vectorized", "temp", "generated"];
+        let filterType = "";
+        let filterValue = "";
+
+        if (selectedFilter.includes(":")) {
+          [filterType, filterValue] = selectedFilter.split(":");
+        }
+
         grid.innerHTML = "";
 
         icons
-          .filter(
-            (icon) =>
-              !bannedThemes.includes(icon.theme?.toLowerCase()) &&
-              (icon.name.toLowerCase().includes(lowerFilter) ||
-                icon.theme.toLowerCase().includes(lowerFilter))
-          )
+          .filter((icon) => {
+            if (bannedThemes.includes(icon.theme?.toLowerCase())) return false;
+
+            const matchesSearch =
+              icon.name.toLowerCase().includes(lowerFilter) ||
+              icon.theme.toLowerCase().includes(lowerFilter);
+
+            const matchesTag =
+              filterType === "tag" ? icon.tags?.includes(filterValue) : true;
+            const matchesTheme =
+              filterType === "theme" ? icon.theme === filterValue : true;
+
+            return matchesSearch && matchesTag && matchesTheme;
+          })
           .forEach((icon) => {
             const div = document.createElement("div");
             div.className = "icon";
@@ -185,7 +259,13 @@
             div.appendChild(object);
             div.appendChild(label);
 
-            div.addEventListener("click", () => selectIcon(div, icon));
+            div.addEventListener(
+              "click",
+              ((iconCopy) => {
+                return () => selectIcon(div, iconCopy);
+              })(icon)
+            );
+
             grid.appendChild(div);
           });
       }
@@ -203,16 +283,22 @@
         detailPath.textContent = icon.file;
         details.style.display = "block";
 
-        document.getElementById("downloadBtn").onclick = () => {
+        downloadBtn.onclick = () => {
           const link = document.createElement("a");
-          link.href = detailIcon.data;
+          link.href = icon.file;
           link.download = icon.file.split("/").pop();
           link.click();
         };
       }
 
       searchInput.addEventListener("input", (e) => {
-        renderIcons(e.target.value);
+        renderIcons(e.target.value, tagFilter.value);
+        details.style.display = "none";
+        selectedDiv = null;
+      });
+
+      tagFilter.addEventListener("change", () => {
+        renderIcons(searchInput.value, tagFilter.value);
         details.style.display = "none";
         selectedDiv = null;
       });
