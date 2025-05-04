@@ -1,0 +1,16 @@
+{
+    "name": "Simple Cat",
+    "fname": "simple-cat",
+    "short_description": "A minimalist line drawing of a sitting cat.",
+    "tags": [
+        "cat",
+        "animal",
+        "pet",
+        "simple",
+        "cute",
+        "feline",
+        "minimalist"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-04"
+}

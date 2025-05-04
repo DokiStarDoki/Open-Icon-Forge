@@ -1,0 +1,16 @@
+{
+    "name": "Bookshelf",
+    "fname": "bookshelf",
+    "short_description": "A simple outline of a bookshelf with books on two shelves.",
+    "tags": [
+        "furniture",
+        "storage",
+        "books",
+        "reading",
+        "library",
+        "shelf",
+        "organization"
+    ],
+    "theme": "furniture",
+    "date_created": "2025-05-04"
+}

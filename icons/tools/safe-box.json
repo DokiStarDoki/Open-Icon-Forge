@@ -1,0 +1,16 @@
+{
+    "name": "Safe Box",
+    "fname": "safe-box",
+    "short_description": "A compact security safe with keypad and handle.",
+    "tags": [
+        "security",
+        "storage",
+        "protection",
+        "valuables",
+        "code",
+        "lock",
+        "tools"
+    ],
+    "theme": "tools",
+    "date_created": "2025-05-04"
+}

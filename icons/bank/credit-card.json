@@ -1,0 +1,17 @@
+{
+    "name": "Credit Card",
+    "fname": "credit-card",
+    "short_description": "A bank card with chip and information lines.",
+    "tags": [
+        "payment",
+        "credit",
+        "banking",
+        "finance",
+        "card",
+        "money",
+        "transaction",
+        "electronic"
+    ],
+    "theme": "bank",
+    "date_created": "2025-05-04"
+}

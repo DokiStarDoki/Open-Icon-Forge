@@ -1,0 +1,17 @@
+{
+    "name": "Magic Wand",
+    "fname": "magic-wand",
+    "short_description": "A star-tipped wand with sparkling effects.",
+    "tags": [
+        "wand",
+        "magic",
+        "spell",
+        "wizard",
+        "star",
+        "sparkle",
+        "casting",
+        "enchantment"
+    ],
+    "theme": "wizard",
+    "date_created": "2025-05-04"
+}

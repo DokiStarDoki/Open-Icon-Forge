@@ -1,0 +1,17 @@
+{
+    "name": "Treasure Chest",
+    "fname": "treasure-chest",
+    "short_description": "A locked wooden chest with metal bands and keyhole.",
+    "tags": [
+        "chest",
+        "treasure",
+        "storage",
+        "gold",
+        "riches",
+        "lock",
+        "wood",
+        "container"
+    ],
+    "theme": "pirate",
+    "date_created": "2025-05-04"
+}

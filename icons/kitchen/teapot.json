@@ -1,0 +1,17 @@
+{
+    "name": "Teapot",
+    "fname": "teapot",
+    "short_description": "A simple outline of a teapot with a lid and spout.",
+    "tags": [
+        "kitchen",
+        "beverage",
+        "tea",
+        "drink",
+        "kettle",
+        "brewing",
+        "hot",
+        "appliance"
+    ],
+    "theme": "kitchen",
+    "date_created": "2025-05-04"
+}

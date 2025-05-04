@@ -1,0 +1,16 @@
+{
+    "name": "Spatula",
+    "fname": "spatula",
+    "short_description": "A cooking spatula with slotted head and handle.",
+    "tags": [
+        "kitchen",
+        "utensil",
+        "cooking",
+        "flipping",
+        "tool",
+        "grill",
+        "frying"
+    ],
+    "theme": "kitchen",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Frog Laser Shotgun",
+    "fname": "frog-laser-shotgun",
+    "short_description": "A cartoon-style laser shotgun with frog eyes on the top.",
+    "tags": [
+        "gun",
+        "weapon",
+        "frog",
+        "laser",
+        "blaster",
+        "cartoon",
+        "eyes",
+        "shotgun"
+    ],
+    "theme": "Frog",
+    "date_created": "2025-05-04"
+}

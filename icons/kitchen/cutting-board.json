@@ -1,0 +1,16 @@
+{
+    "name": "Cutting Board",
+    "fname": "cutting-board",
+    "short_description": "A rectangular cutting board with a hole in the corner.",
+    "tags": [
+        "kitchen",
+        "preparation",
+        "chopping",
+        "cooking",
+        "wooden",
+        "board",
+        "cutting"
+    ],
+    "theme": "kitchen",
+    "date_created": "2025-05-04"
+}

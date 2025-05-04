@@ -1,0 +1,16 @@
+{
+    "name": "Laser Pistol",
+    "fname": "laser-pistol",
+    "short_description": "A handheld energy weapon that emits a focused beam.",
+    "tags": [
+        "gun",
+        "pistol",
+        "laser",
+        "weapon",
+        "sci-fi",
+        "futuristic",
+        "space"
+    ],
+    "theme": "Space",
+    "date_created": "2025-05-04"
+}

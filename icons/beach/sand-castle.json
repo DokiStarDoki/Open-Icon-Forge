@@ -1,0 +1,17 @@
+{
+    "name": "Sand Castle",
+    "fname": "sand-castle",
+    "short_description": "A medieval castle with crenellations, towers and a flag.",
+    "tags": [
+        "castle",
+        "fortress",
+        "medieval",
+        "beach",
+        "sand",
+        "tower",
+        "flag",
+        "keep"
+    ],
+    "theme": "Beach",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Sofa",
+    "fname": "sofa",
+    "short_description": "A simple outline of a two-seater sofa with armrests.",
+    "tags": [
+        "furniture",
+        "living room",
+        "couch",
+        "seating",
+        "comfort",
+        "home",
+        "interior"
+    ],
+    "theme": "living room",
+    "date_created": "2025-05-04"
+}

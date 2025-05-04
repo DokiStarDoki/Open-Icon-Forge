@@ -1,0 +1,16 @@
+{
+    "name": "Kitchen Knife",
+    "fname": "kitchen-knife",
+    "short_description": "A chef's knife with a sharp blade and handle.",
+    "tags": [
+        "kitchen",
+        "utensil",
+        "cutting",
+        "cooking",
+        "chef",
+        "blade",
+        "sharp"
+    ],
+    "theme": "kitchen",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Combat Sword",
+    "fname": "combat-sword",
+    "short_description": "A straight double-edged sword with pointed tip and cross-guard.",
+    "tags": [
+        "sword",
+        "weapon",
+        "blade",
+        "medieval",
+        "combat",
+        "sharp",
+        "knight"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}
