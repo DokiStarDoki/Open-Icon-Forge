@@ -1,0 +1,16 @@
+{
+    "name": "Storm Deer",
+    "fname": "storm-deer",
+    "short_description": "A mystical deer with lightning antlers and a cloudy body.",
+    "tags": [
+        "monster",
+        "mythical",
+        "deer",
+        "lightning",
+        "storm",
+        "fantasy",
+        "cloud"
+    ],
+    "theme": "Monster",
+    "date_created": "2025-05-04"
+}

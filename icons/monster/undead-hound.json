@@ -1,0 +1,15 @@
+{
+    "name": "Undead Hound",
+    "fname": "undead-hound",
+    "short_description": "A skeletal monster resembling a dog or wolf.",
+    "tags": [
+        "monster",
+        "undead",
+        "skeleton",
+        "dog",
+        "creature",
+        "bone"
+    ],
+    "theme": "Monster",
+    "date_created": "2025-05-04"
+}

@@ -49,6 +49,159 @@
             "json_path": "icons/artifact/treasure-map.json"
         },
         {
+            "name": "Dice Pair",
+            "theme": "Casino",
+            "tags": [
+                "dice",
+                "casino",
+                "luck",
+                "gambling",
+                "game",
+                "chance"
+            ],
+            "short_description": "A pair of six-sided dice with visible pips.",
+            "file": "icons/casino/dice-pair.svg",
+            "json_path": "icons/casino/dice-pair.json"
+        },
+        {
+            "name": "Notification Bell",
+            "theme": "Casino",
+            "tags": [
+                "casino",
+                "bell",
+                "notification",
+                "alert",
+                "sound",
+                "win"
+            ],
+            "short_description": "A ringing bell icon, often used for alerts or wins.",
+            "file": "icons/casino/notification-bell.svg",
+            "json_path": "icons/casino/notification-bell.json"
+        },
+        {
+            "name": "Playing Cards",
+            "theme": "Casino",
+            "tags": [
+                "cards",
+                "poker",
+                "casino",
+                "gambling",
+                "spade",
+                "heart",
+                "club"
+            ],
+            "short_description": "Three playing cards showing spade, heart, and club suits.",
+            "file": "icons/casino/playing-cards.svg",
+            "json_path": "icons/casino/playing-cards.json"
+        },
+        {
+            "name": "Roulette Wheel",
+            "theme": "Casino",
+            "tags": [
+                "casino",
+                "gambling",
+                "roulette",
+                "wheel",
+                "luck",
+                "game"
+            ],
+            "short_description": "A classic roulette wheel with numbered slots and a spinning ball.",
+            "file": "icons/casino/roulette-wheel.svg",
+            "json_path": "icons/casino/roulette-wheel.json"
+        },
+        {
+            "name": "Slot Machine",
+            "theme": "Casino",
+            "tags": [
+                "slot",
+                "casino",
+                "777",
+                "gambling",
+                "jackpot",
+                "machine"
+            ],
+            "short_description": "A slot machine showing a winning combination of triple 7s.",
+            "file": "icons/casino/slot-machine.svg",
+            "json_path": "icons/casino/slot-machine.json"
+        },
+        {
+            "name": "Spade Poker Chip",
+            "theme": "Casino",
+            "tags": [
+                "chip",
+                "poker",
+                "casino",
+                "spade",
+                "gambling",
+                "token"
+            ],
+            "short_description": "A casino chip featuring a spade symbol in the center.",
+            "file": "icons/casino/spade-poker-chip.svg",
+            "json_path": "icons/casino/spade-poker-chip.json"
+        },
+        {
+            "name": "Stack of Cash",
+            "theme": "Casino",
+            "tags": [
+                "casino",
+                "money",
+                "cash",
+                "stack",
+                "currency",
+                "prize"
+            ],
+            "short_description": "A thick stack of dollar bills tied with a band.",
+            "file": "icons/casino/stack-of-cash.svg",
+            "json_path": "icons/casino/stack-of-cash.json"
+        },
+        {
+            "name": "Ten Poker Chip",
+            "theme": "Casino",
+            "tags": [
+                "chip",
+                "ten",
+                "casino",
+                "poker",
+                "gambling",
+                "token",
+                "value"
+            ],
+            "short_description": "A casino chip marked with the number ten.",
+            "file": "icons/casino/ten-poker-chip.svg",
+            "json_path": "icons/casino/ten-poker-chip.json"
+        },
+        {
+            "name": "VIP Pass",
+            "theme": "Casino",
+            "tags": [
+                "casino",
+                "vip",
+                "pass",
+                "badge",
+                "exclusive",
+                "access"
+            ],
+            "short_description": "A badge labeled VIP, signifying special casino access.",
+            "file": "icons/casino/vip-pass.svg",
+            "json_path": "icons/casino/vip-pass.json"
+        },
+        {
+            "name": "Whiskey Glass",
+            "theme": "Casino",
+            "tags": [
+                "casino",
+                "drink",
+                "whiskey",
+                "glass",
+                "alcohol",
+                "bar",
+                "ice"
+            ],
+            "short_description": "A glass of whiskey with ice cubes and a straw.",
+            "file": "icons/casino/whiskey-glass.svg",
+            "json_path": "icons/casino/whiskey-glass.json"
+        },
+        {
             "name": "Bone Brush",
             "theme": "Goblin",
             "tags": [
@@ -161,6 +314,22 @@
             "json_path": "icons/goblin/bone-spoon.json"
         },
         {
+            "name": "Goblin Potion Bag",
+            "theme": "Goblin",
+            "tags": [
+                "goblin",
+                "magic",
+                "potion",
+                "bag",
+                "fantasy",
+                "alchemy",
+                "ingredients"
+            ],
+            "short_description": "A bag filled with magical goblin ingredients and tools.",
+            "file": "icons/goblin/goblin-potion-bag.svg",
+            "json_path": "icons/goblin/goblin-potion-bag.json"
+        },
+        {
             "name": "Goblin Slingshot",
             "theme": "Goblin",
             "tags": [
@@ -270,6 +439,145 @@
             "short_description": "A primitive necklace strung with sharp animal teeth.",
             "file": "icons/goblin/tooth-necklace.svg",
             "json_path": "icons/goblin/tooth-necklace.json"
+        },
+        {
+            "name": "Fire Dragon",
+            "theme": "Monster",
+            "tags": [
+                "monster",
+                "dragon",
+                "fire",
+                "fantasy",
+                "breath",
+                "reptile"
+            ],
+            "short_description": "A fierce dragon breathing fire, with curled horns.",
+            "file": "icons/monster/fire-dragon.svg",
+            "json_path": "icons/monster/fire-dragon.json"
+        },
+        {
+            "name": "Ghost Lantern",
+            "theme": "Monster",
+            "tags": [
+                "monster",
+                "ghost",
+                "lantern",
+                "haunted",
+                "spirit",
+                "light",
+                "creepy"
+            ],
+            "short_description": "A lantern containing a glowing ghost and sparkles.",
+            "file": "icons/monster/ghost-lantern.svg",
+            "json_path": "icons/monster/ghost-lantern.json"
+        },
+        {
+            "name": "Storm Deer",
+            "theme": "Monster",
+            "tags": [
+                "monster",
+                "mythical",
+                "deer",
+                "lightning",
+                "storm",
+                "fantasy",
+                "cloud"
+            ],
+            "short_description": "A mystical deer with lightning antlers and a cloudy body.",
+            "file": "icons/monster/storm-deer.svg",
+            "json_path": "icons/monster/storm-deer.json"
+        },
+        {
+            "name": "Thorn Beast",
+            "theme": "Monster",
+            "tags": [
+                "monster",
+                "beast",
+                "spikes",
+                "cat",
+                "rose",
+                "tail",
+                "aggressive"
+            ],
+            "short_description": "A feline monster with spikes on its back and a rosebud tail.",
+            "file": "icons/monster/thorn-beast.svg",
+            "json_path": "icons/monster/thorn-beast.json"
+        },
+        {
+            "name": "Undead Hound",
+            "theme": "Monster",
+            "tags": [
+                "monster",
+                "undead",
+                "skeleton",
+                "dog",
+                "creature",
+                "bone"
+            ],
+            "short_description": "A skeletal monster resembling a dog or wolf.",
+            "file": "icons/monster/undead-hound.svg",
+            "json_path": "icons/monster/undead-hound.json"
+        },
+        {
+            "name": "Life Preserver",
+            "theme": "Navy",
+            "tags": [
+                "life ring",
+                "safety",
+                "rescue",
+                "nautical",
+                "navy",
+                "lifesaver"
+            ],
+            "short_description": "A classic life ring used for water safety and rescue.",
+            "file": "icons/navy/life-preserver.svg",
+            "json_path": "icons/navy/life-preserver.json"
+        },
+        {
+            "name": "Nautical Flags",
+            "theme": "Navy",
+            "tags": [
+                "flags",
+                "signal",
+                "nautical",
+                "maritime",
+                "communication",
+                "black and white"
+            ],
+            "short_description": "Two crossed signal flags used for maritime communication.",
+            "file": "icons/navy/nautical-flags.svg",
+            "json_path": "icons/navy/nautical-flags.json"
+        },
+        {
+            "name": "Torpedo",
+            "theme": "Navy",
+            "tags": [
+                "weapon",
+                "torpedo",
+                "navy",
+                "missile",
+                "marine",
+                "underwater"
+            ],
+            "short_description": "A naval torpedo with tail fins and cylindrical body.",
+            "file": "icons/navy/torpedo.svg",
+            "json_path": "icons/navy/torpedo.json"
+        },
+        {
+            "name": "Boiling Flask",
+            "theme": "Science",
+            "tags": [
+                "science",
+                "flask",
+                "chemistry",
+                "experiment",
+                "lab",
+                "bubbles",
+                "steam"
+            ],
+            "short_description": "A science flask bubbling with chemicals and vapor.",
+            "file": "icons/science/boiling-flask.svg",
+            "json_path": "icons/science/boiling-flask.json"
         },
         {
             "name": "Space Station",

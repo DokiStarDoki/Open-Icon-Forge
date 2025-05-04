@@ -1,0 +1,15 @@
+{
+    "name": "VIP Pass",
+    "fname": "vip-pass",
+    "short_description": "A badge labeled VIP, signifying special casino access.",
+    "tags": [
+        "casino",
+        "vip",
+        "pass",
+        "badge",
+        "exclusive",
+        "access"
+    ],
+    "theme": "Casino",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Ghost Lantern",
+    "fname": "ghost-lantern",
+    "short_description": "A lantern containing a glowing ghost and sparkles.",
+    "tags": [
+        "monster",
+        "ghost",
+        "lantern",
+        "haunted",
+        "spirit",
+        "light",
+        "creepy"
+    ],
+    "theme": "Monster",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Playing Cards",
+    "fname": "playing-cards",
+    "short_description": "Three playing cards showing spade, heart, and club suits.",
+    "tags": [
+        "cards",
+        "poker",
+        "casino",
+        "gambling",
+        "spade",
+        "heart",
+        "club"
+    ],
+    "theme": "Casino",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Ten Poker Chip",
+    "fname": "ten-poker-chip",
+    "short_description": "A casino chip marked with the number ten.",
+    "tags": [
+        "chip",
+        "ten",
+        "casino",
+        "poker",
+        "gambling",
+        "token",
+        "value"
+    ],
+    "theme": "Casino",
+    "date_created": "2025-05-04"
+}
