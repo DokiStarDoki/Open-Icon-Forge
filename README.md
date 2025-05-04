@@ -62,19 +62,21 @@ LICENSE                 # CC0 1.0 Universal (Public Domain Dedication)
 
 ## 🧠 Metadata Format
 
-### metadata.json
-
-Lightweight tracker used for indexing themes and listing all created icons:
+### theme.json (input)
 
 ```json
 {
-  "themes_used": ["Space", "Underwater"],
-  "icons_created": [
-    {
-      "file": "icons/space/space-station.svg",
-      "name": "Space Station",
-      "theme": "Space"
-    }
+  "themes": [
+    "Mirrors",
+    "Clouds",
+    "Volcanoes",
+    "Maze",
+    "Tunnels",
+    "Coral Reef",
+    "Lanterns",
+    "Wizards",
+    "Time Travel",
+    "Origami"
   ]
 }
 ```
@@ -115,13 +117,6 @@ Open `index.html` to browse all finalized icons:
 - 🧩 Filter by tag or theme
 - 📝 View metadata details
 - ⬇ Download SVGs
-
-## Python Script: organize_icons.py
-
-Use this to:
-
-- Move icons and metadata from /input/ into their respective /icons/[theme]/ folder
-- Update metadata.json automatically
 
 ## 🧪 Tech Stack
 
