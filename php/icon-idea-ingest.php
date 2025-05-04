@@ -26,11 +26,12 @@ foreach ($iconData as $icon) {
   }
 
   $theme = $icon['theme'];
+  $themeSlug = strtolower($theme); // 👈 Force lowercase folder name
   $name = $icon['name'];
   $safeName = strtolower(str_replace(' ', '-', $name));
-  $themePath = "$iconsDir/$theme";
+  $themePath = "$iconsDir/$themeSlug";
 
-  if (in_array($theme, $ignored)) continue;
+  if (in_array($themeSlug, $ignored)) continue;
 
   if (!file_exists($themePath)) {
     mkdir($themePath, 0777, true);
@@ -41,12 +42,9 @@ foreach ($iconData as $icon) {
     $icon['date_created'] = $icon['date_created'] ?? $date;
     file_put_contents($jsonPath, json_encode($icon, JSON_PRETTY_PRINT));
     $created[] = $name;
-  } else {
-    // Already exists, skip
   }
 }
 
-// Clear input after processing
 file_put_contents($inputFile, json_encode($remaining, JSON_PRETTY_PRINT));
 
 echo json_encode(['created' => $created]);

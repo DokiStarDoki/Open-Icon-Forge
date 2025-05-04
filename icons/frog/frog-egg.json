@@ -1,0 +1,15 @@
+{
+    "name": "Frog Egg",
+    "short_description": "A cluster of jelly-like eggs with dark centers.",
+    "tags": [
+        "egg",
+        "frog",
+        "spawn",
+        "jelly",
+        "tadpole",
+        "cluster",
+        "pond"
+    ],
+    "theme": "Frog",
+    "date_created": "2025-05-03"
+}

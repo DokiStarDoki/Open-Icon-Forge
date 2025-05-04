@@ -24,6 +24,7 @@ $existingThemes = array_values(array_filter(
   }
 ));
 
+$existingThemes = array_map('strtolower', $existingThemes);
 sort($existingThemes);
 
 // Load input themes
@@ -42,18 +43,20 @@ $added = [];
 $remaining = [];
 
 foreach ($inputThemes as $theme) {
-  if (!in_array($theme, $existingThemes)) {
-    $themePath = "$iconsDir/$theme";
+  $lowerTheme = strtolower($theme);
+
+  if (!in_array($lowerTheme, $existingThemes)) {
+    $themePath = "$iconsDir/$lowerTheme";
     if (!file_exists($themePath)) {
       mkdir($themePath, 0777, true);
-      $added[] = $theme;
-      $existingThemes[] = $theme;
+      $added[] = $lowerTheme;
+      $existingThemes[] = $lowerTheme;
     }
   }
-  // In both cases (added or already existed), do NOT include it in remaining list
+  // Skip adding to $remaining since it's already handled
 }
 
-// Rewrite theme.json with remaining themes (those not added or already present)
+// Rewrite theme.json with themes that haven't been added (in case any were skipped)
 file_put_contents($inputFile, json_encode(['themes' => $remaining], JSON_PRETTY_PRINT));
 
 sort($existingThemes);

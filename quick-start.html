@@ -354,6 +354,7 @@
 
         for (const file of files) {
           const imagePath = "input/" + file;
+          loadSvgGrid();
           try {
             statusBox.innerHTML += `<div>🖼️ Processing ${imagePath}...</div>`;
 
