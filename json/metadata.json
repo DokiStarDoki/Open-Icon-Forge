@@ -18,6 +18,38 @@
             "json_path": "icons/animal/mouse.json"
         },
         {
+            "name": "Simple Cat",
+            "theme": "Animal",
+            "tags": [
+                "cat",
+                "animal",
+                "pet",
+                "simple",
+                "cute",
+                "feline",
+                "minimalist"
+            ],
+            "short_description": "A minimalist line drawing of a sitting cat.",
+            "file": "icons/animal/simple-cat.svg",
+            "json_path": "icons/animal/simple-cat.json"
+        },
+        {
+            "name": "Sphynx Cat",
+            "theme": "Animal",
+            "tags": [
+                "cat",
+                "sphynx",
+                "animal",
+                "pet",
+                "hairless",
+                "feline",
+                "exotic"
+            ],
+            "short_description": "A detailed outline of a hairless sphynx cat breed.",
+            "file": "icons/animal/sphynx-cat.svg",
+            "json_path": "icons/animal/sphynx-cat.json"
+        },
+        {
             "name": "Canteen",
             "theme": "Army",
             "tags": [
@@ -62,6 +94,22 @@
             "short_description": "A standard army helmet with netting.",
             "file": "icons/army/combat-helmet.svg",
             "json_path": "icons/army/combat-helmet.json"
+        },
+        {
+            "name": "Combat Sword",
+            "theme": "Army",
+            "tags": [
+                "sword",
+                "weapon",
+                "blade",
+                "medieval",
+                "combat",
+                "sharp",
+                "knight"
+            ],
+            "short_description": "A straight double-edged sword with pointed tip and cross-guard.",
+            "file": "icons/army/combat-sword.svg",
+            "json_path": "icons/army/combat-sword.json"
         },
         {
             "name": "Dog Tags",
@@ -124,6 +172,22 @@
             "short_description": "A sealed pack of military field rations.",
             "file": "icons/army/military-ration-pack.svg",
             "json_path": "icons/army/military-ration-pack.json"
+        },
+        {
+            "name": "Serrated Dagger",
+            "theme": "Army",
+            "tags": [
+                "dagger",
+                "knife",
+                "blade",
+                "weapon",
+                "serrated",
+                "medieval",
+                "combat"
+            ],
+            "short_description": "A blade with a wavy, serrated edge and wrapped handle.",
+            "file": "icons/army/serrated-dagger.svg",
+            "json_path": "icons/army/serrated-dagger.json"
         },
         {
             "name": "Supply Crate",
@@ -204,6 +268,23 @@
             "short_description": "An old, rolled parchment map marked with a treasure route.",
             "file": "icons/artifact/treasure-map.svg",
             "json_path": "icons/artifact/treasure-map.json"
+        },
+        {
+            "name": "Credit Card",
+            "theme": "bank",
+            "tags": [
+                "payment",
+                "credit",
+                "banking",
+                "finance",
+                "card",
+                "money",
+                "transaction",
+                "electronic"
+            ],
+            "short_description": "A bank card with chip and information lines.",
+            "file": "icons/bank/credit-card.svg",
+            "json_path": "icons/bank/credit-card.json"
         },
         {
             "name": "Barber Cape",
@@ -372,6 +453,23 @@
             "json_path": "icons/bbq/bbq-grill.json"
         },
         {
+            "name": "Sand Castle",
+            "theme": "Beach",
+            "tags": [
+                "castle",
+                "fortress",
+                "medieval",
+                "beach",
+                "sand",
+                "tower",
+                "flag",
+                "keep"
+            ],
+            "short_description": "A medieval castle with crenellations, towers and a flag.",
+            "file": "icons/beach/sand-castle.svg",
+            "json_path": "icons/beach/sand-castle.json"
+        },
+        {
             "name": "Tire",
             "theme": "car",
             "tags": [
@@ -389,6 +487,23 @@
             "json_path": "icons/car/tire.json"
         },
         {
+            "name": "Coins Stack",
+            "theme": "casino",
+            "tags": [
+                "money",
+                "coins",
+                "currency",
+                "cash",
+                "finance",
+                "wealth",
+                "casino",
+                "stack"
+            ],
+            "short_description": "A stack of coins with dollar sign on top.",
+            "file": "icons/casino/coins-stack.svg",
+            "json_path": "icons/casino/coins-stack.json"
+        },
+        {
             "name": "Dice Pair",
             "theme": "Casino",
             "tags": [
@@ -402,6 +517,22 @@
             "short_description": "A pair of six-sided dice with visible pips.",
             "file": "icons/casino/dice-pair.svg",
             "json_path": "icons/casino/dice-pair.json"
+        },
+        {
+            "name": "Dollar Bill",
+            "theme": "casino",
+            "tags": [
+                "money",
+                "currency",
+                "cash",
+                "dollar",
+                "finance",
+                "payment",
+                "casino"
+            ],
+            "short_description": "A stylized dollar bill with decorative borders.",
+            "file": "icons/casino/dollar-bill.svg",
+            "json_path": "icons/casino/dollar-bill.json"
         },
         {
             "name": "Notification Bell",
@@ -542,6 +673,138 @@
             "json_path": "icons/casino/whiskey-glass.json"
         },
         {
+            "name": "Frog Blaster",
+            "theme": "Frog",
+            "tags": [
+                "gun",
+                "blaster",
+                "frog",
+                "animal",
+                "cartoon",
+                "cute",
+                "weapon"
+            ],
+            "short_description": "A whimsical energy weapon shaped like a cartoon frog.",
+            "file": "icons/frog/frog-blaster.svg",
+            "json_path": "icons/frog/frog-blaster.json"
+        },
+        {
+            "name": "Frog House",
+            "theme": "Frog",
+            "tags": [
+                "house",
+                "home",
+                "frog",
+                "building",
+                "dwelling",
+                "cute",
+                "shelter",
+                "cartoon"
+            ],
+            "short_description": "A small house with frog face on the roof.",
+            "file": "icons/frog/frog-house.svg",
+            "json_path": "icons/frog/frog-house.json"
+        },
+        {
+            "name": "Frog Laser Shotgun",
+            "theme": "Frog",
+            "tags": [
+                "gun",
+                "weapon",
+                "frog",
+                "laser",
+                "blaster",
+                "cartoon",
+                "eyes",
+                "shotgun"
+            ],
+            "short_description": "A cartoon-style laser shotgun with frog eyes on the top.",
+            "file": "icons/frog/frog-laser-shotgun.svg",
+            "json_path": "icons/frog/frog-laser-shotgun.json"
+        },
+        {
+            "name": "Frog Paintbrush",
+            "theme": "Frog",
+            "tags": [
+                "paint",
+                "brush",
+                "art",
+                "tool",
+                "frog",
+                "craft",
+                "creative",
+                "design"
+            ],
+            "short_description": "A paintbrush with frog face on the handle.",
+            "file": "icons/frog/frog-paintbrush.svg",
+            "json_path": "icons/frog/frog-paintbrush.json"
+        },
+        {
+            "name": "Frog Wallet",
+            "theme": "Frog",
+            "tags": [
+                "wallet",
+                "purse",
+                "frog",
+                "money",
+                "finance",
+                "smile",
+                "cute",
+                "accessory"
+            ],
+            "short_description": "A smiling frog-shaped wallet or coin purse.",
+            "file": "icons/frog/frog-wallet.svg",
+            "json_path": "icons/frog/frog-wallet.json"
+        },
+        {
+            "name": "Bookshelf",
+            "theme": "furniture",
+            "tags": [
+                "furniture",
+                "storage",
+                "books",
+                "reading",
+                "library",
+                "shelf",
+                "organization"
+            ],
+            "short_description": "A simple outline of a bookshelf with books on two shelves.",
+            "file": "icons/furniture/bookshelf.svg",
+            "json_path": "icons/furniture/bookshelf.json"
+        },
+        {
+            "name": "Coffee Table",
+            "theme": "furniture",
+            "tags": [
+                "furniture",
+                "living room",
+                "table",
+                "decor",
+                "interior",
+                "home",
+                "modern"
+            ],
+            "short_description": "A minimalist outline of a low coffee table with angled legs.",
+            "file": "icons/furniture/coffee-table.svg",
+            "json_path": "icons/furniture/coffee-table.json"
+        },
+        {
+            "name": "Computer Monitor",
+            "theme": "furniture",
+            "tags": [
+                "technology",
+                "computer",
+                "display",
+                "screen",
+                "desktop",
+                "office",
+                "digital"
+            ],
+            "short_description": "A simple outline of a desktop computer monitor with stand.",
+            "file": "icons/furniture/computer-monitor.svg",
+            "json_path": "icons/furniture/computer-monitor.json"
+        },
+        {
             "name": "Desk",
             "theme": "furniture",
             "tags": [
@@ -557,6 +820,56 @@
             "short_description": "A simple desk or work table with drawer and storage compartment.",
             "file": "icons/furniture/desk.svg",
             "json_path": "icons/furniture/desk.json"
+        },
+        {
+            "name": "Frog Chair",
+            "theme": "Furniture",
+            "tags": [
+                "chair",
+                "furniture",
+                "seat",
+                "frog",
+                "decor",
+                "stool",
+                "cute",
+                "home"
+            ],
+            "short_description": "A chair with frog-themed backrest and legs.",
+            "file": "icons/furniture/frog-chair.svg",
+            "json_path": "icons/furniture/frog-chair.json"
+        },
+        {
+            "name": "Frog Stool",
+            "theme": "Furniture",
+            "tags": [
+                "stool",
+                "furniture",
+                "seat",
+                "frog",
+                "small",
+                "chair",
+                "cute",
+                "decor"
+            ],
+            "short_description": "A small stool with frog face on the seat.",
+            "file": "icons/furniture/frog-stool.svg",
+            "json_path": "icons/furniture/frog-stool.json"
+        },
+        {
+            "name": "Table Lamp",
+            "theme": "furniture",
+            "tags": [
+                "lighting",
+                "furniture",
+                "decor",
+                "desk",
+                "interior",
+                "home",
+                "light"
+            ],
+            "short_description": "A minimalist outline of a table lamp with a trapezoid shade.",
+            "file": "icons/furniture/table-lamp.svg",
+            "json_path": "icons/furniture/table-lamp.json"
         },
         {
             "name": "Boot in Water",
@@ -1016,6 +1329,167 @@
             "json_path": "icons/hospital/wheelchair.json"
         },
         {
+            "name": "Cutting Board",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "preparation",
+                "chopping",
+                "cooking",
+                "wooden",
+                "board",
+                "cutting"
+            ],
+            "short_description": "A rectangular cutting board with a hole in the corner.",
+            "file": "icons/kitchen/cutting-board.svg",
+            "json_path": "icons/kitchen/cutting-board.json"
+        },
+        {
+            "name": "Kitchen Knife",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "utensil",
+                "cutting",
+                "cooking",
+                "chef",
+                "blade",
+                "sharp"
+            ],
+            "short_description": "A chef's knife with a sharp blade and handle.",
+            "file": "icons/kitchen/kitchen-knife.svg",
+            "json_path": "icons/kitchen/kitchen-knife.json"
+        },
+        {
+            "name": "Measuring Cups",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "measuring",
+                "cooking",
+                "baking",
+                "cups",
+                "precision",
+                "ingredients"
+            ],
+            "short_description": "A set of stacked measuring cups with measurement markers.",
+            "file": "icons/kitchen/measuring-cups.svg",
+            "json_path": "icons/kitchen/measuring-cups.json"
+        },
+        {
+            "name": "Mixing Bowl",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "baking",
+                "cooking",
+                "utensil",
+                "preparation",
+                "mixing",
+                "food"
+            ],
+            "short_description": "A simple outline of a mixing bowl with a whisk inside.",
+            "file": "icons/kitchen/mixing-bowl.svg",
+            "json_path": "icons/kitchen/mixing-bowl.json"
+        },
+        {
+            "name": "Rolling Pin",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "baking",
+                "cooking",
+                "utensil",
+                "pastry",
+                "tool",
+                "dough"
+            ],
+            "short_description": "A simple outline of a traditional rolling pin with handles.",
+            "file": "icons/kitchen/rolling-pin.svg",
+            "json_path": "icons/kitchen/rolling-pin.json"
+        },
+        {
+            "name": "Salt and Pepper Shakers",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "seasoning",
+                "cooking",
+                "dining",
+                "condiment",
+                "food",
+                "tableware"
+            ],
+            "short_description": "Minimalist outlines of tall salt and pepper shakers, one with holes on top.",
+            "file": "icons/kitchen/salt-and-pepper-shakers.svg",
+            "json_path": "icons/kitchen/salt-and-pepper-shakers.json"
+        },
+        {
+            "name": "Spatula",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "utensil",
+                "cooking",
+                "flipping",
+                "tool",
+                "grill",
+                "frying"
+            ],
+            "short_description": "A cooking spatula with slotted head and handle.",
+            "file": "icons/kitchen/spatula.svg",
+            "json_path": "icons/kitchen/spatula.json"
+        },
+        {
+            "name": "Teapot",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "beverage",
+                "tea",
+                "drink",
+                "kettle",
+                "brewing",
+                "hot",
+                "appliance"
+            ],
+            "short_description": "A simple outline of a teapot with a lid and spout.",
+            "file": "icons/kitchen/teapot.svg",
+            "json_path": "icons/kitchen/teapot.json"
+        },
+        {
+            "name": "Toaster",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "appliance",
+                "toast",
+                "bread",
+                "breakfast",
+                "cooking",
+                "electric"
+            ],
+            "short_description": "A simple kitchen toaster with control buttons.",
+            "file": "icons/kitchen/toaster.svg",
+            "json_path": "icons/kitchen/toaster.json"
+        },
+        {
+            "name": "Whisk",
+            "theme": "kitchen",
+            "tags": [
+                "kitchen",
+                "utensil",
+                "mixing",
+                "baking",
+                "cooking",
+                "blending",
+                "whisking"
+            ],
+            "short_description": "A kitchen whisk for mixing ingredients.",
+            "file": "icons/kitchen/whisk.svg",
+            "json_path": "icons/kitchen/whisk.json"
+        },
+        {
             "name": "Image Frame",
             "theme": "living room",
             "tags": [
@@ -1048,6 +1522,39 @@
             "short_description": "A television or media remote control with numbered buttons and control pad.",
             "file": "icons/living room/remote-control.svg",
             "json_path": "icons/living room/remote-control.json"
+        },
+        {
+            "name": "Rug",
+            "theme": "living room",
+            "tags": [
+                "living room",
+                "floor",
+                "decor",
+                "textile",
+                "interior",
+                "home",
+                "carpet",
+                "flooring"
+            ],
+            "short_description": "A minimalist outline of a rectangular rug or carpet with fringe edges.",
+            "file": "icons/living room/rug.svg",
+            "json_path": "icons/living room/rug.json"
+        },
+        {
+            "name": "Sofa",
+            "theme": "living room",
+            "tags": [
+                "furniture",
+                "living room",
+                "couch",
+                "seating",
+                "comfort",
+                "home",
+                "interior"
+            ],
+            "short_description": "A simple outline of a two-seater sofa with armrests.",
+            "file": "icons/living room/sofa.svg",
+            "json_path": "icons/living room/sofa.json"
         },
         {
             "name": "Fire Dragon",
@@ -1330,6 +1837,23 @@
             "json_path": "icons/outdoors/lawn-mower.json"
         },
         {
+            "name": "Treasure Chest",
+            "theme": "pirate",
+            "tags": [
+                "chest",
+                "treasure",
+                "storage",
+                "gold",
+                "riches",
+                "lock",
+                "wood",
+                "container"
+            ],
+            "short_description": "A locked wooden chest with metal bands and keyhole.",
+            "file": "icons/pirate/treasure-chest.svg",
+            "json_path": "icons/pirate/treasure-chest.json"
+        },
+        {
             "name": "Paint Can",
             "theme": "Renovation",
             "tags": [
@@ -1380,6 +1904,22 @@
             "json_path": "icons/science/boiling-flask.json"
         },
         {
+            "name": "Laser Pistol",
+            "theme": "Space",
+            "tags": [
+                "gun",
+                "pistol",
+                "laser",
+                "weapon",
+                "sci-fi",
+                "futuristic",
+                "space"
+            ],
+            "short_description": "A handheld energy weapon that emits a focused beam.",
+            "file": "icons/space/laser-pistol.svg",
+            "json_path": "icons/space/laser-pistol.json"
+        },
+        {
             "name": "Space Station",
             "theme": "Space",
             "tags": [
@@ -1391,6 +1931,38 @@
             "short_description": "A simple satellite-style space station icon",
             "file": "icons/space/space-station.svg",
             "json_path": "icons/space/space-station.json"
+        },
+        {
+            "name": "Standard Blaster",
+            "theme": "Space",
+            "tags": [
+                "gun",
+                "blaster",
+                "weapon",
+                "sci-fi",
+                "space",
+                "futuristic",
+                "compact"
+            ],
+            "short_description": "A simple handheld energy weapon with streamlined design.",
+            "file": "icons/space/standard-blaster.svg",
+            "json_path": "icons/space/standard-blaster.json"
+        },
+        {
+            "name": "Tactical Blaster",
+            "theme": "Space",
+            "tags": [
+                "gun",
+                "blaster",
+                "weapon",
+                "sci-fi",
+                "tactical",
+                "military",
+                "space"
+            ],
+            "short_description": "An advanced energy weapon with tactical attachment and grip.",
+            "file": "icons/space/tactical-blaster.svg",
+            "json_path": "icons/space/tactical-blaster.json"
         },
         {
             "name": "Briefcase",
@@ -1425,6 +1997,40 @@
             "short_description": "A cordless power drill with battery pack for construction and home repairs.",
             "file": "icons/tools/power-drill.svg",
             "json_path": "icons/tools/power-drill.json"
+        },
+        {
+            "name": "Safe Box",
+            "theme": "tools",
+            "tags": [
+                "security",
+                "storage",
+                "protection",
+                "valuables",
+                "code",
+                "lock",
+                "tools"
+            ],
+            "short_description": "A compact security safe with keypad and handle.",
+            "file": "icons/tools/safe-box.svg",
+            "json_path": "icons/tools/safe-box.json"
+        },
+        {
+            "name": "Safe",
+            "theme": "tools",
+            "tags": [
+                "security",
+                "vault",
+                "safe",
+                "combination",
+                "lock",
+                "storage",
+                "protection",
+                "valuables",
+                "money"
+            ],
+            "short_description": "A secure vault with a ship's wheel combination lock.",
+            "file": "icons/tools/safe.svg",
+            "json_path": "icons/tools/safe.json"
         },
         {
             "name": "Screwdriver",
@@ -1513,6 +2119,40 @@
             "json_path": "icons/wizard/crystal-ball.json"
         },
         {
+            "name": "Crystal",
+            "theme": "wizard",
+            "tags": [
+                "crystal",
+                "gem",
+                "mineral",
+                "magic",
+                "power",
+                "energy",
+                "sparkle",
+                "treasure"
+            ],
+            "short_description": "A multifaceted gemstone or crystal formation.",
+            "file": "icons/wizard/crystal.svg",
+            "json_path": "icons/wizard/crystal.json"
+        },
+        {
+            "name": "Dragon Egg",
+            "theme": "wizard",
+            "tags": [
+                "egg",
+                "dragon",
+                "fantasy",
+                "scales",
+                "magical",
+                "creature",
+                "hatchling",
+                "rare"
+            ],
+            "short_description": "An oval egg with scale-like patterns.",
+            "file": "icons/wizard/dragon-egg.svg",
+            "json_path": "icons/wizard/dragon-egg.json"
+        },
+        {
             "name": "Herb Bundle",
             "theme": "Wizard",
             "tags": [
@@ -1524,6 +2164,22 @@
             "short_description": "A tied bunch of leaves used for magical purposes.",
             "file": "icons/wizard/herb-bundle.svg",
             "json_path": "icons/wizard/herb-bundle.json"
+        },
+        {
+            "name": "Magic Ring",
+            "theme": "Wizard",
+            "tags": [
+                "ring",
+                "jewelry",
+                "magic",
+                "wizard",
+                "fantasy",
+                "gem",
+                "enchanted"
+            ],
+            "short_description": "An enchanted ring with glowing gemstone centerpiece.",
+            "file": "icons/wizard/magic-ring.svg",
+            "json_path": "icons/wizard/magic-ring.json"
         },
         {
             "name": "Magic Tome",
@@ -1539,6 +2195,23 @@
             "json_path": "icons/wizard/magic-tome.json"
         },
         {
+            "name": "Magic Wand",
+            "theme": "wizard",
+            "tags": [
+                "wand",
+                "magic",
+                "spell",
+                "wizard",
+                "star",
+                "sparkle",
+                "casting",
+                "enchantment"
+            ],
+            "short_description": "A star-tipped wand with sparkling effects.",
+            "file": "icons/wizard/magic-wand.svg",
+            "json_path": "icons/wizard/magic-wand.json"
+        },
+        {
             "name": "Mortar and Pestle",
             "theme": "Wizard",
             "tags": [
@@ -1550,6 +2223,23 @@
             "short_description": "A bowl with a pestle for grinding magical ingredients.",
             "file": "icons/wizard/mortar-and-pestle.svg",
             "json_path": "icons/wizard/mortar-and-pestle.json"
+        },
+        {
+            "name": "Ornate Key",
+            "theme": "wizard",
+            "tags": [
+                "key",
+                "unlock",
+                "access",
+                "treasure",
+                "secret",
+                "ornate",
+                "diamond",
+                "magical"
+            ],
+            "short_description": "A decorative key with a diamond-shaped head.",
+            "file": "icons/wizard/ornate-key.svg",
+            "json_path": "icons/wizard/ornate-key.json"
         },
         {
             "name": "Potion Bottle",
@@ -1565,6 +2255,22 @@
             "json_path": "icons/wizard/potion-bottle.json"
         },
         {
+            "name": "Potion Flask",
+            "theme": "Wizard",
+            "tags": [
+                "potion",
+                "flask",
+                "magic",
+                "alchemy",
+                "wizard",
+                "fantasy",
+                "bottle"
+            ],
+            "short_description": "A magical round flask containing mysterious liquid.",
+            "file": "icons/wizard/potion-flask.svg",
+            "json_path": "icons/wizard/potion-flask.json"
+        },
+        {
             "name": "Scroll",
             "theme": "Wizard",
             "tags": [
@@ -1576,6 +2282,23 @@
             "short_description": "A rolled parchment with a visible seal and text lines.",
             "file": "icons/wizard/scroll.svg",
             "json_path": "icons/wizard/scroll.json"
+        },
+        {
+            "name": "Spell Book",
+            "theme": "wizard",
+            "tags": [
+                "book",
+                "spell",
+                "magic",
+                "tome",
+                "grimoire",
+                "knowledge",
+                "diamond",
+                "arcane"
+            ],
+            "short_description": "A bound magical tome with a mystical diamond symbol.",
+            "file": "icons/wizard/spell-book.svg",
+            "json_path": "icons/wizard/spell-book.json"
         },
         {
             "name": "Wand",
