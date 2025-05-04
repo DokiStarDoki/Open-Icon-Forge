@@ -167,7 +167,7 @@
         } catch (err) {
           console.warn("PHP failed, trying fallback metadata.json");
           try {
-            const fallbackRes = await fetch("metadata.json");
+            const fallbackRes = await fetch("json/metadata.json");
             const fallbackData = await fallbackRes.json();
             icons = fallbackData.icons || [];
           } catch (fallbackErr) {
