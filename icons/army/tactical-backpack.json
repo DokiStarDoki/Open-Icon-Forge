@@ -1,0 +1,16 @@
+{
+    "name": "Tactical Backpack",
+    "fname": "tactical-backpack",
+    "short_description": "A rugged backpack designed for carrying gear and supplies.",
+    "tags": [
+        "backpack",
+        "gear",
+        "military",
+        "equipment",
+        "storage",
+        "army",
+        "tactical"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

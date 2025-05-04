@@ -1,0 +1,15 @@
+{
+    "name": "Boot",
+    "fname": "boot",
+    "short_description": "A single waterproof rubber boot.",
+    "tags": [
+        "boot",
+        "rubber",
+        "footwear",
+        "protection",
+        "garbage",
+        "clothing"
+    ],
+    "theme": "Garbage",
+    "date_created": "2025-05-03"
+}

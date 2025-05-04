@@ -1,0 +1,16 @@
+{
+    "name": "Spray Bottle",
+    "fname": "spray-bottle",
+    "short_description": "A plastic spray bottle commonly used in barbershops to moisten hair.",
+    "tags": [
+        "barbershop",
+        "spray",
+        "bottle",
+        "hair",
+        "water",
+        "tool",
+        "salon"
+    ],
+    "theme": "Barbershop",
+    "date_created": "2025-05-04"
+}

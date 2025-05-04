@@ -1,0 +1,15 @@
+{
+    "name": "Combat Helmet",
+    "fname": "combat-helmet",
+    "short_description": "A standard army helmet with netting.",
+    "tags": [
+        "helmet",
+        "army",
+        "combat",
+        "protection",
+        "gear",
+        "headgear"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

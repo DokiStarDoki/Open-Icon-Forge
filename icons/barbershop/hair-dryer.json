@@ -1,0 +1,16 @@
+{
+    "name": "Hair Dryer",
+    "fname": "hair-dryer",
+    "short_description": "A handheld electric hair dryer used to dry and style hair.",
+    "tags": [
+        "hair",
+        "dryer",
+        "barbershop",
+        "styling",
+        "electric",
+        "tool",
+        "grooming"
+    ],
+    "theme": "Barbershop",
+    "date_created": "2025-05-04"
+}

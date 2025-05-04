@@ -1,0 +1,16 @@
+{
+    "name": "Surgical Scalpel",
+    "fname": "surgical-scalpel",
+    "short_description": "A sharp blade used in surgical procedures.",
+    "tags": [
+        "scalpel",
+        "blade",
+        "surgery",
+        "medical",
+        "hospital",
+        "cut",
+        "instrument"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-04"
+}

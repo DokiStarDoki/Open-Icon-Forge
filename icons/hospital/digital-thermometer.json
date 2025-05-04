@@ -1,0 +1,16 @@
+{
+    "name": "Digital Thermometer",
+    "fname": "digital-thermometer",
+    "short_description": "An electronic device for measuring body temperature.",
+    "tags": [
+        "thermometer",
+        "digital",
+        "temperature",
+        "medical",
+        "fever",
+        "health",
+        "hospital"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-04"
+}

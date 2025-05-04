@@ -1,0 +1,15 @@
+{
+    "name": "Military Ration Pack",
+    "fname": "military-ration-pack",
+    "short_description": "A sealed pack of military field rations.",
+    "tags": [
+        "ration",
+        "food",
+        "army",
+        "supplies",
+        "pack",
+        "survival"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

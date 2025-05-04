@@ -1,0 +1,16 @@
+{
+    "name": "Supply Crate",
+    "fname": "supply-crate",
+    "short_description": "A wooden military supply crate with metal reinforcements.",
+    "tags": [
+        "crate",
+        "supply",
+        "storage",
+        "army",
+        "wood",
+        "box",
+        "equipment"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

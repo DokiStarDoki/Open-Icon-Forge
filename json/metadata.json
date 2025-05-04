@@ -1,6 +1,146 @@
 {
     "icons": [
         {
+            "name": "Canteen",
+            "theme": "Army",
+            "tags": [
+                "canteen",
+                "water",
+                "army",
+                "hydration",
+                "gear",
+                "equipment"
+            ],
+            "short_description": "A military-style water canteen with strap.",
+            "file": "icons/army/canteen.svg",
+            "json_path": "icons/army/canteen.json"
+        },
+        {
+            "name": "Combat Boots",
+            "theme": "Army",
+            "tags": [
+                "boots",
+                "combat",
+                "military",
+                "footwear",
+                "army",
+                "durable",
+                "tactical"
+            ],
+            "short_description": "Durable boots designed for military use.",
+            "file": "icons/army/combat-boots.svg",
+            "json_path": "icons/army/combat-boots.json"
+        },
+        {
+            "name": "Combat Helmet",
+            "theme": "Army",
+            "tags": [
+                "helmet",
+                "army",
+                "combat",
+                "protection",
+                "gear",
+                "headgear"
+            ],
+            "short_description": "A standard army helmet with netting.",
+            "file": "icons/army/combat-helmet.svg",
+            "json_path": "icons/army/combat-helmet.json"
+        },
+        {
+            "name": "Dog Tags",
+            "theme": "Army",
+            "tags": [
+                "dog tags",
+                "military",
+                "ID",
+                "identification",
+                "army",
+                "metal",
+                "tag"
+            ],
+            "short_description": "Identification tags worn by military personnel.",
+            "file": "icons/army/dog-tags.svg",
+            "json_path": "icons/army/dog-tags.json"
+        },
+        {
+            "name": "Field Radio",
+            "theme": "Army",
+            "tags": [
+                "radio",
+                "communication",
+                "army",
+                "equipment",
+                "antenna",
+                "portable",
+                "device"
+            ],
+            "short_description": "A military field radio with antenna and dials.",
+            "file": "icons/army/field-radio.svg",
+            "json_path": "icons/army/field-radio.json"
+        },
+        {
+            "name": "Gas Mask",
+            "theme": "Army",
+            "tags": [
+                "gas mask",
+                "protection",
+                "army",
+                "filter",
+                "survival",
+                "equipment"
+            ],
+            "short_description": "A dual-filter gas mask used for protection.",
+            "file": "icons/army/gas-mask.svg",
+            "json_path": "icons/army/gas-mask.json"
+        },
+        {
+            "name": "Military Ration Pack",
+            "theme": "Army",
+            "tags": [
+                "ration",
+                "food",
+                "army",
+                "supplies",
+                "pack",
+                "survival"
+            ],
+            "short_description": "A sealed pack of military field rations.",
+            "file": "icons/army/military-ration-pack.svg",
+            "json_path": "icons/army/military-ration-pack.json"
+        },
+        {
+            "name": "Supply Crate",
+            "theme": "Army",
+            "tags": [
+                "crate",
+                "supply",
+                "storage",
+                "army",
+                "wood",
+                "box",
+                "equipment"
+            ],
+            "short_description": "A wooden military supply crate with metal reinforcements.",
+            "file": "icons/army/supply-crate.svg",
+            "json_path": "icons/army/supply-crate.json"
+        },
+        {
+            "name": "Tactical Backpack",
+            "theme": "Army",
+            "tags": [
+                "backpack",
+                "gear",
+                "military",
+                "equipment",
+                "storage",
+                "army",
+                "tactical"
+            ],
+            "short_description": "A rugged backpack designed for carrying gear and supplies.",
+            "file": "icons/army/tactical-backpack.svg",
+            "json_path": "icons/army/tactical-backpack.json"
+        },
+        {
             "name": "Ancient Goblet",
             "theme": "Artifact",
             "tags": [
@@ -47,6 +187,70 @@
             "short_description": "An old, rolled parchment map marked with a treasure route.",
             "file": "icons/artifact/treasure-map.svg",
             "json_path": "icons/artifact/treasure-map.json"
+        },
+        {
+            "name": "Hair Dryer",
+            "theme": "Barbershop",
+            "tags": [
+                "hair",
+                "dryer",
+                "barbershop",
+                "styling",
+                "electric",
+                "tool",
+                "grooming"
+            ],
+            "short_description": "A handheld electric hair dryer used to dry and style hair.",
+            "file": "icons/barbershop/hair-dryer.svg",
+            "json_path": "icons/barbershop/hair-dryer.json"
+        },
+        {
+            "name": "Shaving Brush",
+            "theme": "Barbershop",
+            "tags": [
+                "shaving",
+                "brush",
+                "grooming",
+                "foam",
+                "barber",
+                "cream",
+                "tool"
+            ],
+            "short_description": "A soft-bristled shaving brush used to apply shaving cream or soap.",
+            "file": "icons/barbershop/shaving-brush.svg",
+            "json_path": "icons/barbershop/shaving-brush.json"
+        },
+        {
+            "name": "Spray Bottle",
+            "theme": "Barbershop",
+            "tags": [
+                "barbershop",
+                "spray",
+                "bottle",
+                "hair",
+                "water",
+                "tool",
+                "salon"
+            ],
+            "short_description": "A plastic spray bottle commonly used in barbershops to moisten hair.",
+            "file": "icons/barbershop/spray-bottle.svg",
+            "json_path": "icons/barbershop/spray-bottle.json"
+        },
+        {
+            "name": "Straight Razor",
+            "theme": "Barbershop",
+            "tags": [
+                "razor",
+                "shave",
+                "barber",
+                "blade",
+                "tool",
+                "traditional",
+                "grooming"
+            ],
+            "short_description": "A classic folding straight razor used for close shaves.",
+            "file": "icons/barbershop/straight-razor.svg",
+            "json_path": "icons/barbershop/straight-razor.json"
         },
         {
             "name": "Dice Pair",
@@ -200,6 +404,82 @@
             "short_description": "A glass of whiskey with ice cubes and a straw.",
             "file": "icons/casino/whiskey-glass.svg",
             "json_path": "icons/casino/whiskey-glass.json"
+        },
+        {
+            "name": "Boot in Water",
+            "theme": "Garbage",
+            "tags": [
+                "boot",
+                "water",
+                "puddle",
+                "footwear",
+                "garbage",
+                "mud"
+            ],
+            "short_description": "A rubber boot stepping into water.",
+            "file": "icons/garbage/boot-in-water.svg",
+            "json_path": "icons/garbage/boot-in-water.json"
+        },
+        {
+            "name": "Boot",
+            "theme": "Garbage",
+            "tags": [
+                "boot",
+                "rubber",
+                "footwear",
+                "protection",
+                "garbage",
+                "clothing"
+            ],
+            "short_description": "A single waterproof rubber boot.",
+            "file": "icons/garbage/boot.svg",
+            "json_path": "icons/garbage/boot.json"
+        },
+        {
+            "name": "Broken Pipe",
+            "theme": "Garbage",
+            "tags": [
+                "plumbing",
+                "leak",
+                "pipe",
+                "crack",
+                "water",
+                "broken"
+            ],
+            "short_description": "A cracked pipe leaking water drops.",
+            "file": "icons/garbage/broken-pipe.svg",
+            "json_path": "icons/garbage/broken-pipe.json"
+        },
+        {
+            "name": "Toxic Barrel",
+            "theme": "Garbage",
+            "tags": [
+                "toxic",
+                "barrel",
+                "hazard",
+                "waste",
+                "leak",
+                "biohazard",
+                "garbage"
+            ],
+            "short_description": "A leaking barrel marked with a biohazard symbol.",
+            "file": "icons/garbage/toxic-barrel.svg",
+            "json_path": "icons/garbage/toxic-barrel.json"
+        },
+        {
+            "name": "Water Pollution",
+            "theme": "Garbage",
+            "tags": [
+                "pollution",
+                "water",
+                "trash",
+                "waste",
+                "environment",
+                "garbage"
+            ],
+            "short_description": "Floating garbage and waste in polluted water.",
+            "file": "icons/garbage/water-pollution.svg",
+            "json_path": "icons/garbage/water-pollution.json"
         },
         {
             "name": "Bone Brush",
@@ -441,6 +721,148 @@
             "json_path": "icons/goblin/tooth-necklace.json"
         },
         {
+            "name": "Defibrillator",
+            "theme": "Hospital",
+            "tags": [
+                "medical",
+                "device",
+                "shock",
+                "defibrillator",
+                "emergency",
+                "hospital",
+                "monitor"
+            ],
+            "short_description": "A medical device used to deliver an electric shock to the heart.",
+            "file": "icons/hospital/defibrillator.svg",
+            "json_path": "icons/hospital/defibrillator.json"
+        },
+        {
+            "name": "Digital Thermometer",
+            "theme": "Hospital",
+            "tags": [
+                "thermometer",
+                "digital",
+                "temperature",
+                "medical",
+                "fever",
+                "health",
+                "hospital"
+            ],
+            "short_description": "An electronic device for measuring body temperature.",
+            "file": "icons/hospital/digital-thermometer.svg",
+            "json_path": "icons/hospital/digital-thermometer.json"
+        },
+        {
+            "name": "Hospital Bed",
+            "theme": "Hospital",
+            "tags": [
+                "bed",
+                "hospital",
+                "medical",
+                "adjustable",
+                "recovery",
+                "patient",
+                "healthcare"
+            ],
+            "short_description": "An adjustable bed commonly used in medical facilities.",
+            "file": "icons/hospital/hospital-bed.svg",
+            "json_path": "icons/hospital/hospital-bed.json"
+        },
+        {
+            "name": "IV Bag",
+            "theme": "Hospital",
+            "tags": [
+                "hospital",
+                "iv",
+                "fluid",
+                "medical",
+                "health",
+                "bag",
+                "drip"
+            ],
+            "short_description": "A hospital IV fluid bag with a connected tube.",
+            "file": "icons/hospital/iv-bag.svg",
+            "json_path": "icons/hospital/iv-bag.json"
+        },
+        {
+            "name": "Medical Mask",
+            "theme": "Hospital",
+            "tags": [
+                "mask",
+                "medical",
+                "face",
+                "hospital",
+                "protection",
+                "hygiene",
+                "germs"
+            ],
+            "short_description": "A face mask used to prevent the spread of germs.",
+            "file": "icons/hospital/medical-mask.svg",
+            "json_path": "icons/hospital/medical-mask.json"
+        },
+        {
+            "name": "Stethoscope",
+            "theme": "Hospital",
+            "tags": [
+                "stethoscope",
+                "medical",
+                "hospital",
+                "health",
+                "tool",
+                "doctor"
+            ],
+            "short_description": "A stethoscope used for medical examinations.",
+            "file": "icons/hospital/stethoscope.svg",
+            "json_path": "icons/hospital/stethoscope.json"
+        },
+        {
+            "name": "Surgical Scalpel",
+            "theme": "Hospital",
+            "tags": [
+                "scalpel",
+                "blade",
+                "surgery",
+                "medical",
+                "hospital",
+                "cut",
+                "instrument"
+            ],
+            "short_description": "A sharp blade used in surgical procedures.",
+            "file": "icons/hospital/surgical-scalpel.svg",
+            "json_path": "icons/hospital/surgical-scalpel.json"
+        },
+        {
+            "name": "Syringe",
+            "theme": "Hospital",
+            "tags": [
+                "syringe",
+                "hospital",
+                "injection",
+                "needle",
+                "medical",
+                "health"
+            ],
+            "short_description": "A medical syringe used for injections.",
+            "file": "icons/hospital/syringe.svg",
+            "json_path": "icons/hospital/syringe.json"
+        },
+        {
+            "name": "Wheelchair",
+            "theme": "Hospital",
+            "tags": [
+                "wheelchair",
+                "mobility",
+                "disability",
+                "medical",
+                "hospital",
+                "chair",
+                "aid"
+            ],
+            "short_description": "A chair with wheels for individuals with mobility impairments.",
+            "file": "icons/hospital/wheelchair.svg",
+            "json_path": "icons/hospital/wheelchair.json"
+        },
+        {
             "name": "Fire Dragon",
             "theme": "Monster",
             "tags": [
@@ -470,6 +892,36 @@
             "short_description": "A lantern containing a glowing ghost and sparkles.",
             "file": "icons/monster/ghost-lantern.svg",
             "json_path": "icons/monster/ghost-lantern.json"
+        },
+        {
+            "name": "Monster Eyes",
+            "theme": "Monster",
+            "tags": [
+                "eyes",
+                "monster",
+                "creature",
+                "scary",
+                "glow",
+                "dark"
+            ],
+            "short_description": "A pair of glowing monster eyes peering from the dark.",
+            "file": "icons/monster/monster-eyes.svg",
+            "json_path": "icons/monster/monster-eyes.json"
+        },
+        {
+            "name": "Sad Ghost",
+            "theme": "Monster",
+            "tags": [
+                "ghost",
+                "monster",
+                "sad",
+                "spooky",
+                "paranormal",
+                "scary"
+            ],
+            "short_description": "A spooky sad-faced ghost illustration.",
+            "file": "icons/monster/sad-ghost.svg",
+            "json_path": "icons/monster/sad-ghost.json"
         },
         {
             "name": "Storm Deer",
@@ -519,6 +971,21 @@
             "json_path": "icons/monster/undead-hound.json"
         },
         {
+            "name": "Anchor",
+            "theme": "Navy",
+            "tags": [
+                "anchor",
+                "ship",
+                "navy",
+                "marine",
+                "boat",
+                "mooring"
+            ],
+            "short_description": "A classic ship anchor with two flukes.",
+            "file": "icons/navy/anchor.svg",
+            "json_path": "icons/navy/anchor.json"
+        },
+        {
             "name": "Life Preserver",
             "theme": "Navy",
             "tags": [
@@ -549,6 +1016,51 @@
             "json_path": "icons/navy/nautical-flags.json"
         },
         {
+            "name": "Periscope",
+            "theme": "Navy",
+            "tags": [
+                "periscope",
+                "submarine",
+                "navy",
+                "observation",
+                "optics",
+                "marine"
+            ],
+            "short_description": "A simple submarine-style periscope.",
+            "file": "icons/navy/periscope.svg",
+            "json_path": "icons/navy/periscope.json"
+        },
+        {
+            "name": "Sailor Hat",
+            "theme": "Navy",
+            "tags": [
+                "hat",
+                "sailor",
+                "uniform",
+                "navy",
+                "headgear",
+                "marine"
+            ],
+            "short_description": "A flat-topped hat typically worn by sailors.",
+            "file": "icons/navy/sailor-hat.svg",
+            "json_path": "icons/navy/sailor-hat.json"
+        },
+        {
+            "name": "Ship Wheel",
+            "theme": "Navy",
+            "tags": [
+                "wheel",
+                "ship",
+                "steering",
+                "navy",
+                "marine",
+                "navigation"
+            ],
+            "short_description": "A traditional ship steering wheel with handles.",
+            "file": "icons/navy/ship-wheel.svg",
+            "json_path": "icons/navy/ship-wheel.json"
+        },
+        {
             "name": "Torpedo",
             "theme": "Navy",
             "tags": [
@@ -562,6 +1074,22 @@
             "short_description": "A naval torpedo with tail fins and cylindrical body.",
             "file": "icons/navy/torpedo.svg",
             "json_path": "icons/navy/torpedo.json"
+        },
+        {
+            "name": "Clipboard",
+            "theme": "Office",
+            "tags": [
+                "clipboard",
+                "documents",
+                "office",
+                "writing",
+                "paper",
+                "stationery",
+                "notes"
+            ],
+            "short_description": "A board with a clip at the top for holding papers.",
+            "file": "icons/office/clipboard.svg",
+            "json_path": "icons/office/clipboard.json"
         },
         {
             "name": "Boiling Flask",

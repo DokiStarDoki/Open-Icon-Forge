@@ -1,0 +1,16 @@
+{
+    "name": "Toxic Barrel",
+    "fname": "toxic-barrel",
+    "short_description": "A leaking barrel marked with a biohazard symbol.",
+    "tags": [
+        "toxic",
+        "barrel",
+        "hazard",
+        "waste",
+        "leak",
+        "biohazard",
+        "garbage"
+    ],
+    "theme": "Garbage",
+    "date_created": "2025-05-03"
+}

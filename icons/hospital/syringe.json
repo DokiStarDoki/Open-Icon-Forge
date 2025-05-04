@@ -1,0 +1,15 @@
+{
+    "name": "Syringe",
+    "fname": "syringe",
+    "short_description": "A medical syringe used for injections.",
+    "tags": [
+        "syringe",
+        "hospital",
+        "injection",
+        "needle",
+        "medical",
+        "health"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-03"
+}

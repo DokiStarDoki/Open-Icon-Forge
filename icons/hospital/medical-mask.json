@@ -1,0 +1,16 @@
+{
+    "name": "Medical Mask",
+    "fname": "medical-mask",
+    "short_description": "A face mask used to prevent the spread of germs.",
+    "tags": [
+        "mask",
+        "medical",
+        "face",
+        "hospital",
+        "protection",
+        "hygiene",
+        "germs"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-04"
+}

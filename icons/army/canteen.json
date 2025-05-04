@@ -1,0 +1,15 @@
+{
+    "name": "Canteen",
+    "fname": "canteen",
+    "short_description": "A military-style water canteen with strap.",
+    "tags": [
+        "canteen",
+        "water",
+        "army",
+        "hydration",
+        "gear",
+        "equipment"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

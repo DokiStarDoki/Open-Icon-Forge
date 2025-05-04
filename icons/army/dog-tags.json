@@ -1,0 +1,16 @@
+{
+    "name": "Dog Tags",
+    "fname": "dog-tags",
+    "short_description": "Identification tags worn by military personnel.",
+    "tags": [
+        "dog tags",
+        "military",
+        "ID",
+        "identification",
+        "army",
+        "metal",
+        "tag"
+    ],
+    "theme": "Army",
+    "date_created": "2025-05-04"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "IV Bag",
+    "fname": "iv-bag",
+    "short_description": "A hospital IV fluid bag with a connected tube.",
+    "tags": [
+        "hospital",
+        "iv",
+        "fluid",
+        "medical",
+        "health",
+        "bag",
+        "drip"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-03"
+}
