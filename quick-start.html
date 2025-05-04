@@ -123,6 +123,7 @@
   </head>
   <body>
     <h1>🎛️ Open Icon Forge Dashboard</h1>
+    <button onclick="generateMetadata()">📄 Generate metadata.json</button>
     <div class="dashboard">
       <!-- 1 -->
       <div class="card">
@@ -526,6 +527,18 @@
           li.textContent = svg;
           svgList.appendChild(li);
         });
+      }
+
+      function generateMetadata() {
+        fetch("php/generate_metadata.php")
+          .then((res) => res.json())
+          .then((data) => {
+            alert(`✅ Metadata generated: ${data.count} entries written.`);
+          })
+          .catch((err) => {
+            alert("❌ Failed to generate metadata.");
+            console.error(err);
+          });
       }
     </script>
   </body>

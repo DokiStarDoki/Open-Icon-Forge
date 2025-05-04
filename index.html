@@ -16,14 +16,13 @@
         text-align: center;
         font-size: 2rem;
         color: #007acc;
-        margin-bottom: 1rem;
       }
       .controls {
         display: flex;
         justify-content: center;
         gap: 1rem;
         flex-wrap: wrap;
-        margin-bottom: 1.5rem;
+        margin-top: 1rem;
       }
       #search,
       #tagFilter {
@@ -31,71 +30,61 @@
         border: 1px solid #ccc;
         border-radius: 6px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        font-size: 1rem;
       }
       #search {
         width: 80%;
         max-width: 400px;
       }
       .grid {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 1rem;
-        justify-content: center;
+        margin-top: 2rem;
         padding: 0 1rem;
       }
       .icon {
         background: white;
-        border: 2px solid transparent;
-        padding: 1rem;
-        border-radius: 12px;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        border-radius: 10px;
         text-align: center;
         cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        min-width: 96px;
       }
-      .icon:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      .icon object {
+        width: 64px;
+        height: 64px;
+        display: block;
+        margin: 0 auto;
+        pointer-events: none;
+      }
+      .icon small {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: #444;
       }
       .icon.selected {
         border-color: #007acc;
         background: #e6f3ff;
         box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.3);
       }
-      .icon object {
-        width: 64px;
-        height: 64px;
-        pointer-events: none;
-        display: block;
-        margin: 0 auto;
-      }
-      .icon small {
-        display: block;
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
-        color: #333;
-      }
       #details {
         margin-top: 2rem;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.9);
+        padding: 1rem;
+        background: #ffffff;
         border: 1px solid #ccc;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         display: none;
         opacity: 0;
-        backdrop-filter: blur(8px);
       }
       .details-content {
         display: flex;
-        flex-wrap: wrap;
         gap: 1.5rem;
-        align-items: center;
+        align-items: flex-start;
       }
       .details-icon object {
         width: 128px;
@@ -107,21 +96,19 @@
       }
       .details-icon button {
         margin-top: 0.75rem;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.75rem;
         font-size: 0.9rem;
         border: none;
-        border-radius: 8px;
-        background: linear-gradient(to right, #007acc, #005fa3);
+        border-radius: 6px;
+        background-color: #007acc;
         color: white;
         cursor: pointer;
-        transition: transform 0.2s ease;
       }
       .details-icon button:hover {
-        transform: scale(1.05);
+        background-color: #005fa3;
       }
       .details-meta {
         flex: 1;
-        min-width: 200px;
       }
       #details h2 {
         margin-top: 0;
@@ -130,19 +117,21 @@
     </style>
   </head>
   <body>
-    <h1>Open Icon Forge Library</h1>
+    <h1 id="mainTitle">Open Icon Forge Library</h1>
     <div class="controls">
       <input type="text" id="search" placeholder="Search by tag or name..." />
       <select id="tagFilter">
-        <option value="">Filter by tag or theme</option>
+        <option value="">Filter by tag</option>
       </select>
     </div>
+
     <div class="grid" id="iconGrid"></div>
+
     <div id="details">
       <div class="details-content">
         <div class="details-icon">
           <object id="detailIcon" type="image/svg+xml"></object>
-          <button id="downloadBtn">⬇ Download SVG</button>
+          <button id="downloadBtn">Download SVG</button>
         </div>
         <div class="details-meta">
           <h2 id="detailName"></h2>
@@ -153,6 +142,7 @@
         </div>
       </div>
     </div>
+
     <script>
       const grid = document.getElementById("iconGrid");
       const searchInput = document.getElementById("search");
@@ -165,6 +155,7 @@
       const detailDate = document.getElementById("detailDate");
       const detailPath = document.getElementById("detailPath");
       const downloadBtn = document.getElementById("downloadBtn");
+
       let icons = [];
       let selectedDiv = null;
 
@@ -173,17 +164,26 @@
           const res = await fetch("php/list_svgs.php");
           const data = await res.json();
           icons = data.icons || [];
-          populateTagDropdown();
-          renderIcons();
         } catch (err) {
-          grid.innerHTML = "<p>Error loading SVG list</p>";
-          console.error("Failed to load SVGs:", err);
+          console.warn("PHP failed, trying fallback metadata.json");
+          try {
+            const fallbackRes = await fetch("metadata.json");
+            const fallbackData = await fallbackRes.json();
+            icons = fallbackData.icons || [];
+          } catch (fallbackErr) {
+            grid.innerHTML = "<p>Failed to load icons from both sources.</p>";
+            console.error("Fallback also failed:", fallbackErr);
+            return;
+          }
         }
+        populateTagDropdown();
+        renderIcons();
       }
 
       function populateTagDropdown() {
         const tagCounts = {};
         const themeCounts = {};
+
         icons.forEach((icon) => {
           const theme = icon.theme;
           if (
@@ -192,12 +192,15 @@
           ) {
             themeCounts[theme] = (themeCounts[theme] || 0) + 1;
           }
+
           (icon.tags || []).forEach((tag) => {
             tagCounts[tag] = (tagCounts[tag] || 0) + 1;
           });
         });
+
         tagFilter.innerHTML =
           '<option value="">Filter by tag or theme</option>';
+
         Object.keys(themeCounts)
           .sort()
           .forEach((theme) => {
@@ -206,6 +209,7 @@
             option.textContent = `Theme: ${theme} (${themeCounts[theme]})`;
             tagFilter.appendChild(option);
           });
+
         Object.keys(tagCounts)
           .sort()
           .forEach((tag) => {
@@ -221,10 +225,13 @@
         const bannedThemes = ["vectorized", "temp", "generated"];
         let filterType = "";
         let filterValue = "";
+
         if (selectedFilter.includes(":")) {
           [filterType, filterValue] = selectedFilter.split(":");
         }
+
         grid.innerHTML = "";
+
         icons
           .filter((icon) => {
             if (bannedThemes.includes(icon.theme?.toLowerCase())) return false;
@@ -240,21 +247,32 @@
           .forEach((icon, index) => {
             const div = document.createElement("div");
             div.className = "icon";
+
             const object = document.createElement("object");
             object.type = "image/svg+xml";
             object.data = icon.file;
+
             const label = document.createElement("small");
             label.textContent = icon.name;
+
             div.appendChild(object);
             div.appendChild(label);
-            div.addEventListener("click", () => selectIcon(div, icon));
+
+            div.addEventListener(
+              "click",
+              ((iconCopy) => {
+                return () => selectIcon(div, iconCopy);
+              })(icon)
+            );
+
             grid.appendChild(div);
+
             gsap.from(div, {
-              duration: 0.4,
+              duration: 0.5,
               opacity: 0,
               scale: 0.8,
-              delay: index * 0.02,
-              ease: "power2.out",
+              delay: index * 0.03,
+              ease: "back.out(1.7)",
             });
           });
       }
@@ -271,17 +289,26 @@
         detailDate.textContent = icon.date_created || "";
         detailPath.textContent = icon.file;
 
-        gsap.set(".details-content > *", { opacity: 0, y: 20 });
+        // Pre-hide inner content before panel animates in
+        gsap.set(".details-content > *", {
+          opacity: 0,
+          y: 20,
+        });
 
         gsap.fromTo(
           details,
-          { display: "none", opacity: 0, y: 50, filter: "blur(8px)" },
+          {
+            display: "none",
+            opacity: 0,
+            y: 50,
+            filter: "blur(8px)",
+          },
           {
             display: "block",
             opacity: 1,
             y: 0,
             filter: "blur(0px)",
-            duration: 0.5,
+            duration: 0.15,
             ease: "expo.out",
             onStart: () => {
               details.style.display = "block";
@@ -290,7 +317,7 @@
               gsap.to(".details-content > *", {
                 opacity: 1,
                 y: 0,
-                duration: 0.4,
+                duration: 0.25,
                 stagger: 0.1,
                 ease: "power3.out",
               });
@@ -306,8 +333,8 @@
         };
       }
 
-      searchInput.addEventListener("input", () => {
-        renderIcons(searchInput.value, tagFilter.value);
+      searchInput.addEventListener("input", (e) => {
+        renderIcons(e.target.value, tagFilter.value);
         gsap.to(details, {
           opacity: 0,
           duration: 0.2,
@@ -326,11 +353,11 @@
         selectedDiv = null;
       });
 
-      gsap.from("h1", {
-        y: -20,
+      gsap.from("#mainTitle", {
+        y: -30,
         opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
+        duration: 1,
+        ease: "bounce.out",
       });
 
       loadIcons();
