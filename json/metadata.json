@@ -1,6 +1,52 @@
 {
     "icons": [
         {
+            "name": "Crab",
+            "theme": "Animal",
+            "tags": [
+                "crab",
+                "seafood",
+                "animal",
+                "minimalist",
+                "ocean",
+                "marine"
+            ],
+            "short_description": "A crab illustration with claws and legs in simple black lines.",
+            "file": "icons/animal/crab.svg",
+            "json_path": "icons/animal/crab.json"
+        },
+        {
+            "name": "Fish Skeleton",
+            "theme": "Animal",
+            "tags": [
+                "fish",
+                "skeleton",
+                "seafood",
+                "animal",
+                "minimalist",
+                "bones"
+            ],
+            "short_description": "A minimalist fish skeleton design with a triangular head and rib bones.",
+            "file": "icons/animal/fish-skeleton.svg",
+            "json_path": "icons/animal/fish-skeleton.json"
+        },
+        {
+            "name": "Marlin",
+            "theme": "Animal",
+            "tags": [
+                "marlin",
+                "fish",
+                "sea",
+                "billfish",
+                "animal",
+                "ocean",
+                "minimalist"
+            ],
+            "short_description": "A sleek marlin fish with a pointed bill.",
+            "file": "icons/animal/marlin.svg",
+            "json_path": "icons/animal/marlin.json"
+        },
+        {
             "name": "Mouse",
             "theme": "Animal",
             "tags": [
@@ -16,6 +62,67 @@
             "short_description": "A small rodent with a long tail and pointed snout.",
             "file": "icons/animal/mouse.svg",
             "json_path": "icons/animal/mouse.json"
+        },
+        {
+            "name": "Octopus Tentacle",
+            "theme": "Animal",
+            "tags": [
+                "octopus",
+                "tentacle",
+                "sea",
+                "animal",
+                "minimalist",
+                "marine"
+            ],
+            "short_description": "A curling octopus tentacle shown with suction cups.",
+            "file": "icons/animal/octopus-tentacle.svg",
+            "json_path": "icons/animal/octopus-tentacle.json"
+        },
+        {
+            "name": "Pufferfish",
+            "theme": "Animal",
+            "tags": [
+                "pufferfish",
+                "fish",
+                "spiky",
+                "sea",
+                "animal",
+                "minimalist"
+            ],
+            "short_description": "A round pufferfish with spikes and markings.",
+            "file": "icons/animal/pufferfish.svg",
+            "json_path": "icons/animal/pufferfish.json"
+        },
+        {
+            "name": "Shark",
+            "theme": "Animal",
+            "tags": [
+                "shark",
+                "fish",
+                "predator",
+                "animal",
+                "ocean",
+                "bold",
+                "minimalist"
+            ],
+            "short_description": "A bold minimalist icon of a shark in motion.",
+            "file": "icons/animal/shark.svg",
+            "json_path": "icons/animal/shark.json"
+        },
+        {
+            "name": "Shrimp",
+            "theme": "Animal",
+            "tags": [
+                "shrimp",
+                "crustacean",
+                "seafood",
+                "animal",
+                "minimalist",
+                "bold"
+            ],
+            "short_description": "A curled shrimp in bold lines and clean style.",
+            "file": "icons/animal/shrimp.svg",
+            "json_path": "icons/animal/shrimp.json"
         },
         {
             "name": "Simple Cat",
@@ -48,6 +155,36 @@
             "short_description": "A detailed outline of a hairless sphynx cat breed.",
             "file": "icons/animal/sphynx-cat.svg",
             "json_path": "icons/animal/sphynx-cat.json"
+        },
+        {
+            "name": "Tuna",
+            "theme": "Animal",
+            "tags": [
+                "tuna",
+                "fish",
+                "seafood",
+                "animal",
+                "ocean",
+                "minimalist"
+            ],
+            "short_description": "A minimalist illustration of a tuna fish.",
+            "file": "icons/animal/tuna.svg",
+            "json_path": "icons/animal/tuna.json"
+        },
+        {
+            "name": "Turtle",
+            "theme": "Animal",
+            "tags": [
+                "turtle",
+                "animal",
+                "shell",
+                "ocean",
+                "minimalist",
+                "geometric"
+            ],
+            "short_description": "A turtle depicted with geometric shell patterns and minimal lines.",
+            "file": "icons/animal/turtle.svg",
+            "json_path": "icons/animal/turtle.json"
         },
         {
             "name": "Canteen",
@@ -671,6 +808,85 @@
             "short_description": "A glass of whiskey with ice cubes and a straw.",
             "file": "icons/casino/whiskey-glass.svg",
             "json_path": "icons/casino/whiskey-glass.json"
+        },
+        {
+            "name": "Ch\u014dchin Lantern",
+            "theme": "Decoration",
+            "tags": [
+                "lantern",
+                "japan",
+                "light",
+                "traditional",
+                "festival",
+                "paper",
+                "ribbed"
+            ],
+            "short_description": "A traditional Japanese paper lantern with a ribbed frame.",
+            "file": "icons/decoration/chochin-lantern.svg",
+            "json_path": "icons/decoration/chochin-lantern.json"
+        },
+        {
+            "name": "Noodle Cup",
+            "theme": "Food",
+            "tags": [
+                "noodles",
+                "food",
+                "instant",
+                "cup",
+                "chopsticks",
+                "ramen",
+                "snack"
+            ],
+            "short_description": "A cup of instant noodles with chopsticks.",
+            "file": "icons/food/noodle-cup.svg",
+            "json_path": "icons/food/noodle-cup.json"
+        },
+        {
+            "name": "Ramen Bowl",
+            "theme": "Food",
+            "tags": [
+                "ramen",
+                "bowl",
+                "noodles",
+                "egg",
+                "japan",
+                "food",
+                "kitchen"
+            ],
+            "short_description": "A bowl of ramen with noodles and egg in simple line art.",
+            "file": "icons/food/ramen-bowl.svg",
+            "json_path": "icons/food/ramen-bowl.json"
+        },
+        {
+            "name": "Sushi Roll - Garnished",
+            "theme": "Food",
+            "tags": [
+                "sushi",
+                "roll",
+                "garnish",
+                "japanese",
+                "food",
+                "toppings",
+                "minimalist"
+            ],
+            "short_description": "A sushi roll with garnish or toppings on top.",
+            "file": "icons/food/sushi-roll-garnished.svg",
+            "json_path": "icons/food/sushi-roll-garnished.json"
+        },
+        {
+            "name": "Sushi Roll - Plain",
+            "theme": "Food",
+            "tags": [
+                "sushi",
+                "roll",
+                "japanese",
+                "food",
+                "minimalist",
+                "cylinder"
+            ],
+            "short_description": "A simple cylindrical sushi roll viewed from the top.",
+            "file": "icons/food/sushi-roll-plain.svg",
+            "json_path": "icons/food/sushi-roll-plain.json"
         },
         {
             "name": "Frog Blaster",
@@ -1329,6 +1545,69 @@
             "json_path": "icons/hospital/wheelchair.json"
         },
         {
+            "name": "Fish Crate",
+            "theme": "Japan",
+            "tags": [
+                "crate",
+                "fish",
+                "box",
+                "kanji",
+                "japan",
+                "seafood",
+                "shipping"
+            ],
+            "short_description": "A wooden crate with the kanji for 'fish' in the center.",
+            "file": "icons/japan/fish-crate.svg",
+            "json_path": "icons/japan/fish-crate.json"
+        },
+        {
+            "name": "Foo Dog Guardian",
+            "theme": "Japan",
+            "tags": [
+                "lion",
+                "guardian",
+                "foo dog",
+                "mythical",
+                "protector",
+                "japan",
+                "temple"
+            ],
+            "short_description": "A bold line art of a traditional guardian lion statue.",
+            "file": "icons/japan/foo-dog-guardian.svg",
+            "json_path": "icons/japan/foo-dog-guardian.json"
+        },
+        {
+            "name": "Lucky Cat",
+            "theme": "Japan",
+            "tags": [
+                "cat",
+                "lucky",
+                "japan",
+                "charm",
+                "mascot",
+                "fortune",
+                "minimalist"
+            ],
+            "short_description": "A beckoning cat symbol holding a coin, drawn in minimalist style.",
+            "file": "icons/japan/lucky-cat.svg",
+            "json_path": "icons/japan/lucky-cat.json"
+        },
+        {
+            "name": "Candle",
+            "theme": "Kitchen",
+            "tags": [
+                "candle",
+                "flame",
+                "wax",
+                "light",
+                "minimalist",
+                "decoration"
+            ],
+            "short_description": "A simple black-and-white candle with melting wax and a flame.",
+            "file": "icons/kitchen/candle.svg",
+            "json_path": "icons/kitchen/candle.json"
+        },
+        {
             "name": "Cutting Board",
             "theme": "kitchen",
             "tags": [
@@ -1423,6 +1702,21 @@
             "short_description": "Minimalist outlines of tall salt and pepper shakers, one with holes on top.",
             "file": "icons/kitchen/salt-and-pepper-shakers.svg",
             "json_path": "icons/kitchen/salt-and-pepper-shakers.json"
+        },
+        {
+            "name": "Soy Sauce Bottle",
+            "theme": "Kitchen",
+            "tags": [
+                "soy sauce",
+                "bottle",
+                "condiment",
+                "kitchen",
+                "japan",
+                "minimalist"
+            ],
+            "short_description": "A bottle with a drop symbol representing soy sauce.",
+            "file": "icons/kitchen/soy-sauce-bottle.svg",
+            "json_path": "icons/kitchen/soy-sauce-bottle.json"
         },
         {
             "name": "Spatula",
@@ -2078,6 +2372,22 @@
             "short_description": "A stylized seashell icon",
             "file": "icons/underwater/seashell.svg",
             "json_path": "icons/underwater/seashell.json"
+        },
+        {
+            "name": "Katana",
+            "theme": "Weapon",
+            "tags": [
+                "katana",
+                "sword",
+                "weapon",
+                "japan",
+                "blade",
+                "samurai",
+                "minimalist"
+            ],
+            "short_description": "A minimalist depiction of a traditional Japanese katana sword.",
+            "file": "icons/weapon/katana.svg",
+            "json_path": "icons/weapon/katana.json"
         },
         {
             "name": "Candlestick",
