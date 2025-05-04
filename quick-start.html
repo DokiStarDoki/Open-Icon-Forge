@@ -143,6 +143,16 @@
       </div>
     </div>
 
+    <div class="card">
+      <h1>Finalize SVG Placement</h1>
+      <p>
+        Moves vectorized SVGs from <code>/input/</code> to their proper folders
+        based on the icon JSON data.
+      </p>
+      <button onclick="finalizeSvgPlacement()">Place SVGs</button>
+      <div id="finalize-status">Status: Idle</div>
+    </div>
+
     <script>
       const IGNORED_FOLDERS = ["generated", "temp", "vectorized"];
 
@@ -297,11 +307,20 @@
       }
 
       async function loadSvgGrid() {
-        const res = await fetch("php/list_svgs.php");
-        const files = await res.json();
+        const res = await fetch("php/list_input_svg.php");
+        const data = await res.json();
+
+        console.log("SVG List Response:", data); // 🔍 Add this line
+
         const grid = document.getElementById("svg-grid");
         grid.innerHTML = "";
-        files.forEach((f) => {
+
+        if (!Array.isArray(data)) {
+          grid.innerHTML = "<div style='color:red'>❌ Invalid SVG list</div>";
+          return;
+        }
+
+        data.forEach((f) => {
           const img = document.createElement("img");
           img.src = f;
           img.style.width = "64px";
@@ -352,6 +371,23 @@
         loadPngGrid();
         loadSvgGrid();
         statusBox.innerHTML += "<hr>✅ Done.";
+      }
+
+      async function finalizeSvgPlacement() {
+        const statusBox = document.getElementById("finalize-status");
+        statusBox.textContent = "🔄 Placing SVGs...";
+
+        try {
+          const res = await fetch("php/match_and_move_svgs.php");
+          const result = await res.json();
+
+          statusBox.innerHTML =
+            `✅ Moved ${result.moved.length} SVGs.<br>` +
+            `⚠️ Skipped ${result.skipped.length} (not found in /input).`;
+          loadSvgGrid(); // refresh grid
+        } catch (e) {
+          statusBox.innerHTML = `❌ Error: ${e.message}`;
+        }
       }
     </script>
   </body>
