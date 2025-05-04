@@ -46,7 +46,7 @@ foreach ($themeFolders as $theme) {
         'theme' => $jsonData['theme'] ?? $theme,
         'tags' => $jsonData['tags'] ?? [],
         'short_description' => $jsonData['short_description'] ?? '',
-        'svg_path' => "icons/" . $svgs[$name],
+        'file' => "icons/" . $svgs[$name],
         'json_path' => "icons/$theme/$name.json"
       ];
     }
