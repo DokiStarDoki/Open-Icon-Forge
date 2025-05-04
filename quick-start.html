@@ -396,6 +396,7 @@
         }
 
         try {
+          // Step 1: Move matched SVGs
           const res = await fetch("php/place_matched_svgs.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -414,12 +415,28 @@
             });
           }
 
-          loadSvgGrid(); // refresh grid
+          // Refresh SVG grid after move
+          loadSvgGrid();
+
+          // Step 2: Clean up PNGs
+          console.log("🧹 Starting PNG cleanup...");
+          const cleanupRes = await fetch("php/cleanup_pngs.php");
+          const cleanup = await cleanupRes.json();
+          console.log("🧹 Cleanup result:", cleanup);
+
+          statusBox.innerHTML += `<br>🧹 Deleted ${cleanup.deleted.length} PNGs.`;
+          if (cleanup.skipped.length > 0) {
+            statusBox.innerHTML += `<br>⚠️ Skipped ${cleanup.skipped.length} PNGs.`;
+          }
+
+          // Refresh PNG grid after cleanup
+          loadPngGrid();
         } catch (e) {
           statusBox.innerHTML = `❌ Error: ${e.message}`;
+          console.error(e);
         }
       }
-      
+
       async function showSvgJsonMatches() {
         const res = await fetch("php/list_json_and_svg_matches.php");
         const data = await res.json();
