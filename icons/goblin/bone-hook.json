@@ -1,0 +1,15 @@
+{
+    "name": "Bone Hook",
+    "short_description": "A simple curved hook carved from bone.",
+    "tags": [
+        "hook",
+        "bone",
+        "tool",
+        "goblin",
+        "primitive",
+        "curved",
+        "fishing"
+    ],
+    "theme": "Goblin",
+    "date_created": "2025-05-04"
+}
