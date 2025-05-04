@@ -1,10 +1,10 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-header("Content-Type: application/json");
+header('Content-Type: application/json');
 
-$iconsDir = __DIR__ . '/../icons/';
-$inputDir = __DIR__ . '/../input/';
+$inputDir = realpath(__DIR__ . '/../input/');
+$iconsBaseDir = realpath(__DIR__ . '/../icons/');
 $moved = [];
 $skipped = [];
 
@@ -12,38 +12,44 @@ function sanitize($str) {
     return strtolower(preg_replace('/[^a-z0-9\-]/', '', str_replace(' ', '-', $str)));
 }
 
-function moveSvgIfExists($themePath, $jsonPath, $inputDir) {
-    $json = json_decode(file_get_contents($jsonPath), true);
-    if (!isset($json['name'], $json['theme'])) return null;
+function findJsonFiles($baseDir) {
+    $matches = [];
 
-    $theme = sanitize($json['theme']);
-    $name = sanitize($json['name']);
-    $svgFilename = "$name.svg";
-    $inputSvgPath = $inputDir . $svgFilename;
-    $destSvgPath = "$themePath/$svgFilename";
+    foreach (glob($baseDir . '/*/*.json') as $jsonFile) {
+        $json = json_decode(file_get_contents($jsonFile), true);
+        if (!isset($json['name']) || !isset($json['theme'])) continue;
 
-    if (file_exists($inputSvgPath)) {
-        rename($inputSvgPath, $destSvgPath);
-        return ["name" => $name, "theme" => $theme, "moved_to" => $destSvgPath];
-    } else {
-        return ["name" => $name, "theme" => $theme, "skipped" => true];
+        $matches[] = [
+            'name' => $json['name'],
+            'theme' => $json['theme'],
+            'jsonPath' => $jsonFile
+        ];
     }
+
+    return $matches;
 }
 
-$themes = scandir($iconsDir);
-foreach ($themes as $themeFolder) {
-    if (in_array($themeFolder, ['.', '..'])) continue;
+$jsonEntries = findJsonFiles($iconsBaseDir);
 
-    $themePath = $iconsDir . $themeFolder;
-    if (!is_dir($themePath)) continue;
+foreach ($jsonEntries as $entry) {
+    $filename = sanitize($entry['name']) . '.svg';
+    $sourcePath = $inputDir . DIRECTORY_SEPARATOR . $filename;
 
-    $files = glob("$themePath/*.json");
-    foreach ($files as $jsonPath) {
-        $result = moveSvgIfExists($themePath, $jsonPath, $inputDir);
-        if ($result) {
-            if (isset($result['skipped'])) $skipped[] = $result;
-            else $moved[] = $result;
-        }
+    if (!file_exists($sourcePath)) {
+        $skipped[] = $filename;
+        continue;
+    }
+
+    $targetFolder = dirname($entry['jsonPath']);
+    $targetPath = $targetFolder . DIRECTORY_SEPARATOR . $filename;
+
+    if (rename($sourcePath, $targetPath)) {
+        $moved[] = [
+            'file' => $filename,
+            'to' => str_replace(realpath(__DIR__ . '/..') . '/', '', $targetPath)
+        ];
+    } else {
+        $skipped[] = $filename;
     }
 }
 

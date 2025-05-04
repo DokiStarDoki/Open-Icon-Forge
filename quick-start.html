@@ -153,6 +153,21 @@
       <div id="finalize-status">Status: Idle</div>
     </div>
 
+    <div class="card">
+      <h1>App 5: SVG Match Debugger</h1>
+      <button onclick="showSvgJsonMatches()">Check Matches</button>
+      <div style="display: flex; gap: 20px; margin-top: 10px">
+        <div style="flex: 1">
+          <h2>JSON Files</h2>
+          <ul id="json-match-list"></ul>
+        </div>
+        <div style="flex: 1">
+          <h2>SVGs in /input/</h2>
+          <ul id="svg-file-list"></ul>
+        </div>
+      </div>
+    </div>
+
     <script>
       const IGNORED_FOLDERS = ["generated", "temp", "vectorized"];
 
@@ -388,6 +403,46 @@
         } catch (e) {
           statusBox.innerHTML = `❌ Error: ${e.message}`;
         }
+      }
+
+      async function showSvgJsonMatches() {
+        const res = await fetch("php/list_json_and_svg_matches.php");
+        const data = await res.json();
+
+        const jsonList = document.getElementById("json-match-list");
+        const svgList = document.getElementById("svg-file-list");
+
+        jsonList.innerHTML = "";
+        svgList.innerHTML = "";
+
+        // Extract base names from SVGs (without .svg extension)
+        const svgBaseNames = data.svg_files.map((f) =>
+          f.toLowerCase().replace(/\.svg$/, "")
+        );
+
+        const matchSet = new Set(svgBaseNames);
+
+        // Show each JSON filename (base name only), highlight if match exists
+        data.json_files.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item.name;
+
+          if (matchSet.has(item.name.toLowerCase())) {
+            li.style.color = "green";
+            li.style.fontWeight = "bold";
+          } else {
+            li.style.color = "gray";
+          }
+
+          jsonList.appendChild(li);
+        });
+
+        // Show raw SVG filenames
+        data.svg_files.forEach((svg) => {
+          const li = document.createElement("li");
+          li.textContent = svg;
+          svgList.appendChild(li);
+        });
       }
     </script>
   </body>
