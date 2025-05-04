@@ -7,7 +7,7 @@ $ignored = ['generated', 'temp', 'vectorized'];
 $metadata = [];
 
 if (!is_dir($baseDir)) {
-  echo json_encode(['error' => 'Icons directory not found']);
+  echo json_encode(['error' => 'Icons directory not found'], JSON_UNESCAPED_SLASHES);
   exit;
 }
 
@@ -57,6 +57,10 @@ if (!is_dir(dirname($outputFile))) {
   mkdir(dirname($outputFile), 0777, true);
 }
 
-file_put_contents($outputFile, json_encode($metadata, JSON_PRETTY_PRINT));
+file_put_contents($outputFile, json_encode($metadata, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
-echo json_encode(['success' => true, 'count' => count($metadata), 'output' => 'json/metadata.json']);
+echo json_encode([
+  'success' => true,
+  'count' => count($metadata),
+  'output' => 'json/metadata.json'
+], JSON_UNESCAPED_SLASHES);

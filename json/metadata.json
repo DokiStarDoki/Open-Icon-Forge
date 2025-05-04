@@ -9,8 +9,8 @@
             "orbit"
         ],
         "short_description": "A simple satellite-style space station icon",
-        "file": "icons\/space\/space-station.svg",
-        "json_path": "icons\/space\/space-station.json"
+        "file": "icons/space/space-station.svg",
+        "json_path": "icons/space/space-station.json"
     },
     {
         "name": "Seashell",
@@ -22,8 +22,8 @@
             "beach"
         ],
         "short_description": "A stylized seashell icon",
-        "file": "icons\/underwater\/seashell.svg",
-        "json_path": "icons\/underwater\/seashell.json"
+        "file": "icons/underwater/seashell.svg",
+        "json_path": "icons/underwater/seashell.json"
     },
     {
         "name": "Candlestick",
@@ -35,8 +35,8 @@
             "fire"
         ],
         "short_description": "A candle in a holder with dripping wax and a flame.",
-        "file": "icons\/wizard\/candlestick.svg",
-        "json_path": "icons\/wizard\/candlestick.json"
+        "file": "icons/wizard/candlestick.svg",
+        "json_path": "icons/wizard/candlestick.json"
     },
     {
         "name": "Cauldron",
@@ -48,8 +48,8 @@
             "alchemy"
         ],
         "short_description": "A round cauldron with steam rising from the top.",
-        "file": "icons\/wizard\/cauldron.svg",
-        "json_path": "icons\/wizard\/cauldron.json"
+        "file": "icons/wizard/cauldron.svg",
+        "json_path": "icons/wizard/cauldron.json"
     },
     {
         "name": "Crystal Ball",
@@ -61,8 +61,8 @@
             "divination"
         ],
         "short_description": "A mystical crystal ball resting on a three-legged stand.",
-        "file": "icons\/wizard\/crystal-ball.svg",
-        "json_path": "icons\/wizard\/crystal-ball.json"
+        "file": "icons/wizard/crystal-ball.svg",
+        "json_path": "icons/wizard/crystal-ball.json"
     },
     {
         "name": "Herb Bundle",
@@ -74,8 +74,8 @@
             "magic"
         ],
         "short_description": "A tied bunch of leaves used for magical purposes.",
-        "file": "icons\/wizard\/herb-bundle.svg",
-        "json_path": "icons\/wizard\/herb-bundle.json"
+        "file": "icons/wizard/herb-bundle.svg",
+        "json_path": "icons/wizard/herb-bundle.json"
     },
     {
         "name": "Magic Tome",
@@ -87,8 +87,8 @@
             "spells"
         ],
         "short_description": "A closed spellbook with a clasp and arcane symbol.",
-        "file": "icons\/wizard\/magic-tome.svg",
-        "json_path": "icons\/wizard\/magic-tome.json"
+        "file": "icons/wizard/magic-tome.svg",
+        "json_path": "icons/wizard/magic-tome.json"
     },
     {
         "name": "Mortar and Pestle",
@@ -100,8 +100,8 @@
             "alchemy"
         ],
         "short_description": "A bowl with a pestle for grinding magical ingredients.",
-        "file": "icons\/wizard\/mortar-and-pestle.svg",
-        "json_path": "icons\/wizard\/mortar-and-pestle.json"
+        "file": "icons/wizard/mortar-and-pestle.svg",
+        "json_path": "icons/wizard/mortar-and-pestle.json"
     },
     {
         "name": "Potion Bottle",
@@ -113,8 +113,8 @@
             "alchemy"
         ],
         "short_description": "A round potion flask with a cork and swirling liquid inside.",
-        "file": "icons\/wizard\/potion-bottle.svg",
-        "json_path": "icons\/wizard\/potion-bottle.json"
+        "file": "icons/wizard/potion-bottle.svg",
+        "json_path": "icons/wizard/potion-bottle.json"
     },
     {
         "name": "Scroll",
@@ -126,8 +126,8 @@
             "spells"
         ],
         "short_description": "A rolled parchment with a visible seal and text lines.",
-        "file": "icons\/wizard\/scroll.svg",
-        "json_path": "icons\/wizard\/scroll.json"
+        "file": "icons/wizard/scroll.svg",
+        "json_path": "icons/wizard/scroll.json"
     },
     {
         "name": "Wand",
@@ -139,8 +139,8 @@
             "casting"
         ],
         "short_description": "A slender wand with a gem tip and wrapped handle.",
-        "file": "icons\/wizard\/wand.svg",
-        "json_path": "icons\/wizard\/wand.json"
+        "file": "icons/wizard/wand.svg",
+        "json_path": "icons/wizard/wand.json"
     },
     {
         "name": "Wizard Hat",
@@ -152,7 +152,7 @@
             "costume"
         ],
         "short_description": "A classic pointed wizard hat with a brim and band.",
-        "file": "icons\/wizard\/wizard-hat.svg",
-        "json_path": "icons\/wizard\/wizard-hat.json"
+        "file": "icons/wizard/wizard-hat.svg",
+        "json_path": "icons/wizard/wizard-hat.json"
     }
 ]
