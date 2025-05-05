@@ -13,7 +13,57 @@ const downloadBtn = document.getElementById("downloadBtn");
 let icons = [];
 let selectedDiv = null;
 let swiper = null;
-const iconsPerPanel = 20;
+
+function getGridConfig() {
+  const width = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const headerHeight = 100; // Approx height of h1 + controls
+  const paginationHeight = 30; // Approx height of pagination
+  const maxPanelHeight = viewportHeight - headerHeight - paginationHeight - 40; // Buffer
+
+  // Icon height (including padding) + gap per row
+  const iconHeights = { large: 108, medium: 98, small: 88, tiny: 78 }; // Includes padding
+  const gaps = { large: 0.8, medium: 0.7, small: 0.6, tiny: 0.5 }; // Gap per row
+  let cols, rows, iconSize, iconCount, gap;
+
+  if (width > 1200) {
+    cols = 7;
+    rows = 3;
+    iconSize = iconHeights.large;
+    gap = gaps.large;
+    iconCount = cols * rows; // 21
+  } else if (width > 768) {
+    cols = 5;
+    rows = 3;
+    iconSize = iconHeights.medium;
+    gap = gaps.medium;
+    iconCount = cols * rows; // 15
+  } else if (width > 480) {
+    cols = 4;
+    rows = 2;
+    iconSize = iconHeights.small;
+    gap = gaps.small;
+    iconCount = cols * rows; // 8
+  } else {
+    cols = 2;
+    rows = 4;
+    iconSize = iconHeights.tiny;
+    gap = gaps.tiny;
+    iconCount = cols * rows; // 8
+  }
+
+  // Ensure panel fits within viewport height
+  const panelHeight = rows * iconSize + (rows - 1) * gap + 32; // 32px for padding
+  if (panelHeight > maxPanelHeight) {
+    rows = Math.max(1, Math.floor((maxPanelHeight - 32) / (iconSize + gap)));
+    iconCount = cols * rows;
+  }
+
+  // Enforce 8–40 icon range
+  iconCount = Math.min(Math.max(iconCount, 8), 40);
+
+  return { cols, rows, iconCount, iconSize: iconSize - 8 }; // Subtract padding
+}
 
 async function loadIcons() {
   try {
@@ -96,7 +146,7 @@ function addHoverEffects(div) {
 const observerOptions = {
   root: null,
   rootMargin: "200px",
-  threshold: 0,
+  threshold: 0.1, // Trigger when 10% of the slide is visible
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -109,12 +159,17 @@ const observer = new IntersectionObserver((entries, observer) => {
       objects.forEach((object, index) => {
         const filePath = object.parentElement.dataset.file;
         if (filePath && placeholders[index]) {
-          object.data = filePath;
-          placeholders[index].style.display = "none";
+          object.data = filePath; // Set the SVG source
+          object.onload = () => {
+            placeholders[index].style.display = "none"; // Hide placeholder on successful load
+          };
+          object.onerror = () => {
+            console.error(`Failed to load SVG at ${filePath}`);
+          };
         }
       });
 
-      observer.unobserve(slide);
+      observer.unobserve(slide); // Stop observing after loading
     }
   });
 }, observerOptions);
@@ -149,20 +204,27 @@ function renderCarousel(filter = "", selectedFilter = "") {
     return matchesSearch && matchesTag && matchesTheme;
   });
 
-  const iconChunks = chunkArray(filteredIcons, iconsPerPanel);
+  const { cols, rows, iconCount, iconSize } = getGridConfig();
+  const iconChunks = chunkArray(filteredIcons, iconCount);
   swiperWrapper.innerHTML = "";
 
+  // Set grid template dynamically
+  const slides = [];
   iconChunks.forEach((chunk, chunkIndex) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
+    slide.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    slide.style.gridTemplateRows = `repeat(${rows}, auto)`;
 
     chunk.forEach((icon) => {
       const div = document.createElement("div");
       div.className = "icon";
       div.dataset.file = icon.file;
+      div.style.width = `${iconSize}px`;
+      div.style.height = `${iconSize}px`;
 
       const object = document.createElement("object");
-      object.type = "image/svg+xml";
+      object.setAttribute("type", "image/svg+xml");
       object.style.display = "block";
 
       const placeholder = document.createElement("div");
@@ -195,6 +257,7 @@ function renderCarousel(filter = "", selectedFilter = "") {
     });
 
     swiperWrapper.appendChild(slide);
+    slides.push(slide);
     observer.observe(slide);
   });
 
@@ -206,6 +269,7 @@ function renderCarousel(filter = "", selectedFilter = "") {
   swiper = new Swiper("#iconCarousel", {
     slidesPerView: 1,
     spaceBetween: 20,
+    centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -246,7 +310,13 @@ function selectIcon(div, icon) {
   selectedDiv = div;
   div.classList.add("selected");
 
-  detailIcon.data = icon.file;
+  detailIcon.data = icon.file; // Set SVG source
+  detailIcon.onload = () => {
+    console.log("Detail SVG loaded successfully");
+  };
+  detailIcon.onerror = () => {
+    console.error(`Failed to load detail SVG at ${icon.file}`);
+  };
   detailName.textContent = icon.name;
   detailTags.textContent = icon.tags?.join(", ") || "";
   detailTheme.textContent = icon.theme || "";
@@ -325,6 +395,11 @@ searchInput.addEventListener("input", (e) => {
 });
 
 tagFilter.addEventListener("change", () => {
+  debouncedRender(searchInput.value, tagFilter.value);
+});
+
+// Handle window resize to update carousel
+window.addEventListener("resize", () => {
   debouncedRender(searchInput.value, tagFilter.value);
 });
 

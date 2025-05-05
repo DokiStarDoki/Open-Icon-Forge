@@ -1673,22 +1673,6 @@
             "json_path": "icons/farm/scarecrow.json"
         },
         {
-            "name": "Tractor",
-            "theme": "farm",
-            "tags": [
-                "tractor",
-                "farm",
-                "agriculture",
-                "vehicle",
-                "farming",
-                "field",
-                "machinery"
-            ],
-            "short_description": "A farming tractor on a plowed field.",
-            "file": "icons/farm/tractor.svg",
-            "json_path": "icons/farm/tractor.json"
-        },
-        {
             "name": "Banana",
             "theme": "Food",
             "tags": [
