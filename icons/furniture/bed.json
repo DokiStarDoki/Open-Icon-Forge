@@ -1,0 +1,14 @@
+{
+    "name": "Bed",
+    "fname": "bed",
+    "short_description": "A simple bed frame with a pillow and mattress.",
+    "tags": [
+        "bed",
+        "furniture",
+        "sleep",
+        "bedroom",
+        "comfort"
+    ],
+    "theme": "Furniture",
+    "date_created": "2025-05-05"
+}

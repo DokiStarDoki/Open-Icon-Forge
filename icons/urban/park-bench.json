@@ -1,0 +1,15 @@
+{
+    "name": "Park Bench",
+    "fname": "park-bench",
+    "short_description": "A streetlamp and bench commonly found in city parks.",
+    "tags": [
+        "bench",
+        "lamp",
+        "street",
+        "urban",
+        "rest",
+        "public-space"
+    ],
+    "theme": "Urban",
+    "date_created": "2025-05-05"
+}

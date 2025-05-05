@@ -1,0 +1,15 @@
+{
+    "name": "Butter Block",
+    "fname": "butter-block",
+    "short_description": "A block of butter on a tray, with a small cube next to it.",
+    "tags": [
+        "butter",
+        "dairy",
+        "food",
+        "tray",
+        "kitchen",
+        "baking"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-05"
+}

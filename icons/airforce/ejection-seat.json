@@ -1,0 +1,15 @@
+{
+    "name": "Ejection Seat",
+    "fname": "ejection-seat",
+    "short_description": "A high-tech pilot seat equipped with safety harnesses and levers.",
+    "tags": [
+        "seat",
+        "pilot",
+        "ejection",
+        "safety",
+        "airforce",
+        "cockpit"
+    ],
+    "theme": "Airforce",
+    "date_created": "2025-05-05"
+}

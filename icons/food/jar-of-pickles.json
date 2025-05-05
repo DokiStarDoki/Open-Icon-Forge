@@ -1,0 +1,15 @@
+{
+    "name": "Jar of Pickles",
+    "fname": "jar-of-pickles",
+    "short_description": "A sealed glass jar containing three pickles.",
+    "tags": [
+        "pickles",
+        "food",
+        "jar",
+        "preserved",
+        "snack",
+        "vegetable"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-05"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Location Map",
+    "fname": "location-map",
+    "short_description": "A folded paper map with a location pin.",
+    "tags": [
+        "map",
+        "location",
+        "navigation",
+        "urban",
+        "travel",
+        "pin"
+    ],
+    "theme": "Urban",
+    "date_created": "2025-05-05"
+}

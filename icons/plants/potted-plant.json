@@ -1,0 +1,16 @@
+{
+    "name": "Potted Plant",
+    "fname": "potted-plant",
+    "short_description": "A simple plant with leaves in a flower pot.",
+    "tags": [
+        "plant",
+        "pot",
+        "leaves",
+        "nature",
+        "greenery",
+        "growth",
+        "indoor"
+    ],
+    "theme": "Plants",
+    "date_created": "2025-05-05"
+}

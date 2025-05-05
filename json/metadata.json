@@ -1,6 +1,190 @@
 {
     "icons": [
         {
+            "name": "Earth and Oyster",
+            "theme": "Abstract",
+            "tags": [
+                "earth",
+                "oyster",
+                "planet",
+                "nature",
+                "abstract",
+                "ocean",
+                "global"
+            ],
+            "short_description": "The Earth partially merged with an abstract oyster shell.",
+            "file": "icons/abstract/earth-and-oyster.svg",
+            "json_path": "icons/abstract/earth-and-oyster.json"
+        },
+        {
+            "name": "Control Tower",
+            "theme": "Airforce",
+            "tags": [
+                "tower",
+                "airport",
+                "control",
+                "airforce",
+                "radar",
+                "communication"
+            ],
+            "short_description": "An air traffic control tower with a radar antenna.",
+            "file": "icons/airforce/control-tower.svg",
+            "json_path": "icons/airforce/control-tower.json"
+        },
+        {
+            "name": "Ejection Seat",
+            "theme": "Airforce",
+            "tags": [
+                "seat",
+                "pilot",
+                "ejection",
+                "safety",
+                "airforce",
+                "cockpit"
+            ],
+            "short_description": "A high-tech pilot seat equipped with safety harnesses and levers.",
+            "file": "icons/airforce/ejection-seat.svg",
+            "json_path": "icons/airforce/ejection-seat.json"
+        },
+        {
+            "name": "Fighter Jet",
+            "theme": "Airforce",
+            "tags": [
+                "jet",
+                "aircraft",
+                "fighter",
+                "airforce",
+                "plane",
+                "military"
+            ],
+            "short_description": "A modern fighter aircraft viewed from above.",
+            "file": "icons/airforce/fighter-jet.svg",
+            "json_path": "icons/airforce/fighter-jet.json"
+        },
+        {
+            "name": "Jet Engine",
+            "theme": "Airforce",
+            "tags": [
+                "jet",
+                "engine",
+                "turbine",
+                "aircraft",
+                "airforce",
+                "propulsion",
+                "aviation"
+            ],
+            "short_description": "A line drawing of a jet engine with turbine fan and fins.",
+            "file": "icons/airforce/jet-engine.svg",
+            "json_path": "icons/airforce/jet-engine.json"
+        },
+        {
+            "name": "Pilot Helmet",
+            "theme": "Airforce",
+            "tags": [
+                "helmet",
+                "pilot",
+                "airforce",
+                "aviation",
+                "oxygen mask",
+                "gear"
+            ],
+            "short_description": "A modern pilot helmet complete with oxygen mask and tubing.",
+            "file": "icons/airforce/pilot-helmet.svg",
+            "json_path": "icons/airforce/pilot-helmet.json"
+        },
+        {
+            "name": "Radar Dome",
+            "theme": "Airforce",
+            "tags": [
+                "radar",
+                "dome",
+                "military",
+                "defense",
+                "surveillance",
+                "structure",
+                "tech"
+            ],
+            "short_description": "A simplified illustration of a radar dome structure.",
+            "file": "icons/airforce/radar-dome.svg",
+            "json_path": "icons/airforce/radar-dome.json"
+        },
+        {
+            "name": "Radar Targeting Display",
+            "theme": "Airforce",
+            "tags": [
+                "radar",
+                "targeting",
+                "display",
+                "airforce",
+                "scanning",
+                "signal"
+            ],
+            "short_description": "A circular radar screen with concentric circles and a sweep arm.",
+            "file": "icons/airforce/radar-targeting-display.svg",
+            "json_path": "icons/airforce/radar-targeting-display.json"
+        },
+        {
+            "name": "Winged Shield Emblem",
+            "theme": "Airforce",
+            "tags": [
+                "shield",
+                "wings",
+                "badge",
+                "rank",
+                "airforce",
+                "emblem",
+                "flight"
+            ],
+            "short_description": "A shield flanked by stylized wings, suggesting aviation or rank.",
+            "file": "icons/airforce/winged-shield-emblem.svg",
+            "json_path": "icons/airforce/winged-shield-emblem.json"
+        },
+        {
+            "name": "Armadillo",
+            "theme": "Animal",
+            "tags": [
+                "animal",
+                "armadillo",
+                "wildlife",
+                "armor",
+                "mammal",
+                "nature"
+            ],
+            "short_description": "A small armored mammal with distinct body plating.",
+            "file": "icons/animal/armadillo.svg",
+            "json_path": "icons/animal/armadillo.json"
+        },
+        {
+            "name": "Brown Bear",
+            "theme": "Animal",
+            "tags": [
+                "bear",
+                "animal",
+                "wildlife",
+                "brown",
+                "forest",
+                "nature"
+            ],
+            "short_description": "An outlined illustration of a standing brown bear.",
+            "file": "icons/animal/brown-bear.svg",
+            "json_path": "icons/animal/brown-bear.json"
+        },
+        {
+            "name": "Chinchilla",
+            "theme": "Animal",
+            "tags": [
+                "chinchilla",
+                "animal",
+                "rodent",
+                "cute",
+                "tail",
+                "furry"
+            ],
+            "short_description": "A fluffy rodent with large ears and a curled tail.",
+            "file": "icons/animal/chinchilla.svg",
+            "json_path": "icons/animal/chinchilla.json"
+        },
+        {
             "name": "Crab",
             "theme": "Animal",
             "tags": [
@@ -14,6 +198,22 @@
             "short_description": "A crab illustration with claws and legs in simple black lines.",
             "file": "icons/animal/crab.svg",
             "json_path": "icons/animal/crab.json"
+        },
+        {
+            "name": "Elephant",
+            "theme": "Animal",
+            "tags": [
+                "elephant",
+                "animal",
+                "wildlife",
+                "safari",
+                "mammal",
+                "trunk",
+                "tusks"
+            ],
+            "short_description": "A large elephant with a raised trunk and visible tusks.",
+            "file": "icons/animal/elephant.svg",
+            "json_path": "icons/animal/elephant.json"
         },
         {
             "name": "Fish Skeleton",
@@ -62,6 +262,21 @@
             "json_path": "icons/animal/hippo.json"
         },
         {
+            "name": "Horse",
+            "theme": "Animal",
+            "tags": [
+                "horse",
+                "animal",
+                "farm",
+                "hoofed",
+                "domestic",
+                "mammal"
+            ],
+            "short_description": "A standing horse with a short mane and tail.",
+            "file": "icons/animal/horse.svg",
+            "json_path": "icons/animal/horse.json"
+        },
+        {
             "name": "Koi Fish",
             "theme": "Animal",
             "tags": [
@@ -90,6 +305,21 @@
             "short_description": "A smiling lion with a thick mane, drawn in bold lines.",
             "file": "icons/animal/lion.svg",
             "json_path": "icons/animal/lion.json"
+        },
+        {
+            "name": "Lobster",
+            "theme": "Animal",
+            "tags": [
+                "lobster",
+                "animal",
+                "sea",
+                "claws",
+                "crustacean",
+                "marine"
+            ],
+            "short_description": "A stylized lobster with claws raised and segmented tail.",
+            "file": "icons/animal/lobster.svg",
+            "json_path": "icons/animal/lobster.json"
         },
         {
             "name": "Maine Coon",
@@ -170,6 +400,22 @@
             "json_path": "icons/animal/penguin.json"
         },
         {
+            "name": "Polar Bear",
+            "theme": "Animal",
+            "tags": [
+                "polar",
+                "bear",
+                "animal",
+                "arctic",
+                "white",
+                "nature",
+                "wildlife"
+            ],
+            "short_description": "A side-view of a polar bear with soft features.",
+            "file": "icons/animal/polar-bear.svg",
+            "json_path": "icons/animal/polar-bear.json"
+        },
+        {
             "name": "Pufferfish",
             "theme": "Animal",
             "tags": [
@@ -197,6 +443,22 @@
             "short_description": "A line-art depiction of a rhinoceros with two horns.",
             "file": "icons/animal/rhinoceros.svg",
             "json_path": "icons/animal/rhinoceros.json"
+        },
+        {
+            "name": "Scout Ant",
+            "theme": "Animal",
+            "tags": [
+                "ant",
+                "insect",
+                "nature",
+                "animal",
+                "bug",
+                "tiny",
+                "scout"
+            ],
+            "short_description": "A simple outline of an ant with antennae and segmented body.",
+            "file": "icons/animal/scout-ant.svg",
+            "json_path": "icons/animal/scout-ant.json"
         },
         {
             "name": "Shark",
@@ -292,6 +554,53 @@
             "json_path": "icons/animal/sunfish.json"
         },
         {
+            "name": "Tapir",
+            "theme": "Animal",
+            "tags": [
+                "tapir",
+                "animal",
+                "mammal",
+                "forest",
+                "wildlife",
+                "snout",
+                "endangered"
+            ],
+            "short_description": "A minimalist line drawing of a tapir with a short snout.",
+            "file": "icons/animal/tapir.svg",
+            "json_path": "icons/animal/tapir.json"
+        },
+        {
+            "name": "Tiger",
+            "theme": "Animal",
+            "tags": [
+                "tiger",
+                "animal",
+                "wildlife",
+                "jungle",
+                "stripes",
+                "big cat"
+            ],
+            "short_description": "A striped tiger with a curled tail and alert expression.",
+            "file": "icons/animal/tiger.svg",
+            "json_path": "icons/animal/tiger.json"
+        },
+        {
+            "name": "Toucan",
+            "theme": "Animal",
+            "tags": [
+                "bird",
+                "toucan",
+                "animal",
+                "beak",
+                "jungle",
+                "wildlife",
+                "tropical"
+            ],
+            "short_description": "A tropical bird with a large curved beak.",
+            "file": "icons/animal/toucan.svg",
+            "json_path": "icons/animal/toucan.json"
+        },
+        {
             "name": "Tuna",
             "theme": "Animal",
             "tags": [
@@ -334,6 +643,22 @@
             "short_description": "A turtle depicted with geometric shell patterns and minimal lines.",
             "file": "icons/animal/turtle.svg",
             "json_path": "icons/animal/turtle.json"
+        },
+        {
+            "name": "Vulture",
+            "theme": "Animal",
+            "tags": [
+                "vulture",
+                "bird",
+                "scavenger",
+                "wildlife",
+                "animal",
+                "carrion",
+                "avian"
+            ],
+            "short_description": "A line drawing of a standing vulture with hooked beak and claws.",
+            "file": "icons/animal/vulture.svg",
+            "json_path": "icons/animal/vulture.json"
         },
         {
             "name": "Canteen",
@@ -773,6 +1098,21 @@
             "json_path": "icons/beach/sunscreen-lotion.json"
         },
         {
+            "name": "Pillow",
+            "theme": "Bedroom",
+            "tags": [
+                "pillow",
+                "sleep",
+                "bedroom",
+                "comfort",
+                "rest",
+                "cushion"
+            ],
+            "short_description": "A soft square pillow with gently curved edges.",
+            "file": "icons/bedroom/pillow.svg",
+            "json_path": "icons/bedroom/pillow.json"
+        },
+        {
             "name": "Tire",
             "theme": "car",
             "tags": [
@@ -976,6 +1316,36 @@
             "json_path": "icons/casino/whiskey-glass.json"
         },
         {
+            "name": "Gingerbread Man",
+            "theme": "Christmas",
+            "tags": [
+                "cookie",
+                "gingerbread",
+                "christmas",
+                "dessert",
+                "holiday",
+                "sweet"
+            ],
+            "short_description": "A smiling gingerbread cookie with a bow tie and buttons.",
+            "file": "icons/christmas/gingerbread-man.svg",
+            "json_path": "icons/christmas/gingerbread-man.json"
+        },
+        {
+            "name": "Biker Jacket",
+            "theme": "Clothing",
+            "tags": [
+                "jacket",
+                "clothing",
+                "leather",
+                "fashion",
+                "outerwear",
+                "biker"
+            ],
+            "short_description": "A stylish motorcycle jacket with lapels and pockets.",
+            "file": "icons/clothing/biker-jacket.svg",
+            "json_path": "icons/clothing/biker-jacket.json"
+        },
+        {
             "name": "Cat Hat",
             "theme": "clothing",
             "tags": [
@@ -990,6 +1360,53 @@
             "short_description": "A beanie hat with cat ears.",
             "file": "icons/clothing/cat-hat.svg",
             "json_path": "icons/clothing/cat-hat.json"
+        },
+        {
+            "name": "High Heel Shoes",
+            "theme": "Clothing",
+            "tags": [
+                "heels",
+                "fashion",
+                "shoes",
+                "clothing",
+                "formal",
+                "footwear",
+                "elegant"
+            ],
+            "short_description": "A pair of elegant high heel shoes, commonly worn for formal occasions.",
+            "file": "icons/clothing/high-heel-shoes.svg",
+            "json_path": "icons/clothing/high-heel-shoes.json"
+        },
+        {
+            "name": "Platform Dress Shoes",
+            "theme": "Clothing",
+            "tags": [
+                "shoes",
+                "platform",
+                "fashion",
+                "clothing",
+                "lace-up",
+                "heels",
+                "formal"
+            ],
+            "short_description": "A pair of formal lace-up shoes with thick platform heels.",
+            "file": "icons/clothing/platform-dress-shoes.svg",
+            "json_path": "icons/clothing/platform-dress-shoes.json"
+        },
+        {
+            "name": "Wired Computer Mouse",
+            "theme": "Computer",
+            "tags": [
+                "mouse",
+                "computer",
+                "wired",
+                "electronics",
+                "input device",
+                "office"
+            ],
+            "short_description": "A standard wired computer mouse with a scroll wheel.",
+            "file": "icons/computer/wired-computer-mouse.svg",
+            "json_path": "icons/computer/wired-computer-mouse.json"
         },
         {
             "name": "Chicken Costume",
@@ -1099,6 +1516,21 @@
             "json_path": "icons/decoration/chochin-lantern.json"
         },
         {
+            "name": "Gumball Machine",
+            "theme": "Decoration",
+            "tags": [
+                "gumball",
+                "candy",
+                "machine",
+                "toy",
+                "sweet",
+                "vending"
+            ],
+            "short_description": "A classic gumball machine filled with round candies.",
+            "file": "icons/decoration/gumball-machine.svg",
+            "json_path": "icons/decoration/gumball-machine.json"
+        },
+        {
             "name": "Japanese Furin Wind Chime",
             "theme": "Decoration",
             "tags": [
@@ -1129,6 +1561,52 @@
             "short_description": "A minimalist line art icon of an origami crane.",
             "file": "icons/decoration/origami-crane.svg",
             "json_path": "icons/decoration/origami-crane.json"
+        },
+        {
+            "name": "Coral Reef Scene",
+            "theme": "Deep Sea",
+            "tags": [
+                "reef",
+                "coral",
+                "fish",
+                "ocean",
+                "marine",
+                "underwater",
+                "scene"
+            ],
+            "short_description": "An underwater scene with fish and coral formations.",
+            "file": "icons/deep sea/coral-reef-scene.svg",
+            "json_path": "icons/deep sea/coral-reef-scene.json"
+        },
+        {
+            "name": "Mini Submarine",
+            "theme": "Deep Sea",
+            "tags": [
+                "submarine",
+                "ocean",
+                "exploration",
+                "underwater",
+                "marine",
+                "vehicle"
+            ],
+            "short_description": "A compact submarine designed for underwater exploration.",
+            "file": "icons/deep sea/mini-submarine.svg",
+            "json_path": "icons/deep sea/mini-submarine.json"
+        },
+        {
+            "name": "Scuba Diver",
+            "theme": "Deep Sea",
+            "tags": [
+                "scuba",
+                "diving",
+                "ocean",
+                "snorkel",
+                "swimming",
+                "explorer"
+            ],
+            "short_description": "A person wearing scuba gear with a snorkel mask.",
+            "file": "icons/deep sea/scuba-diver.svg",
+            "json_path": "icons/deep sea/scuba-diver.json"
         },
         {
             "name": "Barn",
@@ -1211,6 +1689,21 @@
             "json_path": "icons/farm/tractor.json"
         },
         {
+            "name": "Banana",
+            "theme": "Food",
+            "tags": [
+                "banana",
+                "fruit",
+                "tropical",
+                "healthy",
+                "food",
+                "yellow"
+            ],
+            "short_description": "A single banana with a simple curved shape.",
+            "file": "icons/food/banana.svg",
+            "json_path": "icons/food/banana.json"
+        },
+        {
             "name": "Bubble Drink Cup",
             "theme": "Food",
             "tags": [
@@ -1226,6 +1719,21 @@
             "json_path": "icons/food/bubble-drink-cup.json"
         },
         {
+            "name": "Butter Block",
+            "theme": "Food",
+            "tags": [
+                "butter",
+                "dairy",
+                "food",
+                "tray",
+                "kitchen",
+                "baking"
+            ],
+            "short_description": "A block of butter on a tray, with a small cube next to it.",
+            "file": "icons/food/butter-block.svg",
+            "json_path": "icons/food/butter-block.json"
+        },
+        {
             "name": "Cake Slice",
             "theme": "Food",
             "tags": [
@@ -1239,6 +1747,21 @@
             "short_description": "A minimalist slice of cake topped with a cherry.",
             "file": "icons/food/cake-slice.svg",
             "json_path": "icons/food/cake-slice.json"
+        },
+        {
+            "name": "Canned Fish",
+            "theme": "Food",
+            "tags": [
+                "can",
+                "fish",
+                "food",
+                "preserved",
+                "tin",
+                "seafood"
+            ],
+            "short_description": "A tin can with a fish icon on it, representing canned fish.",
+            "file": "icons/food/canned-fish.svg",
+            "json_path": "icons/food/canned-fish.json"
         },
         {
             "name": "Classic Sundae",
@@ -1303,6 +1826,22 @@
             "json_path": "icons/food/dumpling-and-taste-symbol.json"
         },
         {
+            "name": "Hot Beverage Cup",
+            "theme": "Food",
+            "tags": [
+                "drink",
+                "hot",
+                "coffee",
+                "tea",
+                "cup",
+                "steam",
+                "breakfast"
+            ],
+            "short_description": "A steaming cup of hot beverage on a saucer.",
+            "file": "icons/food/hot-beverage-cup.svg",
+            "json_path": "icons/food/hot-beverage-cup.json"
+        },
+        {
             "name": "Ice Cream Cone",
             "theme": "Food",
             "tags": [
@@ -1316,6 +1855,36 @@
             "short_description": "A swirled soft-serve ice cream atop a cone.",
             "file": "icons/food/ice-cream-cone.svg",
             "json_path": "icons/food/ice-cream-cone.json"
+        },
+        {
+            "name": "Jar of Pickles",
+            "theme": "Food",
+            "tags": [
+                "pickles",
+                "food",
+                "jar",
+                "preserved",
+                "snack",
+                "vegetable"
+            ],
+            "short_description": "A sealed glass jar containing three pickles.",
+            "file": "icons/food/jar-of-pickles.svg",
+            "json_path": "icons/food/jar-of-pickles.json"
+        },
+        {
+            "name": "Maple Syrup Bottle",
+            "theme": "Food",
+            "tags": [
+                "syrup",
+                "maple",
+                "bottle",
+                "canada",
+                "sweet",
+                "breakfast"
+            ],
+            "short_description": "A bottle with a maple leaf emblem, representing maple syrup.",
+            "file": "icons/food/maple-syrup-bottle.svg",
+            "json_path": "icons/food/maple-syrup-bottle.json"
         },
         {
             "name": "Minimalist Onigiri",
@@ -1363,6 +1932,51 @@
             "short_description": "A rice ball with a topping, wrapped in seaweed, in a cute and stylized form.",
             "file": "icons/food/onigiri-with-topping.svg",
             "json_path": "icons/food/onigiri-with-topping.json"
+        },
+        {
+            "name": "Orange Fruit",
+            "theme": "Food",
+            "tags": [
+                "orange",
+                "fruit",
+                "citrus",
+                "healthy",
+                "food",
+                "fresh"
+            ],
+            "short_description": "A whole orange with a leaf attached.",
+            "file": "icons/food/orange-fruit.svg",
+            "json_path": "icons/food/orange-fruit.json"
+        },
+        {
+            "name": "Pancakes Stack",
+            "theme": "Food",
+            "tags": [
+                "pancakes",
+                "breakfast",
+                "butter",
+                "syrup",
+                "stack",
+                "food"
+            ],
+            "short_description": "A stack of pancakes with syrup and a pat of butter.",
+            "file": "icons/food/pancakes-stack.svg",
+            "json_path": "icons/food/pancakes-stack.json"
+        },
+        {
+            "name": "Pizza Slice",
+            "theme": "Food",
+            "tags": [
+                "pizza",
+                "food",
+                "cheese",
+                "pepperoni",
+                "snack",
+                "fast food"
+            ],
+            "short_description": "A slice of pizza with visible toppings like pepperoni.",
+            "file": "icons/food/pizza-slice.svg",
+            "json_path": "icons/food/pizza-slice.json"
         },
         {
             "name": "Ramen Bowl",
@@ -1540,6 +2154,20 @@
             "short_description": "A smiling frog-shaped wallet or coin purse.",
             "file": "icons/frog/frog-wallet.svg",
             "json_path": "icons/frog/frog-wallet.json"
+        },
+        {
+            "name": "Bed",
+            "theme": "Furniture",
+            "tags": [
+                "bed",
+                "furniture",
+                "sleep",
+                "bedroom",
+                "comfort"
+            ],
+            "short_description": "A simple bed frame with a pillow and mattress.",
+            "file": "icons/furniture/bed.svg",
+            "json_path": "icons/furniture/bed.json"
         },
         {
             "name": "Bookshelf",
@@ -1747,6 +2375,22 @@
             "short_description": "A rudimentary brush made from a bone handle and coarse fibers.",
             "file": "icons/goblin/bone-brush.svg",
             "json_path": "icons/goblin/bone-brush.json"
+        },
+        {
+            "name": "Bone Comb",
+            "theme": "Goblin",
+            "tags": [
+                "comb",
+                "bone",
+                "goblin",
+                "primitive",
+                "tool",
+                "hair",
+                "fantasy"
+            ],
+            "short_description": "A comb shaped like a stylized bone with jagged teeth.",
+            "file": "icons/goblin/bone-comb.svg",
+            "json_path": "icons/goblin/bone-comb.json"
         },
         {
             "name": "Bone Dagger",
@@ -2052,6 +2696,21 @@
             "json_path": "icons/hospital/medical-mask.json"
         },
         {
+            "name": "Pill Bottle",
+            "theme": "Hospital",
+            "tags": [
+                "medicine",
+                "pill",
+                "bottle",
+                "pharmacy",
+                "health",
+                "hospital"
+            ],
+            "short_description": "A bottle with a pill icon on the label, used for medication.",
+            "file": "icons/hospital/pill-bottle.svg",
+            "json_path": "icons/hospital/pill-bottle.json"
+        },
+        {
             "name": "Stethoscope",
             "theme": "Hospital",
             "tags": [
@@ -2098,6 +2757,21 @@
             "json_path": "icons/hospital/syringe.json"
         },
         {
+            "name": "Tooth",
+            "theme": "Hospital",
+            "tags": [
+                "tooth",
+                "dentist",
+                "dental",
+                "health",
+                "molar",
+                "oral care"
+            ],
+            "short_description": "A simplified drawing of a human tooth.",
+            "file": "icons/hospital/tooth.svg",
+            "json_path": "icons/hospital/tooth.json"
+        },
+        {
             "name": "Wheelchair",
             "theme": "Hospital",
             "tags": [
@@ -2129,6 +2803,21 @@
             "json_path": "icons/human/jumping-figure.json"
         },
         {
+            "name": "Raised Hand",
+            "theme": "Human",
+            "tags": [
+                "hand",
+                "stop",
+                "gesture",
+                "palm",
+                "human",
+                "sign"
+            ],
+            "short_description": "An open hand shown palm forward, commonly indicating stop or attention.",
+            "file": "icons/human/raised-hand.svg",
+            "json_path": "icons/human/raised-hand.json"
+        },
+        {
             "name": "Seated Figure",
             "theme": "Human",
             "tags": [
@@ -2141,6 +2830,21 @@
             "short_description": "A minimal icon of a person sitting on a chair.",
             "file": "icons/human/seated-figure.svg",
             "json_path": "icons/human/seated-figure.json"
+        },
+        {
+            "name": "Thumbs Up",
+            "theme": "Human",
+            "tags": [
+                "hand",
+                "thumbs up",
+                "gesture",
+                "like",
+                "approval",
+                "sign"
+            ],
+            "short_description": "A hand showing a thumbs up gesture.",
+            "file": "icons/human/thumbs-up.svg",
+            "json_path": "icons/human/thumbs-up.json"
         },
         {
             "name": "Fish Crate",
@@ -2529,6 +3233,53 @@
             "json_path": "icons/living room/sofa.json"
         },
         {
+            "name": "Crystal Shard",
+            "theme": "Magic",
+            "tags": [
+                "crystal",
+                "magic",
+                "gem",
+                "sparkle",
+                "fantasy",
+                "mystical",
+                "shard"
+            ],
+            "short_description": "A floating crystal surrounded by sparkles.",
+            "file": "icons/magic/crystal-shard.svg",
+            "json_path": "icons/magic/crystal-shard.json"
+        },
+        {
+            "name": "Garden Gnome",
+            "theme": "Magic",
+            "tags": [
+                "gnome",
+                "magic",
+                "fantasy",
+                "garden",
+                "figure",
+                "beard",
+                "hat"
+            ],
+            "short_description": "A bearded garden gnome wearing a pointed hat and belt.",
+            "file": "icons/magic/garden-gnome.svg",
+            "json_path": "icons/magic/garden-gnome.json"
+        },
+        {
+            "name": "Armored Knight",
+            "theme": "Medieval",
+            "tags": [
+                "knight",
+                "armor",
+                "medieval",
+                "shield",
+                "warrior",
+                "historical"
+            ],
+            "short_description": "A medieval knight in armor holding a shield.",
+            "file": "icons/medieval/armored-knight.svg",
+            "json_path": "icons/medieval/armored-knight.json"
+        },
+        {
             "name": "Ancient Coin",
             "theme": "Money",
             "tags": [
@@ -2779,6 +3530,38 @@
             "json_path": "icons/music/tambourine.json"
         },
         {
+            "name": "Anchor and Octopus",
+            "theme": "Nautical",
+            "tags": [
+                "anchor",
+                "octopus",
+                "sea",
+                "marine",
+                "tentacles",
+                "deep",
+                "nautical"
+            ],
+            "short_description": "An octopus wrapped around a heavy anchor.",
+            "file": "icons/nautical/anchor-and-octopus.svg",
+            "json_path": "icons/nautical/anchor-and-octopus.json"
+        },
+        {
+            "name": "Treasure Chest",
+            "theme": "Nautical",
+            "tags": [
+                "treasure",
+                "chest",
+                "gold",
+                "pirate",
+                "ocean",
+                "loot",
+                "sea"
+            ],
+            "short_description": "An open chest filled with treasure sitting in water.",
+            "file": "icons/nautical/treasure-chest.svg",
+            "json_path": "icons/nautical/treasure-chest.json"
+        },
+        {
             "name": "Anchor",
             "theme": "Navy",
             "tags": [
@@ -2869,6 +3652,22 @@
             "json_path": "icons/navy/ship-wheel.json"
         },
         {
+            "name": "Ship\u2019s Bell",
+            "theme": "Navy",
+            "tags": [
+                "bell",
+                "ship",
+                "navy",
+                "alarm",
+                "nautical",
+                "marine",
+                "vessel"
+            ],
+            "short_description": "A traditional ship\u2019s bell hanging from a support arm.",
+            "file": "icons/navy/ships-bell.svg",
+            "json_path": "icons/navy/ships-bell.json"
+        },
+        {
             "name": "Torpedo",
             "theme": "Navy",
             "tags": [
@@ -2899,6 +3698,21 @@
             "json_path": "icons/ocean/japanese-wave.json"
         },
         {
+            "name": "Adhesive Tape Roll",
+            "theme": "Office",
+            "tags": [
+                "tape",
+                "adhesive",
+                "office",
+                "stationery",
+                "tools",
+                "roll"
+            ],
+            "short_description": "A roll of adhesive tape with the end slightly peeled.",
+            "file": "icons/office/adhesive-tape-roll.svg",
+            "json_path": "icons/office/adhesive-tape-roll.json"
+        },
+        {
             "name": "Clipboard",
             "theme": "Office",
             "tags": [
@@ -2913,6 +3727,66 @@
             "short_description": "A board with a clip at the top for holding papers.",
             "file": "icons/office/clipboard.svg",
             "json_path": "icons/office/clipboard.json"
+        },
+        {
+            "name": "Handshake Agreement",
+            "theme": "Office",
+            "tags": [
+                "handshake",
+                "agreement",
+                "partnership",
+                "business",
+                "deal",
+                "trust"
+            ],
+            "short_description": "Two hands shaking to represent agreement or partnership.",
+            "file": "icons/office/handshake-agreement.svg",
+            "json_path": "icons/office/handshake-agreement.json"
+        },
+        {
+            "name": "Mobile Payment",
+            "theme": "Office",
+            "tags": [
+                "mobile",
+                "smartphone",
+                "payment",
+                "finance",
+                "money",
+                "dollar"
+            ],
+            "short_description": "A smartphone displaying a dollar sign on the screen.",
+            "file": "icons/office/mobile-payment.svg",
+            "json_path": "icons/office/mobile-payment.json"
+        },
+        {
+            "name": "Office Printer",
+            "theme": "Office",
+            "tags": [
+                "printer",
+                "office",
+                "equipment",
+                "paper",
+                "technology",
+                "computer"
+            ],
+            "short_description": "A typical office printer with paper input and output trays.",
+            "file": "icons/office/office-printer.svg",
+            "json_path": "icons/office/office-printer.json"
+        },
+        {
+            "name": "Roll of Tape",
+            "theme": "Office",
+            "tags": [
+                "tape",
+                "adhesive",
+                "office",
+                "stationery",
+                "roll",
+                "supply"
+            ],
+            "short_description": "A dispenser roll of adhesive tape with a cut end.",
+            "file": "icons/office/roll-of-tape.svg",
+            "json_path": "icons/office/roll-of-tape.json"
         },
         {
             "name": "Bamboo Stalks",
@@ -3103,6 +3977,22 @@
             "json_path": "icons/pirate/treasure-chest.json"
         },
         {
+            "name": "Potted Plant",
+            "theme": "Plants",
+            "tags": [
+                "plant",
+                "pot",
+                "leaves",
+                "nature",
+                "greenery",
+                "growth",
+                "indoor"
+            ],
+            "short_description": "A simple plant with leaves in a flower pot.",
+            "file": "icons/plants/potted-plant.svg",
+            "json_path": "icons/plants/potted-plant.json"
+        },
+        {
             "name": "Paint Can",
             "theme": "Renovation",
             "tags": [
@@ -3199,6 +4089,54 @@
             "json_path": "icons/space/astronaut.json"
         },
         {
+            "name": "Combat Gauntlet",
+            "theme": "Space",
+            "tags": [
+                "gauntlet",
+                "armor",
+                "futuristic",
+                "glove",
+                "combat",
+                "wearable",
+                "tech"
+            ],
+            "short_description": "A heavy-duty armored glove with a tech interface on the back.",
+            "file": "icons/space/combat-gauntlet.svg",
+            "json_path": "icons/space/combat-gauntlet.json"
+        },
+        {
+            "name": "HUD Visor",
+            "theme": "Space",
+            "tags": [
+                "visor",
+                "goggles",
+                "hud",
+                "tech",
+                "futuristic",
+                "display",
+                "space"
+            ],
+            "short_description": "Futuristic visor with a heads-up display and antenna.",
+            "file": "icons/space/hud-visor.svg",
+            "json_path": "icons/space/hud-visor.json"
+        },
+        {
+            "name": "Jet Injector Pack",
+            "theme": "Space",
+            "tags": [
+                "syringe",
+                "device",
+                "injector",
+                "futuristic",
+                "space",
+                "medical",
+                "tech"
+            ],
+            "short_description": "A sci-fi jetpack-like device with tanks and a central injector needle.",
+            "file": "icons/space/jet-injector-pack.svg",
+            "json_path": "icons/space/jet-injector-pack.json"
+        },
+        {
             "name": "Laser Pistol",
             "theme": "Space",
             "tags": [
@@ -3274,6 +4212,53 @@
             "short_description": "An advanced energy weapon with tactical attachment and grip.",
             "file": "icons/space/tactical-blaster.svg",
             "json_path": "icons/space/tactical-blaster.json"
+        },
+        {
+            "name": "Pogo Stick",
+            "theme": "Sport",
+            "tags": [
+                "pogo",
+                "spring",
+                "jump",
+                "toy",
+                "sport",
+                "fun",
+                "stick"
+            ],
+            "short_description": "A vertical spring-loaded stick with handlebars and footrests used for jumping.",
+            "file": "icons/sport/pogo-stick.svg",
+            "json_path": "icons/sport/pogo-stick.json"
+        },
+        {
+            "name": "Street Skateboard",
+            "theme": "Sport",
+            "tags": [
+                "skateboard",
+                "sport",
+                "street",
+                "wheels",
+                "deck",
+                "ride",
+                "recreation"
+            ],
+            "short_description": "A standard street skateboard with upward-curving ends.",
+            "file": "icons/sport/street-skateboard.svg",
+            "json_path": "icons/sport/street-skateboard.json"
+        },
+        {
+            "name": "Disposable Lighter",
+            "theme": "Tool",
+            "tags": [
+                "lighter",
+                "fire",
+                "tool",
+                "flame",
+                "ignition",
+                "smoking"
+            ],
+            "short_description": "A common plastic lighter used to create flame.",
+            "file": "icons/tool/disposable-lighter.svg",
+            "json_path": "icons/tool/disposable-lighter.json"
         },
         {
             "name": "Power Axe",
@@ -3428,6 +4413,22 @@
             "json_path": "icons/underwater/clam-and-pearl.json"
         },
         {
+            "name": "Diving Helmet",
+            "theme": "Underwater",
+            "tags": [
+                "helmet",
+                "diving",
+                "vintage",
+                "underwater",
+                "sea",
+                "exploration",
+                "navy"
+            ],
+            "short_description": "A vintage diving helmet used for deep-sea exploration.",
+            "file": "icons/underwater/diving-helmet.svg",
+            "json_path": "icons/underwater/diving-helmet.json"
+        },
+        {
             "name": "Seashell",
             "theme": "Underwater",
             "tags": [
@@ -3439,6 +4440,112 @@
             "short_description": "A stylized seashell icon",
             "file": "icons/underwater/seashell.svg",
             "json_path": "icons/underwater/seashell.json"
+        },
+        {
+            "name": "City Bus",
+            "theme": "Urban",
+            "tags": [
+                "bus",
+                "transport",
+                "public",
+                "vehicle",
+                "urban",
+                "commute"
+            ],
+            "short_description": "A front-facing city bus used for public transportation.",
+            "file": "icons/urban/city-bus.svg",
+            "json_path": "icons/urban/city-bus.json"
+        },
+        {
+            "name": "Food Cart",
+            "theme": "Urban",
+            "tags": [
+                "cart",
+                "food",
+                "street",
+                "vendor",
+                "urban",
+                "snack"
+            ],
+            "short_description": "A street food cart with a canopy and large wheel.",
+            "file": "icons/urban/food-cart.svg",
+            "json_path": "icons/urban/food-cart.json"
+        },
+        {
+            "name": "Location Map",
+            "theme": "Urban",
+            "tags": [
+                "map",
+                "location",
+                "navigation",
+                "urban",
+                "travel",
+                "pin"
+            ],
+            "short_description": "A folded paper map with a location pin.",
+            "file": "icons/urban/location-map.svg",
+            "json_path": "icons/urban/location-map.json"
+        },
+        {
+            "name": "Park Bench",
+            "theme": "Urban",
+            "tags": [
+                "bench",
+                "lamp",
+                "street",
+                "urban",
+                "rest",
+                "public-space"
+            ],
+            "short_description": "A streetlamp and bench commonly found in city parks.",
+            "file": "icons/urban/park-bench.svg",
+            "json_path": "icons/urban/park-bench.json"
+        },
+        {
+            "name": "Excavator",
+            "theme": "Vehicle",
+            "tags": [
+                "excavator",
+                "vehicle",
+                "construction",
+                "dig",
+                "machinery",
+                "heavy"
+            ],
+            "short_description": "A tracked excavator with a digging arm and cabin.",
+            "file": "icons/vehicle/excavator.svg",
+            "json_path": "icons/vehicle/excavator.json"
+        },
+        {
+            "name": "Atomic Grenade",
+            "theme": "Weapon",
+            "tags": [
+                "grenade",
+                "bomb",
+                "explosive",
+                "atomic",
+                "weapon",
+                "future",
+                "tech"
+            ],
+            "short_description": "A grenade with a glowing atomic symbol at its core.",
+            "file": "icons/weapon/atomic-grenade.svg",
+            "json_path": "icons/weapon/atomic-grenade.json"
+        },
+        {
+            "name": "Hand Grenade",
+            "theme": "Weapon",
+            "tags": [
+                "grenade",
+                "weapon",
+                "explosive",
+                "military",
+                "combat",
+                "warfare"
+            ],
+            "short_description": "A stylized illustration of a classic hand grenade with safety pin.",
+            "file": "icons/weapon/hand-grenade.svg",
+            "json_path": "icons/weapon/hand-grenade.json"
         },
         {
             "name": "Katana",
@@ -3455,6 +4562,53 @@
             "short_description": "A minimalist depiction of a traditional Japanese katana sword.",
             "file": "icons/weapon/katana.svg",
             "json_path": "icons/weapon/katana.json"
+        },
+        {
+            "name": "Pulse Rifle",
+            "theme": "Weapon",
+            "tags": [
+                "rifle",
+                "gun",
+                "weapon",
+                "sci-fi",
+                "pulse",
+                "energy",
+                "future"
+            ],
+            "short_description": "A sci-fi energy-based firearm with a tactical design.",
+            "file": "icons/weapon/pulse-rifle.svg",
+            "json_path": "icons/weapon/pulse-rifle.json"
+        },
+        {
+            "name": "Tactical Knife",
+            "theme": "Weapon",
+            "tags": [
+                "knife",
+                "blade",
+                "combat",
+                "weapon",
+                "survival",
+                "military",
+                "tactical"
+            ],
+            "short_description": "A rugged combat knife with a serrated edge and thick handle.",
+            "file": "icons/weapon/tactical-knife.svg",
+            "json_path": "icons/weapon/tactical-knife.json"
+        },
+        {
+            "name": "Curved Sword",
+            "theme": "Weapons",
+            "tags": [
+                "sword",
+                "weapon",
+                "blade",
+                "combat",
+                "curved",
+                "medieval"
+            ],
+            "short_description": "A short sword with a broad, curved blade.",
+            "file": "icons/weapons/curved-sword.svg",
+            "json_path": "icons/weapons/curved-sword.json"
         },
         {
             "name": "Candlestick",

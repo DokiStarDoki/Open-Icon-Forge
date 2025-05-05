@@ -1,0 +1,15 @@
+{
+    "name": "Armadillo",
+    "fname": "armadillo",
+    "short_description": "A small armored mammal with distinct body plating.",
+    "tags": [
+        "animal",
+        "armadillo",
+        "wildlife",
+        "armor",
+        "mammal",
+        "nature"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-05"
+}

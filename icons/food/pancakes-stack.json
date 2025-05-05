@@ -1,0 +1,15 @@
+{
+    "name": "Pancakes Stack",
+    "fname": "pancakes-stack",
+    "short_description": "A stack of pancakes with syrup and a pat of butter.",
+    "tags": [
+        "pancakes",
+        "breakfast",
+        "butter",
+        "syrup",
+        "stack",
+        "food"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-05"
+}

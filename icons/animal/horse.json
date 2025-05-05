@@ -1,0 +1,15 @@
+{
+    "name": "Horse",
+    "fname": "horse",
+    "short_description": "A standing horse with a short mane and tail.",
+    "tags": [
+        "horse",
+        "animal",
+        "farm",
+        "hoofed",
+        "domestic",
+        "mammal"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-05"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Raised Hand",
+    "fname": "raised-hand",
+    "short_description": "An open hand shown palm forward, commonly indicating stop or attention.",
+    "tags": [
+        "hand",
+        "stop",
+        "gesture",
+        "palm",
+        "human",
+        "sign"
+    ],
+    "theme": "Human",
+    "date_created": "2025-05-05"
+}

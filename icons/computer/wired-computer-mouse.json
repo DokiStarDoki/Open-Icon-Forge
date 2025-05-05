@@ -1,0 +1,15 @@
+{
+    "name": "Wired Computer Mouse",
+    "fname": "wired-computer-mouse",
+    "short_description": "A standard wired computer mouse with a scroll wheel.",
+    "tags": [
+        "mouse",
+        "computer",
+        "wired",
+        "electronics",
+        "input device",
+        "office"
+    ],
+    "theme": "Computer",
+    "date_created": "2025-05-05"
+}

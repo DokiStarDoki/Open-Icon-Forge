@@ -1,0 +1,15 @@
+{
+    "name": "City Bus",
+    "fname": "city-bus",
+    "short_description": "A front-facing city bus used for public transportation.",
+    "tags": [
+        "bus",
+        "transport",
+        "public",
+        "vehicle",
+        "urban",
+        "commute"
+    ],
+    "theme": "Urban",
+    "date_created": "2025-05-05"
+}

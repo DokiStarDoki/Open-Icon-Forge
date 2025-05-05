@@ -1,0 +1,16 @@
+{
+    "name": "Tactical Knife",
+    "fname": "tactical-knife",
+    "short_description": "A rugged combat knife with a serrated edge and thick handle.",
+    "tags": [
+        "knife",
+        "blade",
+        "combat",
+        "weapon",
+        "survival",
+        "military",
+        "tactical"
+    ],
+    "theme": "Weapon",
+    "date_created": "2025-05-05"
+}

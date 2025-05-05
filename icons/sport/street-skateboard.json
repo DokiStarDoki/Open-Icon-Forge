@@ -1,0 +1,16 @@
+{
+    "name": "Street Skateboard",
+    "fname": "street-skateboard",
+    "short_description": "A standard street skateboard with upward-curving ends.",
+    "tags": [
+        "skateboard",
+        "sport",
+        "street",
+        "wheels",
+        "deck",
+        "ride",
+        "recreation"
+    ],
+    "theme": "Sport",
+    "date_created": "2025-05-05"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Jet Engine",
+    "fname": "jet-engine",
+    "short_description": "A line drawing of a jet engine with turbine fan and fins.",
+    "tags": [
+        "jet",
+        "engine",
+        "turbine",
+        "aircraft",
+        "airforce",
+        "propulsion",
+        "aviation"
+    ],
+    "theme": "Airforce",
+    "date_created": "2025-05-05"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Office Printer",
+    "fname": "office-printer",
+    "short_description": "A typical office printer with paper input and output trays.",
+    "tags": [
+        "printer",
+        "office",
+        "equipment",
+        "paper",
+        "technology",
+        "computer"
+    ],
+    "theme": "Office",
+    "date_created": "2025-05-05"
+}

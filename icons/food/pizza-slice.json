@@ -1,0 +1,15 @@
+{
+    "name": "Pizza Slice",
+    "fname": "pizza-slice",
+    "short_description": "A slice of pizza with visible toppings like pepperoni.",
+    "tags": [
+        "pizza",
+        "food",
+        "cheese",
+        "pepperoni",
+        "snack",
+        "fast food"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-05"
+}

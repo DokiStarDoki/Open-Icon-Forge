@@ -1,0 +1,15 @@
+{
+    "name": "Pill Bottle",
+    "fname": "pill-bottle",
+    "short_description": "A bottle with a pill icon on the label, used for medication.",
+    "tags": [
+        "medicine",
+        "pill",
+        "bottle",
+        "pharmacy",
+        "health",
+        "hospital"
+    ],
+    "theme": "Hospital",
+    "date_created": "2025-05-05"
+}

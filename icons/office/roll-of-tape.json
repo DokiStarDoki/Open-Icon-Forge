@@ -1,0 +1,15 @@
+{
+    "name": "Roll of Tape",
+    "fname": "roll-of-tape",
+    "short_description": "A dispenser roll of adhesive tape with a cut end.",
+    "tags": [
+        "tape",
+        "adhesive",
+        "office",
+        "stationery",
+        "roll",
+        "supply"
+    ],
+    "theme": "Office",
+    "date_created": "2025-05-05"
+}

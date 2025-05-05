@@ -1,0 +1,15 @@
+{
+    "name": "Gumball Machine",
+    "fname": "gumball-machine",
+    "short_description": "A classic gumball machine filled with round candies.",
+    "tags": [
+        "gumball",
+        "candy",
+        "machine",
+        "toy",
+        "sweet",
+        "vending"
+    ],
+    "theme": "Decoration",
+    "date_created": "2025-05-05"
+}

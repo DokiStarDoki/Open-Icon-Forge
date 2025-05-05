@@ -1,0 +1,15 @@
+{
+    "name": "Orange Fruit",
+    "fname": "orange-fruit",
+    "short_description": "A whole orange with a leaf attached.",
+    "tags": [
+        "orange",
+        "fruit",
+        "citrus",
+        "healthy",
+        "food",
+        "fresh"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-05"
+}

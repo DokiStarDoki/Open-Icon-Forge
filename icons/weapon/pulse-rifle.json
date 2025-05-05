@@ -1,0 +1,16 @@
+{
+    "name": "Pulse Rifle",
+    "fname": "pulse-rifle",
+    "short_description": "A sci-fi energy-based firearm with a tactical design.",
+    "tags": [
+        "rifle",
+        "gun",
+        "weapon",
+        "sci-fi",
+        "pulse",
+        "energy",
+        "future"
+    ],
+    "theme": "Weapon",
+    "date_created": "2025-05-05"
+}

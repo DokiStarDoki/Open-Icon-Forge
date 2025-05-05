@@ -1,0 +1,16 @@
+{
+    "name": "Bone Comb",
+    "fname": "bone-comb",
+    "short_description": "A comb shaped like a stylized bone with jagged teeth.",
+    "tags": [
+        "comb",
+        "bone",
+        "goblin",
+        "primitive",
+        "tool",
+        "hair",
+        "fantasy"
+    ],
+    "theme": "Goblin",
+    "date_created": "2025-05-05"
+}
