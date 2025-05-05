@@ -62,7 +62,7 @@ function getGridConfig() {
   // Enforce 8–40 icon range
   iconCount = Math.min(Math.max(iconCount, 8), 40);
 
-  return { cols, rows, iconCount, iconSize: iconSize - 8 }; // Subtract padding
+  return { cols, rows, iconCount, iconSize: iconSize - 8, gap };
 }
 
 async function loadIcons() {
@@ -146,7 +146,7 @@ function addHoverEffects(div) {
 const observerOptions = {
   root: null,
   rootMargin: "200px",
-  threshold: 0.1, // Trigger when 10% of the slide is visible
+  threshold: 0.1,
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -159,9 +159,9 @@ const observer = new IntersectionObserver((entries, observer) => {
       objects.forEach((object, index) => {
         const filePath = object.parentElement.dataset.file;
         if (filePath && placeholders[index]) {
-          object.data = filePath; // Set the SVG source
+          object.data = filePath;
           object.onload = () => {
-            placeholders[index].style.display = "none"; // Hide placeholder on successful load
+            placeholders[index].style.display = "none";
           };
           object.onerror = () => {
             console.error(`Failed to load SVG at ${filePath}`);
@@ -169,7 +169,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
       });
 
-      observer.unobserve(slide); // Stop observing after loading
+      observer.unobserve(slide);
     }
   });
 }, observerOptions);
@@ -204,7 +204,7 @@ function renderCarousel(filter = "", selectedFilter = "") {
     return matchesSearch && matchesTag && matchesTheme;
   });
 
-  const { cols, rows, iconCount, iconSize } = getGridConfig();
+  const { cols, rows, iconCount, iconSize, gap } = getGridConfig();
   const iconChunks = chunkArray(filteredIcons, iconCount);
   swiperWrapper.innerHTML = "";
 
@@ -213,8 +213,9 @@ function renderCarousel(filter = "", selectedFilter = "") {
   iconChunks.forEach((chunk, chunkIndex) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
-    slide.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-    slide.style.gridTemplateRows = `repeat(${rows}, auto)`;
+    slide.style.setProperty("--cols", cols);
+    slide.style.setProperty("--rows", rows);
+    slide.style.setProperty("--gap", `${gap}rem`);
 
     chunk.forEach((icon) => {
       const div = document.createElement("div");
@@ -235,7 +236,7 @@ function renderCarousel(filter = "", selectedFilter = "") {
 
       const download = document.createElement("button");
       download.className = "quick-download";
-      download.innerText = "↓";
+      download.innerText = "🡇";
       download.title = "Download SVG";
 
       download.addEventListener("click", (e) => {
@@ -261,13 +262,14 @@ function renderCarousel(filter = "", selectedFilter = "") {
     observer.observe(slide);
   });
 
-  // Initialize or update Swiper
+  // Initialize or update Swiper with dynamic width
   if (swiper) {
     swiper.destroy(true, true);
   }
 
   swiper = new Swiper("#iconCarousel", {
-    slidesPerView: 1,
+    slidesPerView: "auto",
+    autoHeight: true,
     spaceBetween: 20,
     centeredSlides: true,
     navigation: {
@@ -280,7 +282,6 @@ function renderCarousel(filter = "", selectedFilter = "") {
     },
     on: {
       slideChange: () => {
-        // Ensure nearby slides are observed
         const activeIndex = swiper.activeIndex;
         const slides = document.querySelectorAll(".swiper-slide");
         slides.forEach((slide, index) => {
@@ -310,7 +311,7 @@ function selectIcon(div, icon) {
   selectedDiv = div;
   div.classList.add("selected");
 
-  detailIcon.data = icon.file; // Set SVG source
+  detailIcon.data = icon.file;
   detailIcon.onload = () => {
     console.log("Detail SVG loaded successfully");
   };
