@@ -63,7 +63,6 @@
       }
 
       .icon object {
-        /* width: 64px; */
         height: 75%;
         display: block;
         margin: 0 auto;
@@ -155,6 +154,13 @@
         margin-top: 0;
         color: #007acc;
       }
+
+      .icon-placeholder {
+        height: 75%;
+        background: #f0f0f0;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
@@ -222,7 +228,6 @@
           }
         }
 
-        // 👇 Set total icon count (excluding banned themes)
         const bannedThemes = ["vectorized", "temp", "generated"];
         const count = icons.filter(
           (icon) => !bannedThemes.includes(icon.theme?.toLowerCase())
@@ -282,6 +287,30 @@
         });
       }
 
+      // Initialize Intersection Observer for lazy loading
+      const observerOptions = {
+        root: null,
+        rootMargin: "100px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const iconDiv = entry.target;
+            const object = iconDiv.querySelector("object");
+            const placeholder = iconDiv.querySelector(".icon-placeholder");
+            const filePath = iconDiv.dataset.file;
+
+            if (object && filePath && placeholder) {
+              object.data = filePath;
+              placeholder.style.display = "none";
+              observer.unobserve(iconDiv);
+            }
+          }
+        });
+      }, observerOptions);
+
       function renderIcons(filter = "", selectedFilter = "") {
         const lowerFilter = filter.toLowerCase();
         const bannedThemes = ["vectorized", "temp", "generated"];
@@ -309,10 +338,15 @@
           .forEach((icon, index) => {
             const div = document.createElement("div");
             div.className = "icon";
+            div.dataset.file = icon.file;
 
             const object = document.createElement("object");
             object.type = "image/svg+xml";
-            object.data = icon.file;
+            // Initially, don't set the data attribute to prevent loading
+            object.style.display = "block";
+
+            const placeholder = document.createElement("div");
+            placeholder.className = "icon-placeholder";
 
             const label = document.createElement("small");
             label.textContent = icon.name;
@@ -330,6 +364,7 @@
               link.click();
             });
 
+            div.appendChild(placeholder);
             div.appendChild(object);
             div.appendChild(label);
             div.appendChild(download);
@@ -337,6 +372,9 @@
             div.addEventListener("click", () => selectIcon(div, icon));
             addHoverEffects(div);
             grid.appendChild(div);
+
+            // Observe the icon div for visibility
+            observer.observe(div);
 
             gsap.from(div, {
               duration: 0.5,
