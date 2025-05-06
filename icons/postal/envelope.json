@@ -1,0 +1,15 @@
+{
+    "name": "Envelope",
+    "fname": "envelope",
+    "short_description": "A closed envelope with a triangular flap.",
+    "tags": [
+        "envelope",
+        "mail",
+        "letter",
+        "correspondence",
+        "stationery",
+        "postal"
+    ],
+    "theme": "Postal",
+    "date_created": "2025-05-06"
+}

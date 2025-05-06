@@ -1,0 +1,16 @@
+{
+    "name": "Vampire Count",
+    "fname": "vampire-count",
+    "short_description": "A vampire with pointed ears, fangs, and a high-collared cape.",
+    "tags": [
+        "vampire",
+        "fangs",
+        "monster",
+        "undead",
+        "cloak",
+        "horror",
+        "night"
+    ],
+    "theme": "Monster",
+    "date_created": "2025-05-06"
+}

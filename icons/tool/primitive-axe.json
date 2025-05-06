@@ -1,0 +1,15 @@
+{
+    "name": "Primitive Axe",
+    "fname": "primitive-axe",
+    "short_description": "A stone axe bound with rope, resembling early tools.",
+    "tags": [
+        "axe",
+        "tool",
+        "stone",
+        "primitive",
+        "weapon",
+        "wood"
+    ],
+    "theme": "Tool",
+    "date_created": "2025-05-06"
+}

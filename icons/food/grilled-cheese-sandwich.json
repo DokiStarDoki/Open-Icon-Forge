@@ -1,0 +1,16 @@
+{
+    "name": "Grilled Cheese Sandwich",
+    "fname": "grilled-cheese-sandwich",
+    "short_description": "A grilled cheese sandwich with the cheese dripping out.",
+    "tags": [
+        "sandwich",
+        "melt",
+        "cheese",
+        "food",
+        "snack",
+        "dripping",
+        "grilled"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-06"
+}

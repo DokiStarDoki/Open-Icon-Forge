@@ -1,0 +1,15 @@
+{
+    "name": "Classic Handbag",
+    "fname": "classic-handbag",
+    "short_description": "A simple handbag with a clasp and curved handle.",
+    "tags": [
+        "handbag",
+        "purse",
+        "fashion",
+        "accessory",
+        "bag",
+        "style"
+    ],
+    "theme": "Fashion",
+    "date_created": "2025-05-06"
+}

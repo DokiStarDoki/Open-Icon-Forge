@@ -1,0 +1,15 @@
+{
+    "name": "Sun Symbol",
+    "fname": "sun-symbol",
+    "short_description": "A radiant sun with lines representing rays.",
+    "tags": [
+        "sun",
+        "weather",
+        "day",
+        "bright",
+        "solar",
+        "sky"
+    ],
+    "theme": "Weather",
+    "date_created": "2025-05-06"
+}

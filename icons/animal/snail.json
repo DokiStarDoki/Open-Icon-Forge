@@ -1,0 +1,14 @@
+{
+    "name": "Snail",
+    "fname": "snail",
+    "short_description": "A basic spiral-shelled snail.",
+    "tags": [
+        "snail",
+        "animal",
+        "nature",
+        "slow",
+        "mollusk"
+    ],
+    "theme": "Animal",
+    "date_created": "2025-05-06"
+}

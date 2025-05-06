@@ -1,0 +1,15 @@
+{
+    "name": "Turntable Deck",
+    "fname": "turntable-deck",
+    "short_description": "A DJ turntable setup with a tonearm and control knob.",
+    "tags": [
+        "turntable",
+        "DJ",
+        "music",
+        "vinyl",
+        "audio",
+        "equipment"
+    ],
+    "theme": "Music",
+    "date_created": "2025-05-06"
+}

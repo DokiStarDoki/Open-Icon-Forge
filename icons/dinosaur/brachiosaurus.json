@@ -1,0 +1,14 @@
+{
+    "name": "Brachiosaurus",
+    "fname": "brachiosaurus",
+    "short_description": "A long-necked dinosaur standing on four legs.",
+    "tags": [
+        "brachiosaurus",
+        "dinosaur",
+        "long neck",
+        "prehistoric",
+        "jurassic"
+    ],
+    "theme": "Dinosaur",
+    "date_created": "2025-05-06"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Forest Guardian",
+    "fname": "forest-guardian",
+    "short_description": "A mythical humanoid with bark-like skin and wild hair.",
+    "tags": [
+        "monster",
+        "forest",
+        "guardian",
+        "myth",
+        "nature",
+        "tree",
+        "wood"
+    ],
+    "theme": "Monster",
+    "date_created": "2025-05-06"
+}

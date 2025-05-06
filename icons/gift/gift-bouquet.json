@@ -1,0 +1,15 @@
+{
+    "name": "Gift Bouquet",
+    "fname": "gift-bouquet",
+    "short_description": "A flower bouquet tied with a ribbon.",
+    "tags": [
+        "flowers",
+        "bouquet",
+        "gift",
+        "floral",
+        "romantic",
+        "present"
+    ],
+    "theme": "Gift",
+    "date_created": "2025-05-06"
+}

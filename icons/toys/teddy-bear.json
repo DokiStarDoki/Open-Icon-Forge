@@ -1,0 +1,15 @@
+{
+    "name": "Teddy Bear",
+    "fname": "teddy-bear",
+    "short_description": "A sitting teddy bear with a friendly face.",
+    "tags": [
+        "toy",
+        "bear",
+        "teddy",
+        "plush",
+        "cute",
+        "stuffed"
+    ],
+    "theme": "Toys",
+    "date_created": "2025-05-06"
+}

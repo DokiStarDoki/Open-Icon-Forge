@@ -1,0 +1,14 @@
+{
+    "name": "Warning Sign",
+    "fname": "warning-sign",
+    "short_description": "A triangular caution sign with an exclamation mark.",
+    "tags": [
+        "warning",
+        "alert",
+        "danger",
+        "sign",
+        "caution"
+    ],
+    "theme": "Sign",
+    "date_created": "2025-05-06"
+}

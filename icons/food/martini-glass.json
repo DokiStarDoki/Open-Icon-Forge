@@ -1,0 +1,16 @@
+{
+    "name": "Martini Glass",
+    "fname": "martini-glass",
+    "short_description": "A martini glass with an olive on a cocktail stick.",
+    "tags": [
+        "martini",
+        "drink",
+        "alcohol",
+        "glass",
+        "bar",
+        "cocktail",
+        "olive"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-06"
+}
