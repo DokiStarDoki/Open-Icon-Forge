@@ -8,3 +8,5 @@ json/request-log.json
 /icons/vectorized
 json/replicate-debug.json
 /archive
+/icons_cleaned
+/node_modules
