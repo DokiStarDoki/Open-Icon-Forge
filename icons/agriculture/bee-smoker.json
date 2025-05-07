@@ -1,0 +1,15 @@
+{
+    "name": "Bee Smoker",
+    "fname": "bee-smoker",
+    "short_description": "A metal canister tool used to calm bees with smoke during hive inspections.",
+    "tags": [
+        "beekeeping",
+        "smoke",
+        "bee",
+        "tool",
+        "hive",
+        "canister"
+    ],
+    "theme": "Agriculture",
+    "date_created": "2025-05-06"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Shovel",
+    "fname": "shovel",
+    "short_description": "A spade-shaped shovel with a handle for digging.",
+    "tags": [
+        "shovel",
+        "tool",
+        "digging",
+        "labor",
+        "garden",
+        "spade"
+    ],
+    "theme": "Labor",
+    "date_created": "2025-05-06"
+}

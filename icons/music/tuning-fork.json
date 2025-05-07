@@ -1,0 +1,14 @@
+{
+    "name": "Tuning Fork",
+    "fname": "tuning-fork",
+    "short_description": "A vibrating tuning fork emitting sound waves for musical tuning.",
+    "tags": [
+        "sound",
+        "music",
+        "vibration",
+        "frequency",
+        "instrument"
+    ],
+    "theme": "Music",
+    "date_created": "2025-05-06"
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Ashtray",
+    "fname": "ashtray",
+    "short_description": "A round ashtray with multiple cigarette rests.",
+    "tags": [
+        "ashtray",
+        "smoking",
+        "cigarette",
+        "circular",
+        "object",
+        "glass",
+        "container"
+    ],
+    "theme": "Everyday Object",
+    "date_created": "2025-05-06"
+}

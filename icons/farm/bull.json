@@ -1,0 +1,17 @@
+{
+    "name": "Bull",
+    "fname": "bull",
+    "short_description": "A standing bull with horns and a full body view.",
+    "tags": [
+        "animal",
+        "farm",
+        "livestock",
+        "mammal",
+        "bull",
+        "cow",
+        "horn",
+        "cattle"
+    ],
+    "theme": "Farm",
+    "date_created": "2025-05-06"
+}

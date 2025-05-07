@@ -1,0 +1,15 @@
+{
+    "name": "Otoscope",
+    "fname": "otoscope",
+    "short_description": "A handheld otoscope used for examining the inside of ears.",
+    "tags": [
+        "medical",
+        "tool",
+        "health",
+        "doctor",
+        "ear",
+        "examination"
+    ],
+    "theme": "Medical",
+    "date_created": "2025-05-06"
+}

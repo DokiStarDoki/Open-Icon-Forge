@@ -1,0 +1,14 @@
+{
+    "name": "Electric Prod",
+    "fname": "electric-prod",
+    "short_description": "A handheld electric prod with sparking tips, likely for livestock control.",
+    "tags": [
+        "shock",
+        "electric",
+        "tool",
+        "livestock",
+        "prod"
+    ],
+    "theme": "Agriculture",
+    "date_created": "2025-05-06"
+}

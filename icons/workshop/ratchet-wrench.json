@@ -1,0 +1,15 @@
+{
+    "name": "Ratchet Wrench",
+    "fname": "ratchet-wrench",
+    "short_description": "A hand tool with a round head designed for tightening or loosening nuts and bolts with a ratcheting mechanism.",
+    "tags": [
+        "tool",
+        "wrench",
+        "ratchet",
+        "mechanic",
+        "repair",
+        "hardware"
+    ],
+    "theme": "Workshop",
+    "date_created": "2025-05-06"
+}

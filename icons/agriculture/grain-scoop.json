@@ -1,0 +1,16 @@
+{
+    "name": "Grain Scoop",
+    "fname": "grain-scoop",
+    "short_description": "A scoop filled with grain or seeds.",
+    "tags": [
+        "scoop",
+        "grain",
+        "food",
+        "agriculture",
+        "seeds",
+        "farming",
+        "container"
+    ],
+    "theme": "Agriculture",
+    "date_created": "2025-05-06"
+}

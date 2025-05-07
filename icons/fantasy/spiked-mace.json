@@ -1,0 +1,15 @@
+{
+    "name": "Spiked Mace",
+    "fname": "spiked-mace",
+    "short_description": "A medieval weapon with a spiked ball mounted on a handle.",
+    "tags": [
+        "weapon",
+        "mace",
+        "spiked",
+        "combat",
+        "medieval",
+        "fantasy"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-06"
+}

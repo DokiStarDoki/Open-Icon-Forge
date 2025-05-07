@@ -1,0 +1,16 @@
+{
+    "name": "Magnifying Glass",
+    "fname": "magnifying-glass",
+    "short_description": "A classic round magnifying glass with a handle.",
+    "tags": [
+        "search",
+        "tool",
+        "glass",
+        "magnify",
+        "inspect",
+        "exploration",
+        "detective"
+    ],
+    "theme": "Investigation",
+    "date_created": "2025-05-06"
+}

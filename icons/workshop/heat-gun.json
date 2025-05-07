@@ -1,0 +1,16 @@
+{
+    "name": "Heat Gun",
+    "fname": "heat-gun",
+    "short_description": "A hand-held device that emits hot air, used in stripping paint or shrink-wrapping.",
+    "tags": [
+        "tool",
+        "heat",
+        "gun",
+        "hot",
+        "air",
+        "paint",
+        "workshop"
+    ],
+    "theme": "Workshop",
+    "date_created": "2025-05-06"
+}

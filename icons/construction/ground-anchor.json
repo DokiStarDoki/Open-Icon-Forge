@@ -1,0 +1,15 @@
+{
+    "name": "Ground Anchor",
+    "fname": "ground-anchor",
+    "short_description": "A metal ground anchor screw with a T-handle for securing items into soil.",
+    "tags": [
+        "anchor",
+        "ground",
+        "screw",
+        "outdoor",
+        "tool",
+        "secure"
+    ],
+    "theme": "Construction",
+    "date_created": "2025-05-06"
+}

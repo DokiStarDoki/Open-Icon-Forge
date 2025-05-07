@@ -1,0 +1,16 @@
+{
+    "name": "Wet Mop",
+    "fname": "wet-mop",
+    "short_description": "A sponge mop cleaning a puddle on the floor.",
+    "tags": [
+        "cleaning",
+        "mop",
+        "floor",
+        "water",
+        "housekeeping",
+        "tool",
+        "maintenance"
+    ],
+    "theme": "Household",
+    "date_created": "2025-05-06"
+}

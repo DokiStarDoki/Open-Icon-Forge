@@ -1,0 +1,16 @@
+{
+    "name": "Decorated Stocking",
+    "fname": "decorated-stocking",
+    "short_description": "A holiday stocking decorated with stars and patterns.",
+    "tags": [
+        "stocking",
+        "christmas",
+        "holiday",
+        "decor",
+        "gift",
+        "festive",
+        "sock"
+    ],
+    "theme": "Christmas",
+    "date_created": "2025-05-06"
+}

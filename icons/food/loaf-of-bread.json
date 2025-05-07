@@ -1,0 +1,15 @@
+{
+    "name": "Loaf of Bread",
+    "fname": "loaf-of-bread",
+    "short_description": "A round loaf of bread with diagonal scoring on top.",
+    "tags": [
+        "bread",
+        "loaf",
+        "baking",
+        "food",
+        "kitchen",
+        "carbohydrate"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-06"
+}

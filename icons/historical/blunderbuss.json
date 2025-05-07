@@ -1,0 +1,16 @@
+{
+    "name": "Blunderbuss",
+    "fname": "blunderbuss",
+    "short_description": "A short firearm with a flared muzzle used in the 17th and 18th centuries.",
+    "tags": [
+        "gun",
+        "weapon",
+        "historical",
+        "firearm",
+        "antique",
+        "vintage",
+        "blunderbuss"
+    ],
+    "theme": "Historical",
+    "date_created": "2025-05-06"
+}

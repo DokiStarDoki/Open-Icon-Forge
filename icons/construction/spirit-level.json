@@ -1,0 +1,15 @@
+{
+    "name": "Spirit Level",
+    "fname": "spirit-level",
+    "short_description": "A horizontal tool with a bubble vial used to check level surfaces.",
+    "tags": [
+        "tool",
+        "level",
+        "measurement",
+        "construction",
+        "bubble",
+        "alignment"
+    ],
+    "theme": "Construction",
+    "date_created": "2025-05-06"
+}

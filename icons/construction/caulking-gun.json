@@ -1,0 +1,14 @@
+{
+    "name": "Caulking Gun",
+    "fname": "caulking-gun",
+    "short_description": "A hand-operated caulking gun used for sealing gaps with caulk.",
+    "tags": [
+        "tool",
+        "sealant",
+        "caulk",
+        "construction",
+        "adhesive"
+    ],
+    "theme": "Construction",
+    "date_created": "2025-05-06"
+}

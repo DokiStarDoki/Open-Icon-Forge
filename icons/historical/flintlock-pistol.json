@@ -1,0 +1,16 @@
+{
+    "name": "Flintlock Pistol",
+    "fname": "flintlock-pistol",
+    "short_description": "A historical single-shot handgun with a flintlock mechanism.",
+    "tags": [
+        "pistol",
+        "gun",
+        "weapon",
+        "historical",
+        "firearm",
+        "flintlock",
+        "antique"
+    ],
+    "theme": "Historical",
+    "date_created": "2025-05-06"
+}

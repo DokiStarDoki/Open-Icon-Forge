@@ -1,0 +1,14 @@
+{
+    "name": "Toilet",
+    "fname": "toilet",
+    "short_description": "A modern indoor toilet with tank and bowl design.",
+    "tags": [
+        "bathroom",
+        "plumbing",
+        "toilet",
+        "indoor",
+        "sanitation"
+    ],
+    "theme": "Home",
+    "date_created": "2025-05-06"
+}

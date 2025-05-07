@@ -1,0 +1,16 @@
+{
+    "name": "Wooden Shield",
+    "fname": "wooden-shield",
+    "short_description": "A shield with wood grain pattern visible on its surface.",
+    "tags": [
+        "shield",
+        "protection",
+        "defense",
+        "medieval",
+        "wood",
+        "armor",
+        "combat"
+    ],
+    "theme": "Medieval",
+    "date_created": "2025-05-06"
+}

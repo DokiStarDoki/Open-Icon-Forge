@@ -1,0 +1,15 @@
+{
+    "name": "Grill Pan",
+    "fname": "grill-pan",
+    "short_description": "A square grill pan with a handle and vertical grill lines.",
+    "tags": [
+        "kitchen",
+        "cookware",
+        "grill",
+        "pan",
+        "cooking",
+        "tool"
+    ],
+    "theme": "Kitchen",
+    "date_created": "2025-05-06"
+}

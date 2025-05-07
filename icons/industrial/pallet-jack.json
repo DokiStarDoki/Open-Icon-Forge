@@ -1,0 +1,15 @@
+{
+    "name": "Pallet Jack",
+    "fname": "pallet-jack",
+    "short_description": "A manual pallet jack for moving heavy pallets and loads.",
+    "tags": [
+        "warehouse",
+        "lifting",
+        "tool",
+        "pallet",
+        "transport",
+        "logistics"
+    ],
+    "theme": "Industrial",
+    "date_created": "2025-05-06"
+}

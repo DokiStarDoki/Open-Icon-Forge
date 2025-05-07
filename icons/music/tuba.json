@@ -1,0 +1,15 @@
+{
+    "name": "Tuba",
+    "fname": "tuba",
+    "short_description": "A large brass tuba with three valves and coiled tubing.",
+    "tags": [
+        "tuba",
+        "music",
+        "brass",
+        "instrument",
+        "band",
+        "orchestra"
+    ],
+    "theme": "Music",
+    "date_created": "2025-05-06"
+}

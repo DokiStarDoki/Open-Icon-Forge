@@ -1,0 +1,15 @@
+{
+    "name": "Soap Bar",
+    "fname": "soap-bar",
+    "short_description": "A rectangular bar of soap with bubbles indicating use.",
+    "tags": [
+        "soap",
+        "bar",
+        "bubbles",
+        "cleaning",
+        "bath",
+        "hygiene"
+    ],
+    "theme": "Personal Care",
+    "date_created": "2025-05-06"
+}
