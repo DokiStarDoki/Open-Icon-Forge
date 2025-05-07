@@ -1,0 +1,16 @@
+{
+    "name": "Smoky Spine",
+    "fname": "smoky-spine",
+    "short_description": "A spine with dark patches and smoke, implying damage or decay.",
+    "tags": [
+        "spine",
+        "bones",
+        "smoke",
+        "damage",
+        "health",
+        "decay",
+        "skeletal"
+    ],
+    "theme": "Health",
+    "date_created": "2025-05-06"
+}

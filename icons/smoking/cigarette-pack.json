@@ -1,0 +1,15 @@
+{
+    "name": "Cigarette Pack",
+    "fname": "cigarette-pack",
+    "short_description": "An open pack of cigarettes showing several sticks inside.",
+    "tags": [
+        "cigarette",
+        "pack",
+        "smoking",
+        "tobacco",
+        "nicotine",
+        "addiction"
+    ],
+    "theme": "Smoking",
+    "date_created": "2025-05-06"
+}

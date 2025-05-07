@@ -1,0 +1,15 @@
+{
+    "name": "Smoky Lungs",
+    "fname": "smoky-lungs",
+    "short_description": "Lungs with dark spots and smoke indicating disease or damage.",
+    "tags": [
+        "lungs",
+        "smoke",
+        "damage",
+        "health",
+        "disease",
+        "organ"
+    ],
+    "theme": "Health",
+    "date_created": "2025-05-06"
+}

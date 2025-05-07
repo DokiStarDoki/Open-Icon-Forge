@@ -1,0 +1,15 @@
+{
+    "name": "Cigar Cutter",
+    "fname": "cigar-cutter",
+    "short_description": "A double-bladed cigar cutter designed to snip the end off a cigar.",
+    "tags": [
+        "cigar",
+        "cutter",
+        "blade",
+        "tool",
+        "accessory",
+        "smoking"
+    ],
+    "theme": "Smoking",
+    "date_created": "2025-05-06"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Lit Cigarette",
+    "fname": "lit-cigarette",
+    "short_description": "A burning cigarette emitting smoke.",
+    "tags": [
+        "cigarette",
+        "smoke",
+        "burning",
+        "tobacco",
+        "nicotine",
+        "health-risk"
+    ],
+    "theme": "Smoking",
+    "date_created": "2025-05-06"
+}
