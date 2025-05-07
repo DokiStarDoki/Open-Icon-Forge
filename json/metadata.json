@@ -1051,6 +1051,51 @@
             "json_path": "icons/animals/chubby-hamster.json"
         },
         {
+            "name": "Dachshund",
+            "theme": "Animals",
+            "tags": [
+                "dog",
+                "dachshund",
+                "pet",
+                "canine",
+                "wiener",
+                "short"
+            ],
+            "short_description": "A long-bodied dachshund dog with short legs and upright tail.",
+            "file": "icons/animals/dachshund.svg",
+            "json_path": "icons/animals/dachshund.json"
+        },
+        {
+            "name": "English Bulldog",
+            "theme": "Animals",
+            "tags": [
+                "dog",
+                "bulldog",
+                "english",
+                "pet",
+                "strong",
+                "canine"
+            ],
+            "short_description": "A stocky English Bulldog with a sturdy stance.",
+            "file": "icons/animals/english-bulldog.svg",
+            "json_path": "icons/animals/english-bulldog.json"
+        },
+        {
+            "name": "Fancy Poodle",
+            "theme": "Animals",
+            "tags": [
+                "dog",
+                "poodle",
+                "fancy",
+                "groomed",
+                "pet",
+                "canine"
+            ],
+            "short_description": "A stylish poodle with a classic trimmed coat and fluffy features.",
+            "file": "icons/animals/fancy-poodle.svg",
+            "json_path": "icons/animals/fancy-poodle.json"
+        },
+        {
             "name": "Ferret",
             "theme": "Animals",
             "tags": [
@@ -1083,6 +1128,21 @@
             "json_path": "icons/animals/field-mouse.json"
         },
         {
+            "name": "German Shepherd",
+            "theme": "Animals",
+            "tags": [
+                "dog",
+                "shepherd",
+                "canine",
+                "guard",
+                "pet",
+                "loyal"
+            ],
+            "short_description": "An alert and standing German Shepherd dog outline.",
+            "file": "icons/animals/german-shepherd.svg",
+            "json_path": "icons/animals/german-shepherd.json"
+        },
+        {
             "name": "Muskrat",
             "theme": "Animals",
             "tags": [
@@ -1113,6 +1173,21 @@
             "short_description": "A raccoon with distinctive facial mask and striped tail.",
             "file": "icons/animals/raccoon.svg",
             "json_path": "icons/animals/raccoon.json"
+        },
+        {
+            "name": "Sad Bulldog",
+            "theme": "Animals",
+            "tags": [
+                "dog",
+                "bulldog",
+                "sad",
+                "pet",
+                "canine",
+                "wrinkles"
+            ],
+            "short_description": "A droopy-faced bulldog with a sad expression.",
+            "file": "icons/animals/sad-bulldog.svg",
+            "json_path": "icons/animals/sad-bulldog.json"
         },
         {
             "name": "Clog Shoe",
@@ -1891,6 +1966,21 @@
             "json_path": "icons/casino/whiskey-glass.json"
         },
         {
+            "name": "Jesus with Cross",
+            "theme": "Christianity",
+            "tags": [
+                "jesus",
+                "christianity",
+                "religion",
+                "cross",
+                "halo",
+                "faith"
+            ],
+            "short_description": "A robed figure with a halo and cross, representing Jesus Christ.",
+            "file": "icons/christianity/jesus-with-cross.svg",
+            "json_path": "icons/christianity/jesus-with-cross.json"
+        },
+        {
             "name": "Christmas Elf",
             "theme": "Christmas",
             "tags": [
@@ -1936,6 +2026,22 @@
             "short_description": "A smiling gingerbread cookie with a bow tie and buttons.",
             "file": "icons/christmas/gingerbread-man.svg",
             "json_path": "icons/christmas/gingerbread-man.json"
+        },
+        {
+            "name": "Santa Claus",
+            "theme": "Christmas",
+            "tags": [
+                "santa",
+                "christmas",
+                "holiday",
+                "beard",
+                "hat",
+                "cheerful",
+                "winter"
+            ],
+            "short_description": "A cheerful bearded man in a hat and belt, representing Santa Claus.",
+            "file": "icons/christmas/santa-claus.svg",
+            "json_path": "icons/christmas/santa-claus.json"
         },
         {
             "name": "Biker Jacket",
@@ -2046,6 +2152,22 @@
             "short_description": "A long-sleeved sweater with a high turtleneck collar.",
             "file": "icons/clothing/turtleneck-sweater.svg",
             "json_path": "icons/clothing/turtleneck-sweater.json"
+        },
+        {
+            "name": "Silence Gesture",
+            "theme": "Communication",
+            "tags": [
+                "silence",
+                "quiet",
+                "gesture",
+                "face",
+                "hush",
+                "signal",
+                "emotion"
+            ],
+            "short_description": "A person with a finger over their lips, indicating silence.",
+            "file": "icons/communication/silence-gesture.svg",
+            "json_path": "icons/communication/silence-gesture.json"
         },
         {
             "name": "Wired Computer Mouse",
@@ -2443,6 +2565,22 @@
             "json_path": "icons/dinosaur/triceratops.json"
         },
         {
+            "name": "Easter Bunny",
+            "theme": "Easter",
+            "tags": [
+                "easter",
+                "bunny",
+                "rabbit",
+                "egg",
+                "holiday",
+                "spring",
+                "celebration"
+            ],
+            "short_description": "A bunny holding an Easter egg, symbolizing Easter celebrations.",
+            "file": "icons/easter/easter-bunny.svg",
+            "json_path": "icons/easter/easter-bunny.json"
+        },
+        {
             "name": "Triangle Ruler",
             "theme": "Education",
             "tags": [
@@ -2520,6 +2658,22 @@
             "json_path": "icons/everyday object/pair-of-socks.json"
         },
         {
+            "name": "Biker Gnome",
+            "theme": "Fantasy",
+            "tags": [
+                "gnome",
+                "motorcycle",
+                "biker",
+                "fantasy",
+                "cool",
+                "sunglasses",
+                "ride"
+            ],
+            "short_description": "A gnome riding a motorcycle wearing sunglasses.",
+            "file": "icons/fantasy/biker-gnome.svg",
+            "json_path": "icons/fantasy/biker-gnome.json"
+        },
+        {
             "name": "Cave Troll",
             "theme": "Fantasy",
             "tags": [
@@ -2536,6 +2690,22 @@
             "json_path": "icons/fantasy/cave-troll.json"
         },
         {
+            "name": "Cool Gnome",
+            "theme": "Fantasy",
+            "tags": [
+                "gnome",
+                "cool",
+                "sunglasses",
+                "fantasy",
+                "beard",
+                "hat",
+                "character"
+            ],
+            "short_description": "A gnome with sunglasses and a pointed hat.",
+            "file": "icons/fantasy/cool-gnome.svg",
+            "json_path": "icons/fantasy/cool-gnome.json"
+        },
+        {
             "name": "Forest Elf",
             "theme": "Fantasy",
             "tags": [
@@ -2549,6 +2719,22 @@
             "short_description": "A humanoid character with pointed ears and a pointed hat.",
             "file": "icons/fantasy/forest-elf.svg",
             "json_path": "icons/fantasy/forest-elf.json"
+        },
+        {
+            "name": "Goblin Warrior",
+            "theme": "Fantasy",
+            "tags": [
+                "goblin",
+                "fantasy",
+                "villain",
+                "creature",
+                "ears",
+                "fangs",
+                "evil"
+            ],
+            "short_description": "A goblin with a mischievous grin and pointed ears.",
+            "file": "icons/fantasy/goblin-warrior.svg",
+            "json_path": "icons/fantasy/goblin-warrior.json"
         },
         {
             "name": "Mermaid",
@@ -3852,6 +4038,98 @@
             "json_path": "icons/gym/dumbbell.json"
         },
         {
+            "name": "Healthy Brain",
+            "theme": "Health",
+            "tags": [
+                "brain",
+                "anatomy",
+                "healthy",
+                "neuro",
+                "mind",
+                "organ"
+            ],
+            "short_description": "A clean and symmetrical brain representing healthy function.",
+            "file": "icons/health/healthy-brain.svg",
+            "json_path": "icons/health/healthy-brain.json"
+        },
+        {
+            "name": "Healthy Spine",
+            "theme": "Health",
+            "tags": [
+                "spine",
+                "bones",
+                "skeleton",
+                "healthy",
+                "anatomy",
+                "structure"
+            ],
+            "short_description": "An illustration of a clean, undamaged spine.",
+            "file": "icons/health/healthy-spine.svg",
+            "json_path": "icons/health/healthy-spine.json"
+        },
+        {
+            "name": "Smoky Brain",
+            "theme": "Health",
+            "tags": [
+                "brain",
+                "damage",
+                "smoke",
+                "health",
+                "neurology",
+                "lesions"
+            ],
+            "short_description": "A brain with smoke and dark lesions indicating harm or disease.",
+            "file": "icons/health/smoky-brain.svg",
+            "json_path": "icons/health/smoky-brain.json"
+        },
+        {
+            "name": "Smoky Lungs",
+            "theme": "Health",
+            "tags": [
+                "lungs",
+                "smoke",
+                "damage",
+                "health",
+                "disease",
+                "organ"
+            ],
+            "short_description": "Lungs with dark spots and smoke indicating disease or damage.",
+            "file": "icons/health/smoky-lungs.svg",
+            "json_path": "icons/health/smoky-lungs.json"
+        },
+        {
+            "name": "Smoky Spine",
+            "theme": "Health",
+            "tags": [
+                "spine",
+                "bones",
+                "smoke",
+                "damage",
+                "health",
+                "decay",
+                "skeletal"
+            ],
+            "short_description": "A spine with dark patches and smoke, implying damage or decay.",
+            "file": "icons/health/smoky-spine.svg",
+            "json_path": "icons/health/smoky-spine.json"
+        },
+        {
+            "name": "Lord Ganesha",
+            "theme": "Hinduism",
+            "tags": [
+                "ganesha",
+                "hindu",
+                "deity",
+                "elephant",
+                "religion",
+                "india",
+                "god"
+            ],
+            "short_description": "A depiction of the Hindu deity Ganesha in a seated pose.",
+            "file": "icons/hinduism/lord-ganesha.svg",
+            "json_path": "icons/hinduism/lord-ganesha.json"
+        },
+        {
             "name": "Blunderbuss",
             "theme": "Historical",
             "tags": [
@@ -4187,6 +4465,21 @@
             "short_description": "A manual pallet jack for moving heavy pallets and loads.",
             "file": "icons/industrial/pallet-jack.svg",
             "json_path": "icons/industrial/pallet-jack.json"
+        },
+        {
+            "name": "Coal Cart",
+            "theme": "Industry",
+            "tags": [
+                "cart",
+                "coal",
+                "mining",
+                "transport",
+                "industry",
+                "minerals"
+            ],
+            "short_description": "A mine cart filled with coal.",
+            "file": "icons/industry/coal-cart.svg",
+            "json_path": "icons/industry/coal-cart.json"
         },
         {
             "name": "Friendly Centipede",
@@ -4664,6 +4957,21 @@
             "short_description": "A simple outline of a two-seater sofa with armrests.",
             "file": "icons/living room/sofa.svg",
             "json_path": "icons/living room/sofa.json"
+        },
+        {
+            "name": "Diamond Cut",
+            "theme": "Luxury",
+            "tags": [
+                "diamond",
+                "gem",
+                "precious",
+                "geometric",
+                "jewel",
+                "luxury"
+            ],
+            "short_description": "A symmetrical geometric illustration of a faceted diamond.",
+            "file": "icons/luxury/diamond-cut.svg",
+            "json_path": "icons/luxury/diamond-cut.json"
         },
         {
             "name": "Crystal Shard",
@@ -5192,6 +5500,21 @@
             "short_description": "A majestic sphinx facing right with human head, lion body, and wings.",
             "file": "icons/mythology/sphinx-sentinel.svg",
             "json_path": "icons/mythology/sphinx-sentinel.json"
+        },
+        {
+            "name": "Deer Skull",
+            "theme": "Nature",
+            "tags": [
+                "deer",
+                "skull",
+                "antlers",
+                "bones",
+                "wild",
+                "forest"
+            ],
+            "short_description": "A skull of a deer featuring large, branched antlers.",
+            "file": "icons/nature/deer-skull.svg",
+            "json_path": "icons/nature/deer-skull.json"
         },
         {
             "name": "Earthworm",
@@ -6065,6 +6388,22 @@
             "json_path": "icons/postal/postal-stamp-with-star.json"
         },
         {
+            "name": "Bear Skull",
+            "theme": "Prehistoric",
+            "tags": [
+                "skull",
+                "saber",
+                "predator",
+                "fossil",
+                "bear",
+                "bones",
+                "prehistoric"
+            ],
+            "short_description": "A fierce skull with prominent fangs.",
+            "file": "icons/prehistoric/bear-skull.svg",
+            "json_path": "icons/prehistoric/bear-skull.json"
+        },
+        {
             "name": "Paint Can",
             "theme": "Renovation",
             "tags": [
@@ -6159,6 +6498,21 @@
             "json_path": "icons/science/bunsen-burner.json"
         },
         {
+            "name": "DNA Strand",
+            "theme": "Science",
+            "tags": [
+                "dna",
+                "science",
+                "helix",
+                "biology",
+                "genetics",
+                "molecule"
+            ],
+            "short_description": "A double helix DNA strand symbol with horizontal rungs.",
+            "file": "icons/science/dna-strand.svg",
+            "json_path": "icons/science/dna-strand.json"
+        },
+        {
             "name": "Stop Sign",
             "theme": "Sign",
             "tags": [
@@ -6185,6 +6539,66 @@
             "short_description": "A triangular caution sign with an exclamation mark.",
             "file": "icons/sign/warning-sign.svg",
             "json_path": "icons/sign/warning-sign.json"
+        },
+        {
+            "name": "Burning Cigar",
+            "theme": "Smoking",
+            "tags": [
+                "cigar",
+                "smoke",
+                "burning",
+                "tobacco",
+                "smoking",
+                "nicotine"
+            ],
+            "short_description": "A lit cigar with smoke rising from the tip.",
+            "file": "icons/smoking/burning-cigar.svg",
+            "json_path": "icons/smoking/burning-cigar.json"
+        },
+        {
+            "name": "Cigar Cutter",
+            "theme": "Smoking",
+            "tags": [
+                "cigar",
+                "cutter",
+                "blade",
+                "tool",
+                "accessory",
+                "smoking"
+            ],
+            "short_description": "A double-bladed cigar cutter designed to snip the end off a cigar.",
+            "file": "icons/smoking/cigar-cutter.svg",
+            "json_path": "icons/smoking/cigar-cutter.json"
+        },
+        {
+            "name": "Cigarette Pack",
+            "theme": "Smoking",
+            "tags": [
+                "cigarette",
+                "pack",
+                "smoking",
+                "tobacco",
+                "nicotine",
+                "addiction"
+            ],
+            "short_description": "An open pack of cigarettes showing several sticks inside.",
+            "file": "icons/smoking/cigarette-pack.svg",
+            "json_path": "icons/smoking/cigarette-pack.json"
+        },
+        {
+            "name": "Lit Cigarette",
+            "theme": "Smoking",
+            "tags": [
+                "cigarette",
+                "smoke",
+                "burning",
+                "tobacco",
+                "nicotine",
+                "health-risk"
+            ],
+            "short_description": "A burning cigarette emitting smoke.",
+            "file": "icons/smoking/lit-cigarette.svg",
+            "json_path": "icons/smoking/lit-cigarette.json"
         },
         {
             "name": "Alien with Flag",
@@ -6389,6 +6803,22 @@
             "short_description": "A standard street skateboard with upward-curving ends.",
             "file": "icons/sport/street-skateboard.svg",
             "json_path": "icons/sport/street-skateboard.json"
+        },
+        {
+            "name": "Leprechaun",
+            "theme": "St. Patrick's Day",
+            "tags": [
+                "leprechaun",
+                "irish",
+                "clover",
+                "st patrick",
+                "green",
+                "beard",
+                "mythical"
+            ],
+            "short_description": "A bearded character in a tall hat with a shamrock, representing a leprechaun.",
+            "file": "icons/st. patrick's day/leprechaun.svg",
+            "json_path": "icons/st. patrick's day/leprechaun.json"
         },
         {
             "name": "Frog Swim Ring",
@@ -7056,6 +7486,21 @@
             "short_description": "A radiant sun with lines representing rays.",
             "file": "icons/weather/sun-symbol.svg",
             "json_path": "icons/weather/sun-symbol.json"
+        },
+        {
+            "name": "Bull Skull",
+            "theme": "Western",
+            "tags": [
+                "skull",
+                "bull",
+                "horns",
+                "western",
+                "bones",
+                "cattle"
+            ],
+            "short_description": "A longhorn bull skull with symmetrical horns.",
+            "file": "icons/western/bull-skull.svg",
+            "json_path": "icons/western/bull-skull.json"
         },
         {
             "name": "Komodo Lizard",
