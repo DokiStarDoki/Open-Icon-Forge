@@ -60,13 +60,27 @@ h1 {
   height: 100px;
   box-sizing: border-box;
   transition: box-shadow 0.2s ease;
+  overflow: hidden; /* Clip any overflow */
 }
 
 .icon object {
-  height: 70%;
+  max-width: 100%;
+  max-height: 70%; /* Restrict height to fit within wrapper */
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
   display: block;
   margin: 0 auto;
   pointer-events: none;
+}
+
+.icon .icon-placeholder {
+  max-width: 100%;
+  max-height: 70%;
+  width: 100%;
+  height: auto;
+  background: #f0f0f0;
+  display: block;
+  margin: 0 auto;
 }
 
 .icon small {
@@ -124,6 +138,7 @@ h1 {
   border-radius: 8px;
   background: #f9f9f9;
   padding: 0.5rem;
+  box-sizing: border-box;
 }
 
 .details-icon button {
@@ -188,6 +203,10 @@ h1 {
     width: 90px;
     height: 90px;
   }
+  .icon object,
+  .icon .icon-placeholder {
+    max-height: 65%; /* Slightly reduce height to fit smaller wrapper */
+  }
   .icon small {
     font-size: 0.65rem;
   }
@@ -201,6 +220,10 @@ h1 {
   .icon {
     width: 80px;
     height: 80px;
+  }
+  .icon object,
+  .icon .icon-placeholder {
+    max-height: 60%; /* Further reduce for smallest screens */
   }
   .icon small {
     font-size: 0.6rem;
