@@ -1,0 +1,15 @@
+{
+    "key": "Cheese Harp Illustration",
+    "dname": "Cheese Harp",
+    "name": "cheese-harp",
+    "short_description": "A cheese harp slicer for cutting soft cheeses.",
+    "tags": [
+        "cheese",
+        "harp",
+        "slicer",
+        "kitchen",
+        "tool"
+    ],
+    "theme": "Kitchen",
+    "date_created": "2025-05-08"
+}

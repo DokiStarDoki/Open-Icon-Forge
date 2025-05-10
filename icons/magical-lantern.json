@@ -1,0 +1,15 @@
+{
+    "key": "Magical Lantern with Glowing Light",
+    "dname": "Magical Lantern",
+    "name": "magical-lantern",
+    "short_description": "A lantern with a glowing magical light inside.",
+    "tags": [
+        "lantern",
+        "magical",
+        "glow",
+        "fantasy",
+        "mystical"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

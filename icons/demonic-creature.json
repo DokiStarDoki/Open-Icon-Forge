@@ -1,0 +1,15 @@
+{
+    "key": "Demonic Creature with Wings",
+    "dname": "Demonic Creature",
+    "name": "demonic-creature",
+    "short_description": "A winged demonic creature in a bold, menacing design.",
+    "tags": [
+        "demon",
+        "wings",
+        "creature",
+        "fantasy",
+        "mythical"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

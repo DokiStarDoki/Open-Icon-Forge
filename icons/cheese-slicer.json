@@ -1,0 +1,15 @@
+{
+    "key": "Black and White Cheese Slicer Icon",
+    "dname": "Cheese Slicer",
+    "name": "cheese-slicer",
+    "short_description": "A cheese slicer with a wire cutter in black and white.",
+    "tags": [
+        "cheese",
+        "slicer",
+        "kitchen",
+        "tool",
+        "cooking"
+    ],
+    "theme": "Kitchen",
+    "date_created": "2025-05-08"
+}

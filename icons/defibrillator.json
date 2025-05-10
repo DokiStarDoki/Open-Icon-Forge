@@ -1,0 +1,15 @@
+{
+    "key": "Defibrillator Icon Design",
+    "dname": "Defibrillator",
+    "name": "defibrillator",
+    "short_description": "A defibrillator with paddles for emergency medical use.",
+    "tags": [
+        "defibrillator",
+        "medical",
+        "emergency",
+        "health",
+        "equipment"
+    ],
+    "theme": "Medical",
+    "date_created": "2025-05-08"
+}

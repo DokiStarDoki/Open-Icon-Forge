@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Icon Forge Library</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -19,22 +14,31 @@
     </h1>
 
     <div class="controls">
-      <input type="text" id="search" placeholder="Search by tag or name..." />
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by name or description..."
+      />
       <select id="tagFilter">
         <option value="">Filter by tag</option>
       </select>
+      <select id="pageSize">
+        <option value="20">20 per page</option>
+        <option value="50">50 per page</option>
+        <option value="100">100 per page</option>
+        <option value="all">All</option>
+      </select>
     </div>
 
-    <div class="swiper-container">
-      <div class="swiper" id="iconCarousel">
-        <div class="swiper-wrapper"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div id="iconGrid" class="icon-grid"></div>
+
+    <div class="pagination">
+      <button id="prevPage" disabled>Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage" disabled>Next</button>
     </div>
 
-    <div id="details">
+    <div id="details" style="display: none">
       <div class="details-content">
         <div class="details-icon">
           <object id="detailIcon" type="image/svg+xml"></object>

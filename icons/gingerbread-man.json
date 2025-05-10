@@ -1,0 +1,15 @@
+{
+    "key": "Gingerbread Man in Bold Lines",
+    "dname": "Gingerbread Man",
+    "name": "gingerbread-man",
+    "short_description": "A bold gingerbread man with icing details.",
+    "tags": [
+        "gingerbread",
+        "man",
+        "food",
+        "holiday",
+        "dessert"
+    ],
+    "theme": "Holiday",
+    "date_created": "2025-05-08"
+}

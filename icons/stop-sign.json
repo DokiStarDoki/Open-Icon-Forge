@@ -1,0 +1,15 @@
+{
+    "key": "Black and White Stop Sign",
+    "dname": "Stop Sign",
+    "name": "stop-sign",
+    "short_description": "A bold stop sign in black and white with an octagonal shape.",
+    "tags": [
+        "stop",
+        "sign",
+        "traffic",
+        "road",
+        "safety"
+    ],
+    "theme": "Traffic",
+    "date_created": "2025-05-08"
+}

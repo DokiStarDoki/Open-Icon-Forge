@@ -1,0 +1,15 @@
+{
+    "key": "Bee Smoker Icon",
+    "dname": "Bee Smoker",
+    "name": "bee-smoker",
+    "short_description": "A bee smoker tool used in beekeeping to calm bees.",
+    "tags": [
+        "bee",
+        "smoker",
+        "beekeeping",
+        "tool",
+        "agriculture"
+    ],
+    "theme": "Beekeeping",
+    "date_created": "2025-05-08"
+}

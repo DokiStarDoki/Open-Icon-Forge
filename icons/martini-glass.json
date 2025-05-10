@@ -1,0 +1,15 @@
+{
+    "key": "Martini Glass Icon",
+    "dname": "Martini Glass",
+    "name": "martini-glass",
+    "short_description": "A minimalist martini glass with an olive.",
+    "tags": [
+        "martini",
+        "glass",
+        "drink",
+        "cocktail",
+        "beverage"
+    ],
+    "theme": "Beverage",
+    "date_created": "2025-05-08"
+}

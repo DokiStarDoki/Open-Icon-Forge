@@ -1,0 +1,15 @@
+{
+    "key": "Herb Bundle Icon",
+    "dname": "Herb Bundle",
+    "name": "herb-bundle",
+    "short_description": "A bundle of herbs tied together for cooking or rituals.",
+    "tags": [
+        "herb",
+        "bundle",
+        "cooking",
+        "nature",
+        "ritual"
+    ],
+    "theme": "Nature",
+    "date_created": "2025-05-08"
+}

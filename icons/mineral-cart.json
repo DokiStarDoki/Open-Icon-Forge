@@ -1,0 +1,15 @@
+{
+    "key": "Mineral Cart Icon Black and White",
+    "dname": "Mineral Cart",
+    "name": "mineral-cart",
+    "short_description": "A black and white cart filled with minerals.",
+    "tags": [
+        "mineral",
+        "cart",
+        "mining",
+        "industry",
+        "resources"
+    ],
+    "theme": "Industry",
+    "date_created": "2025-05-08"
+}

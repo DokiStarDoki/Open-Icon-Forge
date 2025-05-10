@@ -1,0 +1,15 @@
+{
+    "key": "Floating Crystal Shard with Stars",
+    "dname": "Crystal Shard",
+    "name": "crystal-shard",
+    "short_description": "A floating crystal shard surrounded by stars.",
+    "tags": [
+        "crystal",
+        "shard",
+        "stars",
+        "mystical",
+        "fantasy"
+    ],
+    "theme": "Mystical",
+    "date_created": "2025-05-08"
+}

@@ -1,0 +1,15 @@
+{
+    "key": "Ejection Seat Line Drawing",
+    "dname": "Ejection Seat",
+    "name": "ejection-seat",
+    "short_description": "A minimalist ejection seat for aircraft emergencies.",
+    "tags": [
+        "ejection-seat",
+        "aircraft",
+        "aviation",
+        "safety",
+        "military"
+    ],
+    "theme": "Aviation",
+    "date_created": "2025-05-08"
+}

@@ -1,0 +1,15 @@
+{
+    "key": "Minimalist Glass with Ice and Stick",
+    "dname": "Iced Drink",
+    "name": "iced-drink",
+    "short_description": "A minimalist glass with ice and a stirring stick.",
+    "tags": [
+        "glass",
+        "ice",
+        "drink",
+        "beverage",
+        "minimalist"
+    ],
+    "theme": "Beverage",
+    "date_created": "2025-05-08"
+}

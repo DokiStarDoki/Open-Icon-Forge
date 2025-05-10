@@ -4,7 +4,6 @@ body {
   background: linear-gradient(to bottom right, #fefefe, #e0f7fa);
   color: #333;
   margin: 0;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -24,7 +23,8 @@ h1 {
 }
 
 #search,
-#tagFilter {
+#tagFilter,
+#pageSize {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -36,33 +36,16 @@ h1 {
   max-width: 400px;
 }
 
-.swiper-container {
-  width: 100%;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.8rem;
   max-width: 1200px;
   margin: 1rem auto;
-  padding: 0 1rem;
-  position: relative;
-}
-
-.swiper {
-  width: 100%;
-  padding: 0 2.5rem;
-}
-
-.swiper-slide {
-  display: grid;
-  grid-template-columns: repeat(var(--cols, 7), 1fr);
-  grid-template-rows: repeat(var(--rows, 3), auto);
-  gap: var(--gap, 0.8rem);
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  min-width: 80%;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .icon {
@@ -70,7 +53,6 @@ h1 {
   background: white;
   border: 1px solid #ddd;
   padding: 0.5rem;
-  padding-top: 0.25rem;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
@@ -127,8 +109,6 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   max-width: 700px;
-  display: none;
-  opacity: 0;
 }
 
 .details-content {
@@ -162,11 +142,6 @@ h1 {
   background-color: #005fa3;
 }
 
-.details-icon {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .details-meta {
   flex: 1;
 }
@@ -176,141 +151,64 @@ h1 {
   color: #007acc;
 }
 
-.icon-placeholder {
-  height: 70%;
-  background: #f0f0f0;
-  display: block;
-  margin: 0 auto;
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #007acc;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(255, 255, 255, 1);
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px;
-}
-
-.swiper-pagination {
-  position: relative;
-  margin-top: 0.5rem;
-  text-align: center;
-}
-
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 0.7;
-}
-
-.swiper-pagination-bullet-active {
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   background: #007acc;
-  opacity: 1;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1rem;
+  color: #333;
 }
 
 /* Responsive adjustments */
-@media (max-width: 1200px) {
-  .swiper-slide {
-    --cols: 5;
-    --rows: 3;
-    --gap: 0.7rem;
-    padding: 0.8rem;
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.7rem;
   }
-
   .icon {
     width: 90px;
     height: 90px;
   }
-
   .icon small {
     font-size: 0.65rem;
-  }
-
-  .swiper {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .swiper-slide {
-    --cols: 4;
-    --rows: 2;
-    --gap: 0.6rem;
-    padding: 0.6rem;
-  }
-
-  .icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .icon small {
-    font-size: 0.6rem;
-  }
-
-  .quick-download {
-    font-size: 0.6rem;
-    padding: 1px 4px;
-  }
-
-  .swiper {
-    padding: 0 1.5rem;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 30px;
-    height: 30px;
-  }
-
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .swiper-slide {
-    --cols: 2;
-    --rows: 4;
-    --gap: 0.5rem;
-    padding: 0.5rem;
+  .icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.6rem;
   }
-
   .icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
-
   .icon small {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
   }
-
-  .swiper {
-    padding: 0 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
   .controls {
     flex-direction: column;
     align-items: center;
   }
-
   #search {
     width: 90%;
   }

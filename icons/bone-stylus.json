@@ -1,0 +1,15 @@
+{
+    "key": "Bone Stylus Line Drawing",
+    "dname": "Bone Stylus",
+    "name": "bone-stylus",
+    "short_description": "A bone stylus for writing or drawing in simple line art.",
+    "tags": [
+        "stylus",
+        "bone",
+        "writing",
+        "tool",
+        "historical"
+    ],
+    "theme": "Historical",
+    "date_created": "2025-05-08"
+}

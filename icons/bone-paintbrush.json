@@ -1,0 +1,15 @@
+{
+    "key": "Bone-Handled Paintbrush in Ink",
+    "dname": "Bone Paintbrush",
+    "name": "bone-paintbrush",
+    "short_description": "A paintbrush with a bone handle, depicted in ink style.",
+    "tags": [
+        "paintbrush",
+        "bone",
+        "art",
+        "tool",
+        "painting"
+    ],
+    "theme": "Art",
+    "date_created": "2025-05-08"
+}
