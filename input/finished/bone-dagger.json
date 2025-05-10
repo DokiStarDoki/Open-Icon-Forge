@@ -1,0 +1,15 @@
+{
+    "key": "Jagged Bone Dagger Illustration",
+    "dname": "Bone Dagger",
+    "name": "bone-dagger",
+    "short_description": "A jagged dagger carved from bone in bold lines.",
+    "tags": [
+        "dagger",
+        "bone",
+        "weapon",
+        "historical",
+        "fantasy"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

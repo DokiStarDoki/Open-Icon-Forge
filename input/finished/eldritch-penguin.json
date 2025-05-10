@@ -1,0 +1,15 @@
+{
+    "key": "Eldritch Penguin with Cosmic Eye",
+    "dname": "Eldritch Penguin",
+    "name": "eldritch-penguin",
+    "short_description": "A penguin with a cosmic eye, evoking eldritch horror.",
+    "tags": [
+        "penguin",
+        "eldritch",
+        "cosmic",
+        "fantasy",
+        "horror"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

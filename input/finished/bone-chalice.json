@@ -1,0 +1,15 @@
+{
+    "key": "Chalice of Bone and Vertebrae",
+    "dname": "Bone Chalice",
+    "name": "bone-chalice",
+    "short_description": "A chalice crafted from bone and vertebrae in gothic style.",
+    "tags": [
+        "chalice",
+        "bone",
+        "vertebrae",
+        "gothic",
+        "mystical"
+    ],
+    "theme": "Mystical",
+    "date_created": "2025-05-08"
+}

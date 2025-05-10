@@ -1,0 +1,15 @@
+{
+    "key": "Camouflage Helmet with Net Overlay",
+    "dname": "Netted Camouflage Helmet",
+    "name": "netted-camouflage-helmet",
+    "short_description": "A camouflage helmet with a net overlay for concealment.",
+    "tags": [
+        "helmet",
+        "camouflage",
+        "net",
+        "military",
+        "gear"
+    ],
+    "theme": "Military",
+    "date_created": "2025-05-08"
+}

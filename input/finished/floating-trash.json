@@ -1,0 +1,15 @@
+{
+    "key": "Floating Trash on Wavy Water",
+    "dname": "Floating Trash",
+    "name": "floating-trash",
+    "short_description": "Trash floating on wavy water, symbolizing pollution.",
+    "tags": [
+        "trash",
+        "water",
+        "pollution",
+        "environment",
+        "ocean"
+    ],
+    "theme": "Environment",
+    "date_created": "2025-05-08"
+}

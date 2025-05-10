@@ -1,0 +1,15 @@
+{
+    "key": "Crystal-Crowned Magic Staff Design",
+    "dname": "Magic Staff",
+    "name": "magic-staff",
+    "short_description": "A magic staff topped with a glowing crystal.",
+    "tags": [
+        "staff",
+        "crystal",
+        "magic",
+        "fantasy",
+        "mystical"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

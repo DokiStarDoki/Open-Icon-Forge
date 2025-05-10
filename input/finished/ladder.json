@@ -1,0 +1,15 @@
+{
+    "key": "Ladder Vector Icon",
+    "dname": "Ladder",
+    "name": "ladder",
+    "short_description": "A simple ladder for climbing in vector style.",
+    "tags": [
+        "ladder",
+        "tool",
+        "construction",
+        "climbing",
+        "equipment"
+    ],
+    "theme": "Tools",
+    "date_created": "2025-05-08"
+}

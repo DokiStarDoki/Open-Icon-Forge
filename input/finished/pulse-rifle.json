@@ -1,0 +1,15 @@
+{
+    "key": "Futuristic Pulse Rifle Design",
+    "dname": "Pulse Rifle",
+    "name": "pulse-rifle",
+    "short_description": "A futuristic pulse rifle with energy details.",
+    "tags": [
+        "pulse",
+        "rifle",
+        "sci-fi",
+        "weapon",
+        "futuristic"
+    ],
+    "theme": "Science Fiction",
+    "date_created": "2025-05-08"
+}

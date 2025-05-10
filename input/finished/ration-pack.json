@@ -1,0 +1,15 @@
+{
+    "key": "Emergency Ration Pack Icon",
+    "dname": "Ration Pack",
+    "name": "ration-pack",
+    "short_description": "An emergency ration pack for survival situations.",
+    "tags": [
+        "ration",
+        "emergency",
+        "survival",
+        "food",
+        "outdoors"
+    ],
+    "theme": "Survival",
+    "date_created": "2025-05-08"
+}

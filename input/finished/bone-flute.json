@@ -1,0 +1,15 @@
+{
+    "key": "Bone Flute in Black and White",
+    "dname": "Bone Flute",
+    "name": "bone-flute",
+    "short_description": "A flute carved from bone with holes for playing.",
+    "tags": [
+        "flute",
+        "bone",
+        "music",
+        "instrument",
+        "historical"
+    ],
+    "theme": "Music",
+    "date_created": "2025-05-08"
+}

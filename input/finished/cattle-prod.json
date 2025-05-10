@@ -1,0 +1,15 @@
+{
+    "key": "Minimalist Cattle Prod Icon",
+    "dname": "Cattle Prod",
+    "name": "cattle-prod",
+    "short_description": "A minimalist cattle prod for livestock management.",
+    "tags": [
+        "cattle-prod",
+        "tool",
+        "farming",
+        "livestock",
+        "minimalist"
+    ],
+    "theme": "Farm",
+    "date_created": "2025-05-08"
+}

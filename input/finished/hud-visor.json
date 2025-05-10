@@ -1,0 +1,15 @@
+{
+    "key": "Futuristic Visor with HUD Display",
+    "dname": "HUD Visor",
+    "name": "hud-visor",
+    "short_description": "A futuristic visor with a heads-up display (HUD).",
+    "tags": [
+        "visor",
+        "hud",
+        "sci-fi",
+        "technology",
+        "futuristic"
+    ],
+    "theme": "Science Fiction",
+    "date_created": "2025-05-08"
+}

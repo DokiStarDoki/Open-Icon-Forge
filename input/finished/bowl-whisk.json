@@ -1,0 +1,15 @@
+{
+    "key": "Bowl and Whisk Icon",
+    "dname": "Bowl and Whisk",
+    "name": "bowl-whisk",
+    "short_description": "A mixing bowl with a whisk for baking or cooking.",
+    "tags": [
+        "bowl",
+        "whisk",
+        "kitchen",
+        "cooking",
+        "baking"
+    ],
+    "theme": "Kitchen",
+    "date_created": "2025-05-08"
+}

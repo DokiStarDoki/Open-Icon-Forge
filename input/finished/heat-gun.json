@@ -1,0 +1,15 @@
+{
+    "key": "Heat Gun Icon in Minimalist Style",
+    "dname": "Heat Gun",
+    "name": "heat-gun",
+    "short_description": "A minimalist heat gun for crafting and repairs.",
+    "tags": [
+        "heat-gun",
+        "tool",
+        "craft",
+        "construction",
+        "repair"
+    ],
+    "theme": "Tools",
+    "date_created": "2025-05-08"
+}

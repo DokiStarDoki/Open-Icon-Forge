@@ -1,0 +1,15 @@
+{
+    "key": "Minimalist Beverage Cup Icon",
+    "dname": "Beverage Cup",
+    "name": "beverage-cup",
+    "short_description": "A minimalist cup with a straw for beverages.",
+    "tags": [
+        "cup",
+        "beverage",
+        "drink",
+        "minimalist",
+        "refreshment"
+    ],
+    "theme": "Beverage",
+    "date_created": "2025-05-08"
+}

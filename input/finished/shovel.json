@@ -1,0 +1,15 @@
+{
+    "key": "Black and White Shovel Icon",
+    "dname": "Shovel",
+    "name": "shovel",
+    "short_description": "A simple shovel with a broad blade in monochrome.",
+    "tags": [
+        "shovel",
+        "tool",
+        "gardening",
+        "construction",
+        "digging"
+    ],
+    "theme": "Tools",
+    "date_created": "2025-05-08"
+}

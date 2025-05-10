@@ -1,0 +1,15 @@
+{
+    "key": "Camouflage Helmet Icon Illustration",
+    "dname": "Camouflage Helmet",
+    "name": "camouflage-helmet",
+    "short_description": "A military helmet with a camouflage pattern in bold lines.",
+    "tags": [
+        "helmet",
+        "camouflage",
+        "military",
+        "gear",
+        "protection"
+    ],
+    "theme": "Military",
+    "date_created": "2025-05-08"
+}

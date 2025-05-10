@@ -1,0 +1,15 @@
+{
+    "key": "Bone Amulet with Spiral Design",
+    "dname": "Bone Amulet",
+    "name": "bone-amulet",
+    "short_description": "A bone amulet featuring a spiral design, worn as a charm.",
+    "tags": [
+        "amulet",
+        "bone",
+        "spiral",
+        "jewelry",
+        "mystical"
+    ],
+    "theme": "Mystical",
+    "date_created": "2025-05-08"
+}

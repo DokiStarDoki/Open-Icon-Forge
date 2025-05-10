@@ -1,0 +1,15 @@
+{
+    "key": "Howling Werewolf in Bold Lines",
+    "dname": "Werewolf",
+    "name": "werewolf",
+    "short_description": "A bold howling werewolf under a full moon.",
+    "tags": [
+        "werewolf",
+        "howling",
+        "fantasy",
+        "mythical",
+        "horror"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

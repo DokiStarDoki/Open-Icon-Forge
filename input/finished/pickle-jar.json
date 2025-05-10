@@ -1,0 +1,15 @@
+{
+    "key": "Black and White Pickle Jar",
+    "dname": "Pickle Jar",
+    "name": "pickle-jar",
+    "short_description": "A jar of pickles with a lid in black and white.",
+    "tags": [
+        "pickle",
+        "jar",
+        "food",
+        "preserved",
+        "kitchen"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-08"
+}

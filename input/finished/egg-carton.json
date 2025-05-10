@@ -1,0 +1,15 @@
+{
+    "key": "Egg Carton with Three Eggs",
+    "dname": "Egg Carton",
+    "name": "egg-carton",
+    "short_description": "An egg carton holding three eggs in simple lines.",
+    "tags": [
+        "egg",
+        "carton",
+        "food",
+        "kitchen",
+        "breakfast"
+    ],
+    "theme": "Food",
+    "date_created": "2025-05-08"
+}

@@ -1,0 +1,15 @@
+{
+    "key": "Cloth Bag with Mushrooms",
+    "dname": "Mushroom Bag",
+    "name": "mushroom-bag",
+    "short_description": "A cloth bag filled with mushrooms in simple line art.",
+    "tags": [
+        "mushrooms",
+        "bag",
+        "cloth",
+        "nature",
+        "foraging"
+    ],
+    "theme": "Nature",
+    "date_created": "2025-05-08"
+}

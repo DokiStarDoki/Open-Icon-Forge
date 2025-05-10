@@ -1,0 +1,15 @@
+{
+    "key": "Biker Gnome in Minimalist Style",
+    "dname": "Biker Gnome",
+    "name": "biker-gnome",
+    "short_description": "A minimalist gnome riding a motorcycle with a leather jacket.",
+    "tags": [
+        "gnome",
+        "biker",
+        "motorcycle",
+        "fantasy",
+        "minimalist"
+    ],
+    "theme": "Fantasy",
+    "date_created": "2025-05-08"
+}

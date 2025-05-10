@@ -1,0 +1,15 @@
+{
+    "key": "Firefly with Flaming Tail",
+    "dname": "Firefly",
+    "name": "firefly",
+    "short_description": "A firefly with a glowing, flaming tail in bold lines.",
+    "tags": [
+        "firefly",
+        "insect",
+        "glow",
+        "nature",
+        "night"
+    ],
+    "theme": "Nature",
+    "date_created": "2025-05-08"
+}

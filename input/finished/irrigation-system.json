@@ -1,0 +1,15 @@
+{
+    "key": "Irrigation System Over Crop Field",
+    "dname": "Irrigation System",
+    "name": "irrigation-system",
+    "short_description": "An irrigation system watering a crop field.",
+    "tags": [
+        "irrigation",
+        "system",
+        "agriculture",
+        "farming",
+        "crops"
+    ],
+    "theme": "Farm",
+    "date_created": "2025-05-08"
+}
