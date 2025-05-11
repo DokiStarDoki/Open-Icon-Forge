@@ -1,0 +1,15 @@
+{
+    "key": "Chimney Brush Icon",
+    "dname": "Chimney Brush",
+    "name": "chimney-brush",
+    "short_description": "A chimney brush with bristles and handle.",
+    "tags": [
+        "chimney",
+        "brush",
+        "cleaning",
+        "tool",
+        "maintenance",
+        "fireplace"
+    ],
+    "date_created": "2025-05-10"
+}

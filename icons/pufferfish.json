@@ -1,16 +1,16 @@
 {
-    "key": "Minimalist Pufferfish Illustration",
+    "key": "Inflated Pufferfish Icon Design",
     "dname": "Pufferfish",
     "name": "pufferfish",
-    "short_description": "A minimalist illustration of a pufferfish with spines.",
+    "short_description": "An inflated pufferfish with spines, ready to defend itself.",
     "tags": [
-        "pufferfish",
         "fish",
-        "minimalist",
-        "ocean",
         "marine",
-        "wildlife",
-        "aquatic"
+        "puffer",
+        "ocean",
+        "spines",
+        "aquatic",
+        "defense"
     ],
     "date_created": "2025-05-10"
 }

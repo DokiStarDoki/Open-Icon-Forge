@@ -1,0 +1,16 @@
+{
+    "key": "Luggage Scale Icon",
+    "dname": "Luggage Scale",
+    "name": "luggage-scale",
+    "short_description": "A scale for weighing luggage before travel.",
+    "tags": [
+        "luggage",
+        "scale",
+        "travel",
+        "weight",
+        "baggage",
+        "airport",
+        "tool"
+    ],
+    "date_created": "2025-05-10"
+}

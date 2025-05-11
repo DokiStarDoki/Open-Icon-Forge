@@ -1,0 +1,14 @@
+{
+    "key": "Statue of Liberty Icon",
+    "dname": "Statue of Liberty",
+    "name": "statue-of-liberty",
+    "short_description": "An icon of the Statue of Liberty with torch.",
+    "tags": [
+        "statue",
+        "liberty",
+        "icon",
+        "landmark",
+        "usa"
+    ],
+    "date_created": "2025-05-10"
+}

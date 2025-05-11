@@ -1,0 +1,15 @@
+{
+    "key": "Bent Steel Rebar - 90-Degree Angle",
+    "dname": "Bent Rebar",
+    "name": "bent-rebar",
+    "short_description": "A steel rebar bent at a 90-degree angle.",
+    "tags": [
+        "rebar",
+        "steel",
+        "construction",
+        "metal",
+        "building",
+        "structure"
+    ],
+    "date_created": "2025-05-10"
+}

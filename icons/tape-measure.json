@@ -1,0 +1,14 @@
+{
+    "key": "Retractable Tape Measure Icon",
+    "dname": "Tape Measure",
+    "name": "tape-measure",
+    "short_description": "A retractable tape measure for precise measurements.",
+    "tags": [
+        "tape",
+        "measure",
+        "tool",
+        "retractable",
+        "construction"
+    ],
+    "date_created": "2025-05-10"
+}

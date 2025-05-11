@@ -1,0 +1,14 @@
+{
+    "key": "Shredded Paper in Tied Bag",
+    "dname": "Shredded Paper Bag",
+    "name": "shredded-paper-bag",
+    "short_description": "A tied garbage bag with shredded paper inside.",
+    "tags": [
+        "shredded",
+        "paper",
+        "bag",
+        "recycling",
+        "waste"
+    ],
+    "date_created": "2025-05-10"
+}

@@ -1,0 +1,15 @@
+{
+    "key": "Air Conditioning Unit Icon",
+    "dname": "AC Unit",
+    "name": "ac-unit",
+    "short_description": "A minimalist air conditioning unit with vent details.",
+    "tags": [
+        "cooling",
+        "appliance",
+        "climate",
+        "vent",
+        "home",
+        "tech"
+    ],
+    "date_created": "2025-05-10"
+}

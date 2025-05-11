@@ -1,15 +1,14 @@
 {
-    "key": "Minimalist Gift Box Icon",
+    "key": "Simple Gift Box Icon",
     "dname": "Gift Box",
     "name": "gift-box",
-    "short_description": "A minimalist gift box with a bow on top.",
+    "short_description": "A simple gift box with a ribbon bow.",
     "tags": [
         "gift",
         "box",
+        "ribbon",
         "present",
-        "celebration",
-        "minimalist"
+        "celebration"
     ],
-    "theme": "Celebration",
-    "date_created": "2025-05-08"
+    "date_created": "2025-05-10"
 }

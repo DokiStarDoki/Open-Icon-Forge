@@ -1,0 +1,14 @@
+{
+    "key": "infrared-thermometer",
+    "dname": "Infrared Thermometer",
+    "name": "infrared-thermometer",
+    "short_description": "A vector infrared thermometer for temperature checks.",
+    "tags": [
+        "thermometer",
+        "infrared",
+        "vector",
+        "temperature",
+        "medical"
+    ],
+    "date_created": "2025-05-10"
+}

@@ -1,0 +1,15 @@
+{
+    "key": "Air Conditioner with Flowing Cool Air",
+    "dname": "Air Conditioner",
+    "name": "air-conditioner",
+    "short_description": "An air conditioner unit with flowing cool air lines.",
+    "tags": [
+        "cooling",
+        "air",
+        "climate",
+        "appliance",
+        "summer",
+        "ventilation"
+    ],
+    "date_created": "2025-05-10"
+}

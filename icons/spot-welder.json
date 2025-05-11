@@ -1,0 +1,14 @@
+{
+    "key": "Spot Welding Machine Icon",
+    "dname": "Spot Welder",
+    "name": "spot-welder",
+    "short_description": "A spot welding machine for metalwork.",
+    "tags": [
+        "welding",
+        "spot",
+        "machine",
+        "tool",
+        "metalwork"
+    ],
+    "date_created": "2025-05-10"
+}

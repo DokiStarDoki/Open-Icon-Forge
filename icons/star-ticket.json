@@ -1,0 +1,14 @@
+{
+    "key": "Star Ticket Icon",
+    "dname": "Star Ticket",
+    "name": "star-ticket",
+    "short_description": "A ticket with a star symbol for events.",
+    "tags": [
+        "ticket",
+        "star",
+        "event",
+        "entry",
+        "pass"
+    ],
+    "date_created": "2025-05-10"
+}

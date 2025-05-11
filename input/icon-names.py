@@ -1,6 +1,6 @@
 import os
 
-folder_path = "./input_pngs"  # Replace with your actual folder path
+folder_path = "./raw_pngs"  # Replace with your actual folder path
 output_file = "icon_names.txt"
 
 icon_names = [os.path.splitext(f)[0] for f in os.listdir(folder_path) if f.lower().endswith(".png")]

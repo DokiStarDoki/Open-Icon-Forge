@@ -1,0 +1,14 @@
+{
+    "key": "Shredded Paper in Garbage Bag",
+    "dname": "Shredded Paper",
+    "name": "shredded-paper",
+    "short_description": "A garbage bag filled with shredded paper.",
+    "tags": [
+        "shredded",
+        "paper",
+        "garbage",
+        "recycling",
+        "waste"
+    ],
+    "date_created": "2025-05-10"
+}

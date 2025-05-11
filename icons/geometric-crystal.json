@@ -1,15 +1,15 @@
 {
-    "key": "Geometric Crystal Illustration",
+    "key": "Geometric Crystal Icon Design",
     "dname": "Geometric Crystal",
     "name": "geometric-crystal",
-    "short_description": "A geometric crystal with angular facets in line art.",
+    "short_description": "A geometric crystal in clean line art.",
     "tags": [
         "crystal",
         "geometric",
-        "abstract",
-        "nature",
-        "design"
+        "design",
+        "gem",
+        "mineral",
+        "abstract"
     ],
-    "theme": "Abstract",
-    "date_created": "2025-05-08"
+    "date_created": "2025-05-10"
 }

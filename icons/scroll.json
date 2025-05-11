@@ -1,0 +1,14 @@
+{
+    "key": "Rolled Scroll with Ribbon Bow",
+    "dname": "Scroll",
+    "name": "scroll",
+    "short_description": "A rolled scroll tied with a ribbon bow.",
+    "tags": [
+        "scroll",
+        "ribbon",
+        "paper",
+        "document",
+        "vintage"
+    ],
+    "date_created": "2025-05-10"
+}

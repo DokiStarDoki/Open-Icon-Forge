@@ -1,0 +1,15 @@
+{
+    "key": "Geiger Counter Icon Design",
+    "dname": "Geiger Counter",
+    "name": "geiger-counter",
+    "short_description": "A Geiger counter for radiation in line art.",
+    "tags": [
+        "geiger",
+        "counter",
+        "radiation",
+        "science",
+        "device",
+        "safety"
+    ],
+    "date_created": "2025-05-10"
+}

@@ -1,15 +1,15 @@
 {
-    "key": "Geometric Diamond in Line Art",
+    "key": "Geometric Diamond Icon",
     "dname": "Geometric Diamond",
     "name": "geometric-diamond",
-    "short_description": "A diamond with geometric facets in minimalist line art.",
+    "short_description": "A geometric diamond shape in minimalist lines.",
     "tags": [
         "diamond",
         "geometric",
-        "jewelry",
-        "abstract",
-        "design"
+        "gem",
+        "design",
+        "jewel",
+        "abstract"
     ],
-    "theme": "Jewelry",
-    "date_created": "2025-05-08"
+    "date_created": "2025-05-10"
 }

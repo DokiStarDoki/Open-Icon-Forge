@@ -1,0 +1,14 @@
+{
+    "key": "Power Adapter with Lightning Bolt",
+    "dname": "Power Adapter",
+    "name": "power-adapter",
+    "short_description": "A power adapter with a lightning bolt symbol.",
+    "tags": [
+        "adapter",
+        "power",
+        "lightning",
+        "electronics",
+        "charger"
+    ],
+    "date_created": "2025-05-10"
+}

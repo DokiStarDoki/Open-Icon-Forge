@@ -1,0 +1,16 @@
+{
+    "key": "Mahjong Tile",
+    "dname": "Mahjong Tile",
+    "name": "mahjong-tile",
+    "short_description": "A single mahjong tile with traditional markings.",
+    "tags": [
+        "mahjong",
+        "tile",
+        "game",
+        "traditional",
+        "strategy",
+        "board",
+        "culture"
+    ],
+    "date_created": "2025-05-10"
+}

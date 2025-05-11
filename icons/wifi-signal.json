@@ -1,0 +1,14 @@
+{
+    "key": "Wi-Fi Signal Icon",
+    "dname": "Wi-Fi Signal",
+    "name": "wifi-signal",
+    "short_description": "A Wi-Fi signal icon with radiating bars.",
+    "tags": [
+        "wifi",
+        "signal",
+        "wireless",
+        "network",
+        "connectivity"
+    ],
+    "date_created": "2025-05-10"
+}

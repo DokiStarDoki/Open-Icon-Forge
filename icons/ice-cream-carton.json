@@ -2,14 +2,13 @@
     "key": "Minimalist Ice Cream Carton Design",
     "dname": "Ice Cream Carton",
     "name": "ice-cream-carton",
-    "short_description": "A minimalist design of an ice cream carton with a lid.",
+    "short_description": "A simple ice cream carton with a clean, minimalist design.",
     "tags": [
-        "ice-cream",
+        "ice cream",
         "carton",
-        "minimalist",
         "dessert",
-        "frozen",
-        "sweet",
+        "food",
+        "minimalist",
         "packaging"
     ],
     "date_created": "2025-05-10"

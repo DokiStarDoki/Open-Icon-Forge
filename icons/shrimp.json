@@ -1,16 +1,15 @@
 {
-    "key": "Shrimp Icon in Bold Lines",
+    "key": "Minimalist Shrimp Icon",
     "dname": "Shrimp",
     "name": "shrimp",
-    "short_description": "A bold line icon of a shrimp with curved body.",
+    "short_description": "A minimalist shrimp with a curved body and antennae.",
     "tags": [
         "shrimp",
         "seafood",
-        "minimalist",
-        "marine",
-        "crustacean",
         "ocean",
-        "food"
+        "minimalist",
+        "animal",
+        "marine"
     ],
     "date_created": "2025-05-10"
 }

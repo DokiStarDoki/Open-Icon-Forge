@@ -1,0 +1,14 @@
+{
+    "key": "Snow Gauge Icon Design",
+    "dname": "Snow Gauge",
+    "name": "snow-gauge",
+    "short_description": "A snow gauge for measuring snowfall depth.",
+    "tags": [
+        "snow",
+        "gauge",
+        "weather",
+        "measurement",
+        "winter"
+    ],
+    "date_created": "2025-05-10"
+}

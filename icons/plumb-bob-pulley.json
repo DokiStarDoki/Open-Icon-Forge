@@ -1,0 +1,14 @@
+{
+    "key": "Plumb Bob and Pulley Icon",
+    "dname": "Plumb Bob and Pulley",
+    "name": "plumb-bob-pulley",
+    "short_description": "A plumb bob and pulley for construction alignment.",
+    "tags": [
+        "plumb",
+        "pulley",
+        "construction",
+        "tool",
+        "measurement"
+    ],
+    "date_created": "2025-05-10"
+}

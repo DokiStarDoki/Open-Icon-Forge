@@ -1,15 +1,15 @@
 {
-    "key": "Minimalist Black-and-White Toucan Design",
+    "key": "Minimalist Toucan Icon in Black and White",
     "dname": "Toucan",
     "name": "toucan",
-    "short_description": "A minimalist black and white toucan with a large beak.",
+    "short_description": "A black and white minimalist toucan with a large beak.",
     "tags": [
         "toucan",
         "bird",
-        "wildlife",
-        "monochrome",
-        "minimalist"
+        "tropical",
+        "minimalist",
+        "animal",
+        "wildlife"
     ],
-    "theme": "Nature",
-    "date_created": "2025-05-08"
+    "date_created": "2025-05-10"
 }

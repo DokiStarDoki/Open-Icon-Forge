@@ -1,0 +1,15 @@
+{
+    "key": "No Running Sign",
+    "dname": "No Running Sign",
+    "name": "no-running-sign",
+    "short_description": "A simple no running sign with a crossed-out figure.",
+    "tags": [
+        "no running",
+        "sign",
+        "safety",
+        "minimalist",
+        "warning",
+        "rule"
+    ],
+    "date_created": "2025-05-10"
+}

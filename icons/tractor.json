@@ -1,16 +1,15 @@
 {
-    "key": "Tractor Plowing a Field Icon",
+    "key": "Minimalist Tractor Icon",
     "dname": "Tractor",
     "name": "tractor",
-    "short_description": "A minimalist icon of a tractor plowing a field.",
+    "short_description": "A minimalist tractor with wheels and a cabin.",
     "tags": [
         "tractor",
         "farm",
+        "vehicle",
         "minimalist",
         "agriculture",
-        "vehicle",
-        "field",
-        "rural"
+        "machinery"
     ],
     "date_created": "2025-05-10"
 }

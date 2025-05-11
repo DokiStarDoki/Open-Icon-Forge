@@ -1,16 +1,14 @@
 {
-    "key": "Space Station Icon Design",
+    "key": "Space Station Vector Icon",
     "dname": "Space Station",
     "name": "space-station",
-    "short_description": "A minimalist design of a space station with solar panels.",
+    "short_description": "A vector icon of a space station in orbit.",
     "tags": [
-        "space-station",
         "space",
-        "minimalist",
-        "technology",
-        "orbit",
-        "science",
-        "astronomy"
+        "station",
+        "vector",
+        "astronomy",
+        "orbit"
     ],
     "date_created": "2025-05-10"
 }

@@ -1,0 +1,14 @@
+{
+    "key": "RFID Icon with Radio Waves",
+    "dname": "RFID",
+    "name": "rfid",
+    "short_description": "An RFID tag with radio waves for tracking.",
+    "tags": [
+        "rfid",
+        "radio",
+        "tracking",
+        "technology",
+        "wireless"
+    ],
+    "date_created": "2025-05-10"
+}

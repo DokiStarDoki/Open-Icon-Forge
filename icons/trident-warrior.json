@@ -1,0 +1,15 @@
+{
+    "key": "Ancient Warrior with Trident Icon",
+    "dname": "Trident Warrior",
+    "name": "trident-warrior",
+    "short_description": "An ancient warrior holding a trident in bold lines.",
+    "tags": [
+        "warrior",
+        "trident",
+        "ancient",
+        "fighter",
+        "mythology",
+        "weapon"
+    ],
+    "date_created": "2025-05-10"
+}

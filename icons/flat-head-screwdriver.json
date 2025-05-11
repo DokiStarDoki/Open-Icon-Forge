@@ -2,14 +2,14 @@
     "key": "Flat-Head Screwdriver Icon",
     "dname": "Flat-Head Screwdriver",
     "name": "flat-head-screwdriver",
-    "short_description": "A minimalist flat-head screwdriver for turning screws.",
+    "short_description": "A flat-head screwdriver in clean line art.",
     "tags": [
         "screwdriver",
         "flat-head",
         "tool",
-        "construction",
-        "repair"
+        "hardware",
+        "repair",
+        "construction"
     ],
-    "theme": "Tools",
-    "date_created": "2025-05-08"
+    "date_created": "2025-05-10"
 }
