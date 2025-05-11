@@ -13,8 +13,8 @@ def create_combined_json():
     # Only get files with .json extension
     json_files = glob.glob(os.path.join(icons_dir, "*.json"))
     
-    # Skip _items.json if it already exists
-    json_files = [f for f in json_files if os.path.basename(f) != "_items.json"]
+    # Skip items.json if it already exists
+    json_files = [f for f in json_files if os.path.basename(f) != "items.json"]
     
     # Process each JSON file
     for json_file in json_files:
@@ -25,8 +25,8 @@ def create_combined_json():
         except Exception as e:
             print(f"Error processing {json_file}: {e}")
     
-    # Write the combined data to _items.json
-    output_path = os.path.join(icons_dir, "_items.json")
+    # Write the combined data to items.json
+    output_path = os.path.join(icons_dir, "items.json")
     with open(output_path, 'w') as f:
         json.dump(all_items, f, indent=2)  # Fixed: added the file object 'f'
     

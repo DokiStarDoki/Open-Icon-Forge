@@ -46,7 +46,7 @@ const observer = new IntersectionObserver(
 
 async function loadIcons() {
   try {
-    const res = await fetch("icons/_items.json"); // Adjust path as needed
+    const res = await fetch("icons/items.json"); // Adjust path as needed
     const data = await res.json();
     icons = data.map((icon) => ({
       ...icon,
